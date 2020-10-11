@@ -1,4 +1,4 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.recipe;
 
 import net.minecraft.util.Identifier;
 

@@ -1,9 +1,10 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.recipe;
 
 import com.google.gson.JsonObject;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import wraith.harvest_scythes.HarvestScythes;
 
 import java.util.HashMap;
 

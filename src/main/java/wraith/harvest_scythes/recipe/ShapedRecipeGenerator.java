@@ -1,4 +1,4 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.recipe;
 
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
