@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "  S",
+    "  S"
+  ],
+  "key": {
+    "I": {
+      "tag": "c:electrum_ingots"
+    },
+    "S": {
+      "item": "minecraft:stick"
+}
+  },
+  "result": {
+    "item": "harvest_scythes:electrum_scythe",
+    "count": 1
+  }
+}
+
