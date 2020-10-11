@@ -1,8 +1,11 @@
 package wraith.harvest_scythes;
 
+import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.util.Identifier;
+
+import java.util.ArrayList;
 
 public class ShapedRecipeGenerator {
 
@@ -18,16 +21,39 @@ public class ShapedRecipeGenerator {
         json.add("pattern", jsonArray);
 
         JsonObject obj = new JsonObject();
+        JsonObject key = new JsonObject();
+
         obj.addProperty(headType, headItem.toString());
-        json.add("#", obj);
+        key.add("#", obj);
 
         obj = new JsonObject();
         obj.addProperty(handleType, handleItem.toString());
-        json.add("|", obj);
+        key.add("|", obj);
+
+        json.add("key", key);
 
         obj = new JsonObject();
         obj.addProperty("item", output.toString());
         obj.addProperty("count", 1);
+        json.add("result", obj);
+
+        return json;
+    }
+
+    public static JsonObject generateSmithingJson(Identifier base, Identifier addition, String baseType, String additionType, Identifier output) {
+        JsonObject json = new JsonObject();
+        json.addProperty("type", "minecraft:smithing");
+
+        JsonObject obj = new JsonObject();
+        obj.addProperty(baseType, base.toString());
+        json.add("base", obj);
+
+        obj = new JsonObject();
+        obj.addProperty(additionType, addition.toString());
+        json.add("addition", obj);
+
+        obj = new JsonObject();
+        obj.addProperty("item", output.toString());
         json.add("result", obj);
 
         return json;
