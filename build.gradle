@@ -18,8 +18,9 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modCompileOnly 'curse.maven:astromine-foundations:3072424'
-	modCompileOnly 'curse.maven:more-gems-fabric:3070139'
+	modCompileOnly 'curse.maven:astromine-foundations:3080153'
+	modCompileOnly 'curse.maven:more-gems-fabric:3111531'
+	modCompileOnly 'curse.maven:hellish-materials:3087133'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }

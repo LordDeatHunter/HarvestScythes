@@ -1,11 +1,8 @@
 package wraith.harvest_scythes.recipe;
 
-import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.util.Identifier;
-
-import java.util.ArrayList;
 
 public class ShapedRecipeGenerator {
 

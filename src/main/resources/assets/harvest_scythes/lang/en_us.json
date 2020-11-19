@@ -26,5 +26,20 @@
   "item.harvest_scythes.lunum_scythe": "Lunum Scythe",
   "item.harvest_scythes.meteoric_steel_scythe": "Meteoric Steel Scythe",
 
+  "item.harvest_scythes.alexandrite_scythe": "Alexandrite Scythe",
+  "item.harvest_scythes.amethyst_scythe": "Amethyst Scythe",
+  "item.harvest_scythes.carbonado_scythe": "Carbonado Scythe",
+  "item.harvest_scythes.citrine_scythe": "Citrine Scythe",
+  "item.harvest_scythes.corundum_scythe": "Corundum Scythe",
+  "item.harvest_scythes.emerald_scythe": "Emerald Scythe",
+  "item.harvest_scythes.ruby_scythe": "Ruby Scythe",
+  "item.harvest_scythes.sapphire_scythe": "Sapphire Scythe",
+  "item.harvest_scythes.topaz_scythe": "Topaz Scythe",
+  "item.harvest_scythes.tourmaline_scythe": "Tourmaline Scythe",
+
+  "item.harvest_scythes.batet_scythe": "Batet Scythe",
+  "item.harvest_scythes.luss_scythe": "Luss Scythe",
+  "item.harvest_scythes.vuld_scythe": "Vuld Scythe",
+
   "itemGroup.harvest_scythes.scythes": "Scythes"
 }

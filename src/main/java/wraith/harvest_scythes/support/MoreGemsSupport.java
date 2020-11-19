@@ -1,11 +1,8 @@
 package wraith.harvest_scythes.support;
 
-import com.kwpugh.more_gems.MoreGems;
 import com.kwpugh.more_gems.materials.ModToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import wraith.harvest_scythes.HarvestScythes;
 import wraith.harvest_scythes.ItemGroup;
 import wraith.harvest_scythes.ItemRegistry;
@@ -16,16 +13,16 @@ import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 public class MoreGemsSupport {
 
     public static int loadItems() {
-        ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ModToolMaterial.ALEXANDRITE, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ModToolMaterial.AMETHYST, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ModToolMaterial.CARBONADO, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("citrine_scythe", new ScytheTool(ModToolMaterial.CITRINE, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("corundum_scythe", new ScytheTool(ModToolMaterial.CORUNDUM, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("emerald_scythe", new ScytheTool(ModToolMaterial.EMERALD, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(ModToolMaterial.RUBY, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(ModToolMaterial.SAPPHIRE, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("topaz_scythe", new ScytheTool(ModToolMaterial.TOPAZ, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ModToolMaterial.TOURMALINE, 3, 0.0f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ModToolMaterial.ALEXANDRITE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ModToolMaterial.AMETHYST, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ModToolMaterial.CARBONADO, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("citrine_scythe", new ScytheTool(ModToolMaterial.CITRINE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("corundum_scythe", new ScytheTool(ModToolMaterial.CORUNDUM, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("emerald_scythe", new ScytheTool(ModToolMaterial.EMERALD, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(ModToolMaterial.RUBY, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(ModToolMaterial.SAPPHIRE, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("topaz_scythe", new ScytheTool(ModToolMaterial.TOPAZ, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ModToolMaterial.TOURMALINE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         return 10;
     }
 

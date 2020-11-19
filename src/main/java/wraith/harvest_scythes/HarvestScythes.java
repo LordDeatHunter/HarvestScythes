@@ -1,6 +1,5 @@
 package wraith.harvest_scythes;
 
-import com.kwpugh.more_gems.MoreGems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Items;
@@ -8,8 +7,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import wraith.harvest_scythes.support.AstromineSupport;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
+import wraith.harvest_scythes.support.AstromineSupport;
+import wraith.harvest_scythes.support.HellishMaterialsSupport;
 import wraith.harvest_scythes.support.MoreGemsSupport;
 
 public class HarvestScythes implements ModInitializer {
@@ -40,6 +40,13 @@ public class HarvestScythes implements ModInitializer {
             MoreGemsSupport.loadRecipes();
             ++compatibleMods;
         }
+        if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
+            LOGGER.info("[Hellish Materials] detected. Loading supported items.");
+            moddedItems += HellishMaterialsSupport.loadItems();
+            HellishMaterialsSupport.loadRecipes();
+            ++compatibleMods;
+        }
+
         LOGGER.info("Loaded " + moddedItems + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + ItemRegistry.registerItems() + " items.");
 
         RecipesGenerator.addRecipes();
