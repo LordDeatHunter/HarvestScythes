@@ -8,9 +8,7 @@ import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
-import wraith.harvest_scythes.support.AstromineSupport;
-import wraith.harvest_scythes.support.HellishMaterialsSupport;
-import wraith.harvest_scythes.support.MoreGemsSupport;
+import wraith.harvest_scythes.support.*;
 
 public class HarvestScythes implements ModInitializer {
 
@@ -44,6 +42,36 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Hellish Materials] detected. Loading supported items.");
             moddedItems += HellishMaterialsSupport.loadItems();
             HellishMaterialsSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("diamold")) {
+            LOGGER.info("[Diamold] detected. Loading supported items.");
+            moddedItems += DiamoldSupport.loadItems();
+            DiamoldSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("betternether")) {
+            LOGGER.info("[Better Nether] detected. Loading supported items.");
+            moddedItems += BetterNetherSupport.loadItems();
+            BetterNetherSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("betterend")) {
+            LOGGER.info("[Better End] detected. Loading supported items.");
+            moddedItems += BetterEndSupport.loadItems();
+            BetterEndSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("byg")) {
+            LOGGER.info("[Better End] detected. Loading supported items.");
+            moddedItems += BYGSupport.loadItems();
+            BYGSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
+            moddedItems += MythicMetalsSupport.loadItems();
+            MythicMetalsSupport.loadRecipes();
             ++compatibleMods;
         }
 

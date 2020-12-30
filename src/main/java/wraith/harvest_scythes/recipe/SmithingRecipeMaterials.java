@@ -16,7 +16,6 @@ public class SmithingRecipeMaterials {
         this.baseType = baseType;
         this.additionType = additionType;
         this.output = output;
-
     }
 
 

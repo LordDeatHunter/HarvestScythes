@@ -4,6 +4,7 @@
   "package": "wraith.harvest_scythes.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ItemMixin",
     "RecipeManagerMixin"
   ],
   "client": [
