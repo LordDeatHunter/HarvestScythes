@@ -38,7 +38,7 @@ public class MythicMetalsSupport {
         ItemRegistry.ITEMS.put("slowsilver_scythe", new ScytheTool(MythicMetalsToolMaterials.SLOWSILVER, 3, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("starrite_scythe", new ScytheTool(MythicMetalsToolMaterials.STARRITE, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("stormyx_scythe", new ScytheTool(MythicMetalsToolMaterials.STORMYX, 3, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tantalite_scythe", new ScytheTool(MythicMetalsToolMaterials.TANTALUM, 3, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tantalite_scythe", new ScytheTool(MythicMetalsToolMaterials.TANTALITE, 3, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("truesilver_scythe", new ScytheTool(MythicMetalsToolMaterials.TRUESILVER, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("ur_scythe", new ScytheTool(MythicMetalsToolMaterials.UR, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         return 28;
