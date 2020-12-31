@@ -28,11 +28,11 @@ public abstract class ItemMixin {
 
     @Shadow public abstract Item asItem();
 
-    @Inject(method = "use", at = @At("HEAD"))
+    @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     void use(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir){
         CompoundTag tag = user.getStackInHand(hand).getTag();
         boolean isScythe = asItem() instanceof ScytheTool;
-        boolean hasTag = tag.contains("HarvestScytheProperties");
+        boolean hasTag = tag != null && tag.contains("HarvestScytheProperties");
         if (isScythe || hasTag) {
             int harvestRadius = 0;
             boolean circleHarvest = false;
