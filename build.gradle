@@ -27,6 +27,7 @@ dependencies {
 	modCompileOnly 'curse.maven:betternether-311377:3133763'
 	modCompileOnly 'curse.maven:byg-391378:3110201'
 	modCompileOnly 'curse.maven:mythicmetals-410127:3153510'
+	modCompileOnly 'curse.maven:techreborn-233564:3151153'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }

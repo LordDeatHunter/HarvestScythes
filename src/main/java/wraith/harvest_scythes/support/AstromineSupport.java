@@ -12,6 +12,8 @@ import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 
 public class AstromineSupport {
 
+    private AstromineSupport() {}
+
     public static int loadItems() {
         ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(AstromineFoundationsToolMaterials.COPPER, 1, -2.75f, 1, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(AstromineFoundationsToolMaterials.TIN, 1, -2.75f, 1, false, new Item.Settings().group(ItemGroup.SCYTHES)));

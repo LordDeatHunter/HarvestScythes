@@ -12,6 +12,8 @@ import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 
 public class MoreGemsSupport {
 
+    private MoreGemsSupport() {}
+
     public static int loadItems() {
         ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ModToolMaterial.ALEXANDRITE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ModToolMaterial.AMETHYST, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));

@@ -26,6 +26,12 @@ public class HarvestScythes implements ModInitializer {
 
         RecipesGenerator.createShapedRecipes();
 
+        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
+            moddedItems += MythicMetalsSupport.loadItems();
+            MythicMetalsSupport.loadRecipes();
+            ++compatibleMods;
+        }
         if (FabricLoader.getInstance().isModLoaded("astromine-foundations")) {
             LOGGER.info("[Astromine Foundations] detected. Loading supported items.");
             moddedItems += AstromineSupport.loadItems();
@@ -68,10 +74,10 @@ public class HarvestScythes implements ModInitializer {
             BYGSupport.loadRecipes();
             ++compatibleMods;
         }
-        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
-            moddedItems += MythicMetalsSupport.loadItems();
-            MythicMetalsSupport.loadRecipes();
+        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
+            LOGGER.info("[Tech Reborn] detected. Loading supported items.");
+            moddedItems += TechRebornSupport.loadItems();
+            TechRebornSupport.loadRecipes();
             ++compatibleMods;
         }
 

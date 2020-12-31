@@ -12,6 +12,8 @@ import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 
 public class DiamoldSupport {
 
+    private DiamoldSupport() {}
+
     public static int loadItems() {
         ItemRegistry.ITEMS.put("diamold_scythe", new ScytheTool(DiamoldMaterial.INSTANCE, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         return 1;

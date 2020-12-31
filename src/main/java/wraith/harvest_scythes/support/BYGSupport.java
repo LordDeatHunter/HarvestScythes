@@ -12,8 +12,10 @@ import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 
 public class BYGSupport {
 
+    private BYGSupport() {}
+
     public static int loadItems() {
-        ItemRegistry.ITEMS.put("pendorite_scythe", new ScytheTool(BYGItemTiers.PENDORITE, 4, -2.75f, 4, true, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("pendorite_scythe", new ScytheTool(BYGItemTiers.PENDORITE, 5, -2.75f, 4, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         return 1;
     }
 
