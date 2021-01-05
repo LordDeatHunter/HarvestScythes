@@ -14,7 +14,7 @@ public class MoreGemsSupport {
 
     private MoreGemsSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ModToolMaterial.ALEXANDRITE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ModToolMaterial.AMETHYST, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ModToolMaterial.CARBONADO, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
@@ -25,7 +25,6 @@ public class MoreGemsSupport {
         ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(ModToolMaterial.SAPPHIRE, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("topaz_scythe", new ScytheTool(ModToolMaterial.TOPAZ, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ModToolMaterial.TOURMALINE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        return 10;
     }
 
     public static void loadRecipes() {

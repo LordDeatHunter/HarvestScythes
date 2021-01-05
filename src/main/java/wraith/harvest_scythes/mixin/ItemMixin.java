@@ -36,11 +36,7 @@ public abstract class ItemMixin {
         if (isScythe || hasTag) {
             int harvestRadius = 0;
             boolean circleHarvest = false;
-            if (isScythe) {
-                harvestRadius = ((ScytheTool) asItem()).getHarvestRadius();
-                circleHarvest = ((ScytheTool) asItem()).hasCircleHarvset();
-            }
-            else {
+            if (hasTag && tag.contains("HarvestScytheProperties")) {
                 tag = tag.getCompound("HarvestScytheProperties");
                 if (tag.contains("HarvestRadius")) {
                     harvestRadius = tag.getInt("HarvestRadius");
@@ -48,6 +44,9 @@ public abstract class ItemMixin {
                 if (tag.contains("CircleHarvest")) {
                     circleHarvest = tag.getBoolean("CircleHarvest");
                 }
+            } else {
+                harvestRadius = ((ScytheTool) asItem()).getHarvestRadius();
+                circleHarvest = ((ScytheTool) asItem()).hasCircleHarvset();
             }
 
             Vec3d pos = user.getPos();

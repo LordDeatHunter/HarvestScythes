@@ -14,9 +14,8 @@ public class DiamoldSupport {
 
     private DiamoldSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("diamold_scythe", new ScytheTool(DiamoldMaterial.INSTANCE, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        return 1;
     }
 
     public static void loadRecipes() {

@@ -14,7 +14,7 @@ public class MythicMetalsSupport {
 
     private MythicMetalsSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("adamantite_scythe", new ScytheTool(MythicMetalsToolMaterials.ADAMANTITE, 4, -2.75f, 3, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("aetherium_scythe", new ScytheTool(MythicMetalsToolMaterials.AETHERIUM, 4, -2.75f, 3, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("aquarium_scythe", new ScytheTool(MythicMetalsToolMaterials.AQUARIUM, 2, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
@@ -49,7 +49,6 @@ public class MythicMetalsSupport {
         ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(MythicMetalsToolMaterials.TIN, 1, -2.75f, 1, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("truesilver_scythe", new ScytheTool(MythicMetalsToolMaterials.TRUESILVER, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("ur_scythe", new ScytheTool(MythicMetalsToolMaterials.UR, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        return 33;
     }
 
     public static void loadRecipes() {

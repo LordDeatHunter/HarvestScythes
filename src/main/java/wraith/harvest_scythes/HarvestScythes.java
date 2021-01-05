@@ -21,67 +21,66 @@ public class HarvestScythes implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Loading [Harvest Scythes]");
 
-        int moddedItems = 0;
         int compatibleMods = 0;
 
         RecipesGenerator.createShapedRecipes();
 
         if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
             LOGGER.info("[Mythic Metals] detected. Loading supported items.");
-            moddedItems += MythicMetalsSupport.loadItems();
+            MythicMetalsSupport.loadItems();
             MythicMetalsSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("astromine-foundations")) {
             LOGGER.info("[Astromine Foundations] detected. Loading supported items.");
-            moddedItems += AstromineSupport.loadItems();
+            AstromineSupport.loadItems();
             AstromineSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
-            moddedItems += MoreGemsSupport.loadItems();
+            MoreGemsSupport.loadItems();
             MoreGemsSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
             LOGGER.info("[Hellish Materials] detected. Loading supported items.");
-            moddedItems += HellishMaterialsSupport.loadItems();
+            HellishMaterialsSupport.loadItems();
             HellishMaterialsSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("diamold")) {
             LOGGER.info("[Diamold] detected. Loading supported items.");
-            moddedItems += DiamoldSupport.loadItems();
+            DiamoldSupport.loadItems();
             DiamoldSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             LOGGER.info("[Better Nether] detected. Loading supported items.");
-            moddedItems += BetterNetherSupport.loadItems();
+            BetterNetherSupport.loadItems();
             BetterNetherSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("betterend")) {
             LOGGER.info("[Better End] detected. Loading supported items.");
-            moddedItems += BetterEndSupport.loadItems();
+            BetterEndSupport.loadItems();
             BetterEndSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("byg")) {
             LOGGER.info("[Better End] detected. Loading supported items.");
-            moddedItems += BYGSupport.loadItems();
+            BYGSupport.loadItems();
             BYGSupport.loadRecipes();
             ++compatibleMods;
         }
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             LOGGER.info("[Tech Reborn] detected. Loading supported items.");
-            moddedItems += TechRebornSupport.loadItems();
+            TechRebornSupport.loadItems();
             TechRebornSupport.loadRecipes();
             ++compatibleMods;
         }
 
-        LOGGER.info("Loaded " + moddedItems + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + ItemRegistry.registerItems() + " items.");
+        LOGGER.info("Loaded " + (ItemRegistry.registerItems() - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + ItemRegistry.registerItems() + " items.");
 
         RecipesGenerator.addRecipes();
 

@@ -14,7 +14,7 @@ public class AstromineSupport {
 
     private AstromineSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(AstromineFoundationsToolMaterials.COPPER, 1, -2.75f, 1, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(AstromineFoundationsToolMaterials.TIN, 1, -2.75f, 1, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("silver_scythe", new ScytheTool(AstromineFoundationsToolMaterials.SILVER, 1, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
@@ -38,8 +38,6 @@ public class AstromineSupport {
 
         HarvestScythes.STICK = new Identifier("c", "wood_sticks");
         HarvestScythes.STICK_TYPE = "tag";
-
-        return 17;
     }
 
     public static void loadRecipes() {

@@ -18,11 +18,10 @@ public class HellishMaterialsSupport {
 
     private HellishMaterialsSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("batet_scythe", new ScytheTool(new BatetMaterial(), 2, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("luss_scythe", new ScytheTool(new LussMaterial(), 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("vuld_scythe", new ScytheTool(new VuldMaterial(), 2, -2.75f, 6, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        return 3;
     }
 
     public static void loadRecipes() {

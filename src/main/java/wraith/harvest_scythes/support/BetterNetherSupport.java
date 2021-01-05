@@ -14,11 +14,10 @@ public class BetterNetherSupport {
 
     private BetterNetherSupport() {}
 
-    public static int loadItems() {
+    public static void loadItems() {
         ItemRegistry.ITEMS.put("nether_ruby_scythe", new ScytheTool(BNItemMaterials.NETHER_RUBY_TOOLS, 3, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("cincinnasite_scythe", new ScytheTool(BNItemMaterials.CINCINNASITE_TOOLS, 2, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
         ItemRegistry.ITEMS.put("cincinnasite_scythe_diamond", new ScytheTool(BNItemMaterials.CINCINNASITE_DIAMOND_TOOLS, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        return 3;
     }
 
     public static void loadRecipes() {
