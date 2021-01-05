@@ -80,7 +80,8 @@ public class HarvestScythes implements ModInitializer {
             ++compatibleMods;
         }
 
-        LOGGER.info("Loaded " + (ItemRegistry.registerItems() - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + ItemRegistry.registerItems() + " items.");
+        int registeredItems = ItemRegistry.registerItems();
+        LOGGER.info("Loaded " + (registeredItems - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");
 
         RecipesGenerator.addRecipes();
 

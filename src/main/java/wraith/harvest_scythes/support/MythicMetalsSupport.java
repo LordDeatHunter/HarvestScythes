@@ -52,7 +52,7 @@ public class MythicMetalsSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_RECIPES.put("adamantite_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "adamantite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "adamantite_scythe")));
+        RecipesGenerator.SHAPED_RECIPES.put("adamantite_scythe", new ShapedRecipeMaterials(new Identifier("c", "adamantite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "adamantite_scythe")));
         RecipesGenerator.SHAPED_RECIPES.put("aetherium_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "aetherium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "aetherium_scythe")));
         RecipesGenerator.SHAPED_RECIPES.put("aquarium_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "aquarium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "aquarium_scythe")));
         RecipesGenerator.SHAPED_RECIPES.put("argonium_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "argonium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "argonium_scythe")));
