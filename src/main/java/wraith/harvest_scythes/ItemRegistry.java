@@ -18,12 +18,9 @@ public class ItemRegistry {
     }};
 
     public static int registerItems(){
-        System.out.println("Starting to register items.");
         for (String itemID : ITEMS.keySet()){
-            System.out.println("REGISTERING " + itemID);
             Registry.register(Registry.ITEM, new Identifier(HarvestScythes.MOD_ID, itemID), ITEMS.get(itemID));
         }
-        System.out.println("Finished registering items.");
         return ITEMS.size();
     }
 }

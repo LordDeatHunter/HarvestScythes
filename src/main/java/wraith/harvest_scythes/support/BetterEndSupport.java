@@ -2,7 +2,7 @@ package wraith.harvest_scythes.support;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
-import ru.betterend.item.EndToolMaterial;
+import ru.betterend.item.material.EndToolMaterial;
 import wraith.harvest_scythes.HarvestScythes;
 import wraith.harvest_scythes.ItemGroup;
 import wraith.harvest_scythes.ItemRegistry;
