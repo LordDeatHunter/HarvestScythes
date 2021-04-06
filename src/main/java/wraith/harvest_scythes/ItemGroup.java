@@ -5,5 +5,5 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ItemGroup {
-    public static final net.minecraft.item.ItemGroup SCYTHES = FabricItemGroupBuilder.create(new Identifier(HarvestScythes.MOD_ID, "scythes")).icon(() -> new ItemStack(ItemRegistry.ITEMS.get("diamond_scythe"))).build();
+    public static final net.minecraft.item.ItemGroup SCYTHES = FabricItemGroupBuilder.create(Utils.ID("scythes")).icon(() -> new ItemStack(ItemRegistry.ITEMS.get("diamond_scythe"))).build();
 }

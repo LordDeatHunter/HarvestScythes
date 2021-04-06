@@ -1,13 +1,18 @@
 package wraith.harvest_scythes;
 
+import net.minecraft.util.Identifier;
+
+import java.util.Calendar;
+import java.util.Random;
+
 public class Utils {
 
-    public static int round(float n) {
-        return (int)(n % 1 > 0.5 ? Math.ceil(n) : Math.floor(n));
+    private static final Random RANDOM = new Random(Calendar.getInstance().getTimeInMillis());
+    public static int getRandomIntInRange(int min, int max) {
+        return RANDOM.nextInt(max - min + 1) + min;
     }
 
-    public static int round(double n) {
-        return (int)(n % 1 > 0.5 ? Math.ceil(n) : Math.floor(n));
+    public static Identifier ID(String path) {
+        return new Identifier(HarvestScythes.MOD_ID, path);
     }
-
 }

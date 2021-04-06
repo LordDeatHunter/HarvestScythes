@@ -79,9 +79,40 @@ public class HarvestScythes implements ModInitializer {
             TechRebornSupport.loadRecipes();
             ++compatibleMods;
         }
+        if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
+            LOGGER.info("[DragonLoot] detected. Loading supported items.");
+            DragonLootSupport.loadItems();
+            DragonLootSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("tungstenmod")) {
+            LOGGER.info("[Tungsten Mod] detected. Loading supported items.");
+            TungstenModSupport.loadItems();
+            TungstenModSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("fantasycraft")) {
+            LOGGER.info("[Fantasycraft] detected. Loading supported items.");
+            FantasycraftSupport.loadItems();
+            FantasycraftSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
+            LOGGER.info("[PigSteel] detected. Loading supported items.");
+            PigSteelSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("luxore")) {
+            LOGGER.info("[Luxore] detected. Loading supported items.");
+            LuxoreSupport.loadItems();
+            LuxoreSupport.loadRecipes();
+            ++compatibleMods;
+        }
 
         int registeredItems = ItemRegistry.registerItems();
         LOGGER.info("Loaded " + (registeredItems - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");
+
+        EnchantsRegistry.registerEnchantments();
 
         RecipesGenerator.addRecipes();
 

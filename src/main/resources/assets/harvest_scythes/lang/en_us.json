@@ -8,6 +8,17 @@
 
   "item.harvest_scythes.vulcanite_scythe": "Vulcanite Scythe",
 
+  "item.harvest_scythes.dragon_scythe": "Dragon Scythe",
+
+  "item.harvest_scythes.luxore_scythe": "Luxore Scythe",
+
+  "item.harvest_scythes.elven_silver_scythe": "Elven Scythe",
+  "item.harvest_scythes.dwarven_bronze_scythe": "Dwarven Scythe",
+  "item.harvest_scythes.triton_prismarine_scythe": "Triton Scythe",
+  "item.harvest_scythes.mithril_scythe": "Mithril Scythe",
+
+  "item.harvest_scythes.tungsten_scythe": "Tungsten Scythe",
+
   "item.harvest_scythes.copper_scythe": "Copper Scythe",
   "item.harvest_scythes.tin_scythe": "Tin Scythe",
   "item.harvest_scythes.silver_scythe": "Silver Scythe",
@@ -48,6 +59,7 @@
   "item.harvest_scythes.discordium_scythe": "Discordium Scythe",
   "item.harvest_scythes.durasteel_scythe": "Durasteel Scythe",
   "item.harvest_scythes.etherite_scythe": "Etherite Scythe",
+  "item.harvest_scythes.hallowed_scythe": "Hallowed Scythe",
   "item.harvest_scythes.kyber_scythe": "Kyber Scythe",
   "item.harvest_scythes.metallurgium_scythe": "Metallurgium Scythe",
   "item.harvest_scythes.midas_gold_scythe": "Midas_gold Scythe",
@@ -83,5 +95,6 @@
   "item.harvest_scythes.luss_scythe": "Luss Scythe",
   "item.harvest_scythes.vuld_scythe": "Vuld Scythe",
 
-  "itemGroup.harvest_scythes.scythes": "Scythes"
+  "itemGroup.harvest_scythes.scythes": "Scythes",
+  "enchantment.harvest_scythes.crop_reaper": "Crop Reaper"
 }

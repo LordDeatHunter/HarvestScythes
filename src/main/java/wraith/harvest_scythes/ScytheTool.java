@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,11 +23,25 @@ public class ScytheTool extends HoeItem {
 
     protected int harvestRadius;
     protected boolean circleHarvest;
+    private int mineLevel = -1;
+
+    public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+        this(material, attackDamage, attackSpeed, getRadius(material), shouldBeCircle(material), settings);
+        this.mineLevel = material.getMiningLevel();
+    }
 
     public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, int harvestRadius, boolean circleHarvest, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
         this.harvestRadius = harvestRadius;
         this.circleHarvest = circleHarvest;
+    }
+
+    private static int getRadius(ToolMaterial material) {
+        return (int) (Math.floor(material.getMiningLevel()/2.0) + 1);
+    }
+
+    private static boolean shouldBeCircle(ToolMaterial material) {
+        return material.getMiningLevel() % 2 == 0;
     }
 
     @Override
@@ -34,17 +50,23 @@ public class ScytheTool extends HoeItem {
     }
 
     public static TypedActionResult<ItemStack> harvest(int harvestRadius, boolean circleHarvest, World world, PlayerEntity user, Hand hand) {
-        Vec3d pos = user.getPos();
-        BlockPos blockPos = new BlockPos(Utils.round(pos.x), Utils.round(pos.y), Utils.round(pos.z));
+
+        BlockPos blockPos = user.getBlockPos();
+
         Item item = user.getStackInHand(hand).getItem();
-        for (int x = -harvestRadius; x <= harvestRadius; ++x){
+
+        int lvl = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("crop_reaper"), user.getStackInHand(hand));
+        int radius = (int) (Math.floor(lvl/2.0) + harvestRadius);
+        circleHarvest = (harvestRadius + lvl) % 2 == 0;
+
+        for (int x = -radius; x <= radius; ++x){
             for (int y = -1; y <= 1; ++y){
-                for (int z = -harvestRadius; z <= harvestRadius; ++z){
+                for (int z = -radius; z <= radius; ++z){
                     BlockPos newBlockPos = new BlockPos(blockPos.getX() + x, blockPos.getY() + y, blockPos.getZ() + z);
                     if (circleHarvest &&
-                            ((y == -1 && newBlockPos.getManhattanDistance(blockPos.up()) > harvestRadius) ||
-                                    (y == 0 && newBlockPos.getManhattanDistance(blockPos) > harvestRadius) ||
-                                    (y == 1 && newBlockPos.getManhattanDistance(blockPos.down()) > harvestRadius))) {
+                            ((y == -1 && newBlockPos.getManhattanDistance(blockPos.down()) > radius) ||
+                            (y == 0 && newBlockPos.getManhattanDistance(blockPos) > radius) ||
+                            (y == 1 && newBlockPos.getManhattanDistance(blockPos.up()) > radius))) {
                         continue;
                     }
                     BlockState blockState = world.getBlockState(newBlockPos);
@@ -54,14 +76,18 @@ public class ScytheTool extends HoeItem {
                         CropBlock cropBlock = (CropBlock) block;
                         Block.dropStacks(blockState, world, newBlockPos);
                         world.setBlockState(newBlockPos, cropBlock.withAge(0));
-                        damageTool = 2;
+                        damageTool = 1;
                     }
                     else if (block.equals(Blocks.GRASS) || block.equals(Blocks.TALL_GRASS) || block.equals(Blocks.FERN) || block.equals(Blocks.LARGE_FERN)){
                         world.breakBlock(newBlockPos, true, user);
                         damageTool = 1;
                     }
-                    if (damageTool > 0){
-                        user.getStackInHand(hand).damage(damageTool, (LivingEntity) user, ((e) -> {e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);}));
+                    if (damageTool > 0) {
+                        int unbreaking = EnchantmentHelper.getLevel(Enchantments.UNBREAKING, user.getStackInHand(hand));
+                        if (Utils.getRandomIntInRange(0, unbreaking) > 0) {
+                            continue;
+                        }
+                        user.getStackInHand(hand).damage(damageTool, (LivingEntity) user, ((e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND)));
                         if (user.getStackInHand(hand).getItem() != item) {
                             return TypedActionResult.success(user.getStackInHand(hand));
                         }

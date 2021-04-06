@@ -6,10 +6,7 @@ import net.tigereye.hellishmaterials.HellishMaterials;
 import net.tigereye.hellishmaterials.items.BatetMaterial;
 import net.tigereye.hellishmaterials.items.LussMaterial;
 import net.tigereye.hellishmaterials.items.VuldMaterial;
-import wraith.harvest_scythes.HarvestScythes;
-import wraith.harvest_scythes.ItemGroup;
-import wraith.harvest_scythes.ItemRegistry;
-import wraith.harvest_scythes.ScytheTool;
+import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
@@ -25,10 +22,10 @@ public class HellishMaterialsSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_RECIPES.put("batet_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "batet_scythe")));
-        RecipesGenerator.SHAPED_RECIPES.put("luss_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, new Identifier(HarvestScythes.MOD_ID, "luss_scythe")));
+        RecipesGenerator.SHAPED_RECIPES.put("batet_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("batet_scythe")));
+        RecipesGenerator.SHAPED_RECIPES.put("luss_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luss_scythe")));
 
-        RecipesGenerator.SMITHING_RECIPES.put("vuld_scythe", new SmithingRecipeMaterials(new Identifier(HarvestScythes.MOD_ID, "diamond_scythe"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", new Identifier(HarvestScythes.MOD_ID, "vuld_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("vuld_scythe", new SmithingRecipeMaterials(Utils.ID("diamond_scythe"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", Utils.ID("vuld_scythe")));
     }
 
 }

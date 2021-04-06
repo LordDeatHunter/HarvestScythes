@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -20,14 +20,19 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modCompileOnly 'curse.maven:astrominefoundations-404374:3080153'
-	modCompileOnly 'curse.maven:moregemsfabric-377284:3153251'
+	modCompileOnly 'curse.maven:moregemsfabric-377284:3198161'
 	modCompileOnly 'curse.maven:hellishmaterials-410015:3087133'
 	modCompileOnly 'curse.maven:diamold-415159:3131013'
-	modCompileOnly 'curse.maven:betterend-413596:3168267'
-	modCompileOnly 'curse.maven:betternether-311377:3173627'
-	modCompileOnly 'curse.maven:byg-391378:3110201'
+	modCompileOnly 'curse.maven:betterend-413596:3203464'
+	modCompileOnly 'curse.maven:betternether-311377:3180179'
+	modCompileOnly 'curse.maven:byg-391378:3239861'
 	modCompileOnly 'curse.maven:mythicmetals-410127:3164691'
 	modCompileOnly 'curse.maven:techreborn-233564:3151153'
+	modCompileOnly 'curse.maven:fantasycraft-458160:3260492'
+	modCompileOnly 'curse.maven:tungstenmod-448549:3227117'
+	modCompileOnly 'curse.maven:pigsteel-448941:3263156'
+	modCompileOnly 'curse.maven:dragonloot-424480:3255465'
+	modCompileOnly 'curse.maven:luxore-421775:3255909'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
