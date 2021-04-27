@@ -13,16 +13,16 @@ public class MoreGemsSupport {
 
     public static void loadItems() {
 
-        ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ItemInit.ALEXANDRITE_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ItemInit.AMETHYST_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ItemInit.CARBONADO_TOOL_MATERIAL, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("citrine_scythe", new ScytheTool(ItemInit.CITRINE_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("corundum_scythe", new ScytheTool(ItemInit.CORUNDUM_TOOL_MATERIAL, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("emerald_scythe", new ScytheTool(ItemInit.EMERALD_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(ItemInit.RUBY_TOOL_MATERIAL, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(ItemInit.SAPPHIRE_TOOL_MATERIAL, 3, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("topaz_scythe", new ScytheTool(ItemInit.TOPAZ_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ItemInit.TOURMALINE_TOOL_MATERIAL, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ItemInit.ALEXANDRITE_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ItemInit.AMETHYST_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ItemInit.CARBONADO_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("citrine_scythe", new ScytheTool(ItemInit.CITRINE_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("corundum_scythe", new ScytheTool(ItemInit.CORUNDUM_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("emerald_scythe", new ScytheTool(ItemInit.EMERALD_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(ItemInit.RUBY_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(ItemInit.SAPPHIRE_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("topaz_scythe", new ScytheTool(ItemInit.TOPAZ_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ItemInit.TOURMALINE_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

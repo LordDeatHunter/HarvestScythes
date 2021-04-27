@@ -12,7 +12,7 @@ public class TungstenModSupport {
     private TungstenModSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("tungsten_scythe", new ScytheTool(TungstenToolMaterial.INSTANCE, 6, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tungsten_scythe", new ScytheTool(TungstenToolMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

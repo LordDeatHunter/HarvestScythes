@@ -12,26 +12,26 @@ public class AstromineSupport {
     private AstromineSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(AstromineFoundationsToolMaterials.COPPER, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(AstromineFoundationsToolMaterials.TIN, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("silver_scythe", new ScytheTool(AstromineFoundationsToolMaterials.SILVER, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("lead_scythe", new ScytheTool(AstromineFoundationsToolMaterials.LEAD, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(AstromineFoundationsToolMaterials.COPPER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(AstromineFoundationsToolMaterials.TIN, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("silver_scythe", new ScytheTool(AstromineFoundationsToolMaterials.SILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("lead_scythe", new ScytheTool(AstromineFoundationsToolMaterials.LEAD, new Item.Settings().group(ItemGroup.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(AstromineFoundationsToolMaterials.BRONZE, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("steel_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STEEL, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("electrum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ELECTRUM, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("rose_gold_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ROSE_GOLD, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("sterling_silver_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STERLING_SILVER, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("fools_gold_scythe", new ScytheTool(AstromineFoundationsToolMaterials.FOOLS_GOLD, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(AstromineFoundationsToolMaterials.BRONZE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("steel_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STEEL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("electrum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ELECTRUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("rose_gold_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ROSE_GOLD, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("sterling_silver_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STERLING_SILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("fools_gold_scythe", new ScytheTool(AstromineFoundationsToolMaterials.FOOLS_GOLD, new Item.Settings().group(ItemGroup.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("metite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.METITE, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("asterite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ASTERITE, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("stellum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STELLUM, 6, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("galaxium_scythe", new ScytheTool(AstromineFoundationsToolMaterials.GALAXIUM, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("univite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.UNIVITE, 6, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("lunum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.LUNUM, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("metite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.METITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("asterite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.ASTERITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("stellum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.STELLUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("galaxium_scythe", new ScytheTool(AstromineFoundationsToolMaterials.GALAXIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("univite_scythe", new ScytheTool(AstromineFoundationsToolMaterials.UNIVITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("lunum_scythe", new ScytheTool(AstromineFoundationsToolMaterials.LUNUM, new Item.Settings().group(ItemGroup.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("meteoric_steel_scythe", new ScytheTool(AstromineFoundationsToolMaterials.METEORIC_STEEL, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("meteoric_steel_scythe", new ScytheTool(AstromineFoundationsToolMaterials.METEORIC_STEEL, new Item.Settings().group(ItemGroup.SCYTHES)));
 
         HarvestScythes.STICK = new Identifier("c", "wood_sticks");
         HarvestScythes.STICK_TYPE = "tag";

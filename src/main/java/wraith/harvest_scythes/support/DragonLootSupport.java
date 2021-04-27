@@ -15,7 +15,7 @@ public class DragonLootSupport {
     private DragonLootSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("dragon_scythe", new ScytheTool(DragonToolMaterial.getInstance(), 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("dragon_scythe", new ScytheTool(DragonToolMaterial.getInstance(), new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

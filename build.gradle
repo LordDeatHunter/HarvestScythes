@@ -33,6 +33,8 @@ dependencies {
 	modCompileOnly 'curse.maven:pigsteel-448941:3263156'
 	modCompileOnly 'curse.maven:dragonloot-424480:3255465'
 	modCompileOnly 'curse.maven:luxore-421775:3255909'
+	modCompileOnly 'curse.maven:gobber-427177:3232918'
+	modCompileOnly 'curse.maven:adabranium-361599:3176385'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }

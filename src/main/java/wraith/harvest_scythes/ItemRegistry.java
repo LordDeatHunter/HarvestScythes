@@ -8,12 +8,12 @@ import java.util.HashMap;
 
 public class ItemRegistry {
     public static final HashMap<String, Item> ITEMS = new HashMap<String, Item>(){{
-        put("wooden_scythe", new ScytheTool(ToolMaterials.WOOD, 0, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("stone_scythe", new ScytheTool(ToolMaterials.STONE, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("iron_scythe", new ScytheTool(ToolMaterials.IRON, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("golden_scythe", new ScytheTool(ToolMaterials.GOLD, 0, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("diamond_scythe", new ScytheTool(ToolMaterials.DIAMOND, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("netherite_scythe", new ScytheTool(ToolMaterials.NETHERITE, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("wooden_scythe", new ScytheTool(ToolMaterials.WOOD, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("stone_scythe", new ScytheTool(ToolMaterials.STONE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("iron_scythe", new ScytheTool(ToolMaterials.IRON, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("golden_scythe", new ScytheTool(ToolMaterials.GOLD, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("diamond_scythe", new ScytheTool(ToolMaterials.DIAMOND, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("netherite_scythe", new ScytheTool(ToolMaterials.NETHERITE, new Item.Settings().group(ItemGroup.SCYTHES).fireproof()));
     }};
 
     public static int registerItems(){

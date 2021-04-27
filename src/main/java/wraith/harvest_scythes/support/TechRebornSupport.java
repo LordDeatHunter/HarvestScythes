@@ -12,10 +12,10 @@ public class TechRebornSupport {
     private TechRebornSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("peridot_scythe", new ScytheTool(TRToolTier.PERIDOT, 2, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(TRToolTier.SAPPHIRE, 3, -2.75f, 3, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(TRToolTier.RUBY, 2, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(TRToolTier.BRONZE, 2, -2.75f, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("peridot_scythe", new ScytheTool(TRToolTier.PERIDOT, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("sapphire_scythe", new ScytheTool(TRToolTier.SAPPHIRE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("ruby_scythe", new ScytheTool(TRToolTier.RUBY, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(TRToolTier.BRONZE, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

@@ -12,8 +12,8 @@ public class BetterEndSupport {
     private BetterEndSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("terminite_scythe", new ScytheTool(EndToolMaterial.TERMINITE, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("aeternium_scythe", new ScytheTool(EndToolMaterial.AETERNIUM, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("terminite_scythe", new ScytheTool(EndToolMaterial.TERMINITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("aeternium_scythe", new ScytheTool(EndToolMaterial.AETERNIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

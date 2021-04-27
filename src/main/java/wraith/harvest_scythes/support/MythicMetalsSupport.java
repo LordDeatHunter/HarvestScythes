@@ -12,41 +12,41 @@ public class MythicMetalsSupport {
     private MythicMetalsSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("adamantite_scythe", new ScytheTool(MythicMetalsToolMaterials.ADAMANTITE, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("aetherium_scythe", new ScytheTool(MythicMetalsToolMaterials.AETHERIUM, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("aquarium_scythe", new ScytheTool(MythicMetalsToolMaterials.AQUARIUM, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("argonium_scythe", new ScytheTool(MythicMetalsToolMaterials.ARGONIUM, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("banglum_scythe", new ScytheTool(MythicMetalsToolMaterials.BANGLUM, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("brass_scythe", new ScytheTool(MythicMetalsToolMaterials.BRASS, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(MythicMetalsToolMaterials.BRONZE, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("carmot_scythe", new ScytheTool(MythicMetalsToolMaterials.CARMOT, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("celestium_scythe", new ScytheTool(MythicMetalsToolMaterials.CELESTIUM, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(MythicMetalsToolMaterials.COPPER, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("discordium_scythe", new ScytheTool(MythicMetalsToolMaterials.DISCORDIUM, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("durasteel_scythe", new ScytheTool(MythicMetalsToolMaterials.DURASTEEL, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("electrum_scythe", new ScytheTool(MythicMetalsToolMaterials.ELECTRUM, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("etherite_scythe", new ScytheTool(MythicMetalsToolMaterials.ETHERITE, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("hallowed_scythe", new ScytheTool(MythicMetalsToolMaterials.HALLOWED, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("kyber_scythe", new ScytheTool(MythicMetalsToolMaterials.KYBER, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("metallurgium_scythe", new ScytheTool(MythicMetalsToolMaterials.METALLURGIUM, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("midas_gold_scythe", new ScytheTool(MythicMetalsToolMaterials.MIDAS_GOLD, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("mythril_scythe", new ScytheTool(MythicMetalsToolMaterials.MYTHRIL, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("orichalcum_scythe", new ScytheTool(MythicMetalsToolMaterials.ORICHALCUM, 4, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("osmium_scythe", new ScytheTool(MythicMetalsToolMaterials.OSMIUM, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("prometheum_scythe", new ScytheTool(MythicMetalsToolMaterials.PROMETHEUM, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("platinum_scythe", new ScytheTool(MythicMetalsToolMaterials.PLATINUM, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("quadrillum_scythe", new ScytheTool(MythicMetalsToolMaterials.QUADRILLUM, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("quicksilver_scythe", new ScytheTool(MythicMetalsToolMaterials.QUICKSILVER, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("runite_scythe", new ScytheTool(MythicMetalsToolMaterials.RUNITE, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("silver_scythe", new ScytheTool(MythicMetalsToolMaterials.SILVER, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("slowsilver_scythe", new ScytheTool(MythicMetalsToolMaterials.SLOWSILVER, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("starrite_scythe", new ScytheTool(MythicMetalsToolMaterials.STARRITE, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("steel_scythe", new ScytheTool(MythicMetalsToolMaterials.STEEL, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("stormyx_scythe", new ScytheTool(MythicMetalsToolMaterials.STORMYX, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tantalite_scythe", new ScytheTool(MythicMetalsToolMaterials.TANTALITE, 2, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(MythicMetalsToolMaterials.TIN, 1, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("truesilver_scythe", new ScytheTool(MythicMetalsToolMaterials.TRUESILVER, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("ur_scythe", new ScytheTool(MythicMetalsToolMaterials.UR, 3, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("adamantite_scythe", new ScytheTool(MythicMetalsToolMaterials.ADAMANTITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("aetherium_scythe", new ScytheTool(MythicMetalsToolMaterials.AETHERIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("aquarium_scythe", new ScytheTool(MythicMetalsToolMaterials.AQUARIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("argonium_scythe", new ScytheTool(MythicMetalsToolMaterials.ARGONIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("banglum_scythe", new ScytheTool(MythicMetalsToolMaterials.BANGLUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("brass_scythe", new ScytheTool(MythicMetalsToolMaterials.BRASS, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("bronze_scythe", new ScytheTool(MythicMetalsToolMaterials.BRONZE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("carmot_scythe", new ScytheTool(MythicMetalsToolMaterials.CARMOT, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("celestium_scythe", new ScytheTool(MythicMetalsToolMaterials.CELESTIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("copper_scythe", new ScytheTool(MythicMetalsToolMaterials.COPPER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("discordium_scythe", new ScytheTool(MythicMetalsToolMaterials.DISCORDIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("durasteel_scythe", new ScytheTool(MythicMetalsToolMaterials.DURASTEEL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("electrum_scythe", new ScytheTool(MythicMetalsToolMaterials.ELECTRUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("etherite_scythe", new ScytheTool(MythicMetalsToolMaterials.ETHERITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("hallowed_scythe", new ScytheTool(MythicMetalsToolMaterials.HALLOWED, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("kyber_scythe", new ScytheTool(MythicMetalsToolMaterials.KYBER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("metallurgium_scythe", new ScytheTool(MythicMetalsToolMaterials.METALLURGIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("midas_gold_scythe", new ScytheTool(MythicMetalsToolMaterials.MIDAS_GOLD, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("mythril_scythe", new ScytheTool(MythicMetalsToolMaterials.MYTHRIL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("orichalcum_scythe", new ScytheTool(MythicMetalsToolMaterials.ORICHALCUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("osmium_scythe", new ScytheTool(MythicMetalsToolMaterials.OSMIUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("prometheum_scythe", new ScytheTool(MythicMetalsToolMaterials.PROMETHEUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("platinum_scythe", new ScytheTool(MythicMetalsToolMaterials.PLATINUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("quadrillum_scythe", new ScytheTool(MythicMetalsToolMaterials.QUADRILLUM, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("quicksilver_scythe", new ScytheTool(MythicMetalsToolMaterials.QUICKSILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("runite_scythe", new ScytheTool(MythicMetalsToolMaterials.RUNITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("silver_scythe", new ScytheTool(MythicMetalsToolMaterials.SILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("slowsilver_scythe", new ScytheTool(MythicMetalsToolMaterials.SLOWSILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("starrite_scythe", new ScytheTool(MythicMetalsToolMaterials.STARRITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("steel_scythe", new ScytheTool(MythicMetalsToolMaterials.STEEL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("stormyx_scythe", new ScytheTool(MythicMetalsToolMaterials.STORMYX, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tantalite_scythe", new ScytheTool(MythicMetalsToolMaterials.TANTALITE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("tin_scythe", new ScytheTool(MythicMetalsToolMaterials.TIN, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("truesilver_scythe", new ScytheTool(MythicMetalsToolMaterials.TRUESILVER, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("ur_scythe", new ScytheTool(MythicMetalsToolMaterials.UR, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

@@ -1,39 +1,41 @@
 package wraith.harvest_scythes;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CropBlock;
+import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
+import java.util.HashSet;
+
 public class ScytheTool extends HoeItem {
 
     protected int harvestRadius;
     protected boolean circleHarvest;
-    private int mineLevel = -1;
 
     public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         this(material, attackDamage, attackSpeed, getRadius(material), shouldBeCircle(material), settings);
-        this.mineLevel = material.getMiningLevel();
     }
 
     public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, int harvestRadius, boolean circleHarvest, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
         this.harvestRadius = harvestRadius;
         this.circleHarvest = circleHarvest;
+    }
+
+    public ScytheTool(ToolMaterial material, Settings settings) {
+        this(material, material.getMiningLevel() + 3, -3.0F, settings);
+    }
+
+    public ScytheTool(ToolMaterial material, int harvestRadius, boolean circleHarvest, Settings settings) {
+        this(material, material.getMiningLevel(), -3.0F, harvestRadius, circleHarvest, settings);
     }
 
     private static int getRadius(ToolMaterial material) {
@@ -78,7 +80,7 @@ public class ScytheTool extends HoeItem {
                         world.setBlockState(newBlockPos, cropBlock.withAge(0));
                         damageTool = 1;
                     }
-                    else if (block.equals(Blocks.GRASS) || block.equals(Blocks.TALL_GRASS) || block.equals(Blocks.FERN) || block.equals(Blocks.LARGE_FERN)){
+                    else if (block instanceof PlantBlock && !(block instanceof CropBlock)){
                         world.breakBlock(newBlockPos, true, user);
                         damageTool = 1;
                     }

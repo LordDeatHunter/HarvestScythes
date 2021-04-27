@@ -16,10 +16,10 @@ public class FantasycraftSupport {
     private FantasycraftSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("elven_silver_scythe", new ScytheTool(ElvenSilverMaterial.INSTANCE, 8, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("dwarven_bronze_scythe", new ScytheTool(DwarvenBronzeMaterial.INSTANCE, 8, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("mithril_scythe", new ScytheTool(MithrilMaterial.INSTANCE, 9, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("triton_prismarine_scythe", new ScytheTool(TritonPrismarineMaterial.INSTANCE, 8, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("elven_silver_scythe", new ScytheTool(ElvenSilverMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("dwarven_bronze_scythe", new ScytheTool(DwarvenBronzeMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("mithril_scythe", new ScytheTool(MithrilMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("triton_prismarine_scythe", new ScytheTool(TritonPrismarineMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

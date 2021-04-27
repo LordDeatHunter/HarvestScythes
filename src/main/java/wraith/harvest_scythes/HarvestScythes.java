@@ -108,6 +108,18 @@ public class HarvestScythes implements ModInitializer {
             LuxoreSupport.loadRecipes();
             ++compatibleMods;
         }
+        if (FabricLoader.getInstance().isModLoaded("gobber2")) {
+            LOGGER.info("[Gobber] detected. Loading supported items.");
+            GobberSupport.loadItems();
+            GobberSupport.loadRecipes();
+            ++compatibleMods;
+        }
+        if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
+            LOGGER.info("[Adabranium] detected. Loading supported items.");
+            AdabraniumSupport.loadItems();
+            AdabraniumSupport.loadRecipes();
+            ++compatibleMods;
+        }
 
         int registeredItems = ItemRegistry.registerItems();
         LOGGER.info("Loaded " + (registeredItems - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");

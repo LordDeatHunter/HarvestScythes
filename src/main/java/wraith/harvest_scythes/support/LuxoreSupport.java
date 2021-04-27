@@ -12,7 +12,7 @@ public class LuxoreSupport {
     private LuxoreSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, 2, -2.75f, 2, true, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {

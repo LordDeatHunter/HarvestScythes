@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "harvest_scythes:item/gobber2_scythe_end"
+    }
+}

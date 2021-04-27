@@ -12,7 +12,7 @@ public class BYGSupport {
     private BYGSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("pendorite_scythe", new ScytheTool(BYGItemTiers.PENDORITE, 5, -2.75f, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("pendorite_scythe", new ScytheTool(BYGItemTiers.PENDORITE, new Item.Settings().group(ItemGroup.SCYTHES)));
     }
 
     public static void loadRecipes() {
