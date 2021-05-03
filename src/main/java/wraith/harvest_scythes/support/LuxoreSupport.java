@@ -13,10 +13,14 @@ public class LuxoreSupport {
 
     public static void loadItems() {
         ItemRegistry.ITEMS.put("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
+
+        ItemRegistry.ITEMS.put("luxore_machete", new MacheteItem(LuxoreToolMaterial.INSTANCE, new Item.Settings().group(ItemGroup.MACHETES)));
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_RECIPES.put("luxore_scythe", new ShapedRecipeMaterials(new Identifier("luxore", "luxore_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luxore_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("luxore_scythe", new ShapedRecipeMaterials(new Identifier("luxore", "luxore_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luxore_scythe")));
+
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("luxore_machete", new ShapedRecipeMaterials(new Identifier("luxore", "luxore_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luxore_machete")));
     }
 
 }

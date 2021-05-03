@@ -31,11 +31,11 @@ public class ScytheTool extends HoeItem {
     }
 
     public ScytheTool(ToolMaterial material, Settings settings) {
-        this(material, material.getMiningLevel() + 3, -3.0F, settings);
+        this(material, material.getMiningLevel() + 2, -3.0F, settings);
     }
 
     public ScytheTool(ToolMaterial material, int harvestRadius, boolean circleHarvest, Settings settings) {
-        this(material, material.getMiningLevel(), -3.0F, harvestRadius, circleHarvest, settings);
+        this(material, material.getMiningLevel() + 2, -3.0F, harvestRadius, circleHarvest, settings);
     }
 
     private static int getRadius(ToolMaterial material) {

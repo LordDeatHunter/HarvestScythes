@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "harvest_scythes:item/wooden_machete"
+    }
+}

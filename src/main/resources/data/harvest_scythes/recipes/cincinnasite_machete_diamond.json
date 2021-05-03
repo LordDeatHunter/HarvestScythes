@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #",
+    "#P"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "P": {
+      "item": "harvest_scythes:cincinnasite_machete"
+    }
+  },
+  "result": {
+    "item": "harvest_scythes:cincinnasite_machete_diamond"
+  }
+}

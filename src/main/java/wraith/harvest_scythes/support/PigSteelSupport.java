@@ -11,7 +11,8 @@ public class PigSteelSupport {
     private PigSteelSupport() {}
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_RECIPES.put("iron_scythe", new ShapedRecipeMaterials(new Identifier("pigsteel", "pigsteel_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("iron_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("iron_scythe", new ShapedRecipeMaterials(new Identifier("pigsteel", "pigsteel_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("iron_scythe")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("iron_machete", new ShapedRecipeMaterials(new Identifier("pigsteel", "pigsteel_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("iron_machete")));
     }
 
 }

@@ -35,6 +35,8 @@ dependencies {
 	modCompileOnly 'curse.maven:luxore-421775:3255909'
 	modCompileOnly 'curse.maven:gobber-427177:3232918'
 	modCompileOnly 'curse.maven:adabranium-361599:3176385'
+	modCompileOnly 'curse.maven:simplyplatinum-262530:3208198'
+
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }

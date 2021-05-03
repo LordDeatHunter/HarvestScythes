@@ -1,14 +1,27 @@
 package wraith.harvest_scythes;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.support.*;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class HarvestScythes implements ModInitializer {
 
@@ -21,10 +34,18 @@ public class HarvestScythes implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Loading [Harvest Scythes]");
 
+        registerEvents();
+
         int compatibleMods = 0;
 
         RecipesGenerator.createShapedRecipes();
 
+        if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
+            LOGGER.info("[Simply Platinum] detected. Loading supported items.");
+            SimplyPlatinumSupport.loadItems();
+            SimplyPlatinumSupport.loadRecipes();
+            ++compatibleMods;
+        }
         if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
             LOGGER.info("[Mythic Metals] detected. Loading supported items.");
             MythicMetalsSupport.loadItems();
@@ -130,6 +151,44 @@ public class HarvestScythes implements ModInitializer {
 
         LOGGER.info("[Harvest Scythes] has successfully been loaded!");
 
+    }
+
+    private void registerEvents() {
+        PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
+            if (world.isClient) {
+                return;
+            }
+            ItemStack stack = player.getMainHandStack();
+            if (!(stack.getItem() instanceof MacheteItem)) {
+                return;
+            }
+            int damage = 0;
+            boolean isCreative = stack.getItem() == ItemRegistry.ITEMS.get("creative_machete");
+            Queue<BlockPos> positions = new LinkedList<>();
+            positions.add(pos);
+            while (!positions.isEmpty() && ((stack.getDamage() + damage <= stack.getMaxDamage()) || isCreative) && damage <= ((MacheteItem) stack.getItem()).getHarvestDepth()) {
+                BlockPos curPos = positions.remove();
+                BlockState curState = world.getBlockState(curPos);
+                if (!(curState.getBlock() instanceof LeavesBlock) && damage > 0) {
+                    continue;
+                }
+                world.breakBlock(curPos, true);
+                ++damage;
+                for (int x = -1; x <= 1; ++x) {
+                    for (int y = -1; y <= 1; ++y) {
+                        for (int z = -1; z <= 1; ++z) {
+                            if (x == 0 && y == 0 && z == 0) {
+                                continue;
+                            }
+                            positions.add(curPos.add(x, y, z));
+                        }
+                    }
+                }
+            }
+            if (isCreative && damage > 1) {
+                stack.damage(damage - 1, player, (p) -> p.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+            }
+        });
     }
 
 }
