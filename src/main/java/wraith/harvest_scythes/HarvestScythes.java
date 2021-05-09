@@ -150,6 +150,12 @@ public class HarvestScythes implements ModInitializer {
             AetherSupport.loadRecipes();
             ++compatibleMods;
         }
+        if (FabricLoader.getInstance().isModLoaded("earlygame")) {
+            LOGGER.info("[EarlyGame] detected. Loading supported items.");
+            EarlyGameSupport.loadItems();
+            EarlyGameSupport.loadRecipes();
+            ++compatibleMods;
+        }
 
         int registeredItems = ItemRegistry.registerItems();
         LOGGER.info("Loaded " + (registeredItems - vanillaHSItems) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");

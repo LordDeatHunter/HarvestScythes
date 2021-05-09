@@ -104,6 +104,9 @@
   "item.harvest_scythes.vuld_scythe": "Vuld Scythe",
 
 
+  "item.harvest_scythes.flint_scythe": "Flint Scythe",
+
+
 
 
 
@@ -214,6 +217,8 @@
 
   "itemGroup.harvest_scythes.scythes": "Scythes",
   "itemGroup.harvest_scythes.machetes": "Machetes",
+
+  "item.harvest_scythes.flint_machete": "Flint Machete",
 
   "enchantment.harvest_scythes.crop_reaper": "Crop Reaper"
 }

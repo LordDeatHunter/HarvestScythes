@@ -22,11 +22,11 @@ public class MacheteItem extends SwordItem {
     }
 
     public MacheteItem(ToolMaterial material, Settings settings) {
-        this(material, material.getMiningLevel() + 2, -2.0F, settings);
+        this(material, 2, -2.0F, settings);
     }
 
     public MacheteItem(ToolMaterial material, int harvestDepth, Settings settings) {
-        this(material, material.getMiningLevel() + 2, -2.0F, harvestDepth, settings);
+        this(material, 2, -2.0F, harvestDepth, settings);
     }
 
     private static int getDepth(ToolMaterial material) {
