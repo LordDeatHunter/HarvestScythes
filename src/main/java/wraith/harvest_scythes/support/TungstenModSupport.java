@@ -18,9 +18,9 @@ public class TungstenModSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tungsten_scythe", new ShapedRecipeMaterials(new Identifier("tungstenmod", "tungsten_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("tungsten_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tm_tungsten_scythe", new ShapedRecipeMaterials(new Identifier("tungstenmod", "tungsten_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("tungsten_scythe")));
 
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tungsten_machete", new ShapedRecipeMaterials(new Identifier("tungstenmod", "tungsten_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("tungsten_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tm_tungsten_machete", new ShapedRecipeMaterials(new Identifier("tungstenmod", "tungsten_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("tungsten_machete")));
     }
 
 }

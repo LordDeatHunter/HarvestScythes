@@ -32,11 +32,14 @@ public class HarvestScythes implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        registerEvents();
+    }
+
+    public static void load() {
         LOGGER.info("Loading [Harvest Scythes]");
 
-        registerEvents();
-
         int compatibleMods = 0;
+        int vanillaHSItems = ItemRegistry.ITEMS.size();
 
         RecipesGenerator.createShapedRecipes();
 
@@ -141,16 +144,21 @@ public class HarvestScythes implements ModInitializer {
             AdabraniumSupport.loadRecipes();
             ++compatibleMods;
         }
+        if (FabricLoader.getInstance().isModLoaded("the_aether")) {
+            LOGGER.info("[Aether Reborn] detected. Loading supported items.");
+            AetherSupport.loadItems();
+            AetherSupport.loadRecipes();
+            ++compatibleMods;
+        }
 
         int registeredItems = ItemRegistry.registerItems();
-        LOGGER.info("Loaded " + (registeredItems - 6) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");
+        LOGGER.info("Loaded " + (registeredItems - vanillaHSItems) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");
 
         EnchantsRegistry.registerEnchantments();
 
         RecipesGenerator.addRecipes();
 
         LOGGER.info("[Harvest Scythes] has successfully been loaded!");
-
     }
 
     private void registerEvents() {

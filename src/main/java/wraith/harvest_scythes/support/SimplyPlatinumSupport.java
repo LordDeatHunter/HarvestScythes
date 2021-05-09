@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
-import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
+import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 
 public class SimplyPlatinumSupport {
 
@@ -19,9 +19,9 @@ public class SimplyPlatinumSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("platinum_scythe", new ShapedRecipeMaterials(new Identifier("simplyplatinum", "platinum_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("tungsten_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_scythe", new SmithingRecipeMaterials(Utils.ID("golden_scythe"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", Utils.ID("platinum_scythe")));
 
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("platinum_machete", new ShapedRecipeMaterials(new Identifier("simplyplatinum", "platinum_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("platinum_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_machete", new SmithingRecipeMaterials(Utils.ID("golden_machete"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", Utils.ID("platinum_machete")));
     }
 
 }

@@ -8,6 +8,10 @@
     "RecipeManagerMixin"
   ],
   "client": [
+    "ClientMixin"
+  ],
+  "server": [
+    "ServerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
