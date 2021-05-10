@@ -10,7 +10,7 @@ import wraith.harvest_scythes.HarvestScythes;
 @Mixin(Main.class)
 public class ServerMixin {
 
-    @Inject(method = "main", at = @At(target = "Lnet/minecraft/util/registry/DynamicRegistryManager;create()Lnet/minecraft/util/registry/DynamicRegistryManager$Impl;", value = "INVOKE_ASSIGN"))
+    @Inject(method = "main", at = @At(target = "Ljava/nio/file/Paths;get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;", value = "INVOKE_ASSIGN"))
     private static void inject(String[] args, CallbackInfo ci) {
         HarvestScythes.load();
     }

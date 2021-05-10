@@ -29,6 +29,7 @@ public class HarvestScythes implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger();
     public static Identifier STICK = Registry.ITEM.getId(Items.STICK);
     public static String STICK_TYPE = "item";
+    private static boolean loaded = false;
 
     @Override
     public void onInitialize() {
@@ -36,6 +37,10 @@ public class HarvestScythes implements ModInitializer {
     }
 
     public static void load() {
+        if (loaded) {
+            return;
+        }
+        loaded = true;
         LOGGER.info("Loading [Harvest Scythes]");
 
         int compatibleMods = 0;

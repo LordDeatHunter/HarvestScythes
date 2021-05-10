@@ -11,10 +11,10 @@ public class ItemRegistry {
         put("wooden_scythe", new ScytheTool(ToolMaterials.WOOD, new Item.Settings().group(ItemGroup.SCYTHES)));
         put("stone_scythe", new ScytheTool(ToolMaterials.STONE, new Item.Settings().group(ItemGroup.SCYTHES)));
         put("iron_scythe", new ScytheTool(ToolMaterials.IRON, new Item.Settings().group(ItemGroup.SCYTHES)));
-        put("golden_scythe", new ScytheTool(ToolMaterials.GOLD, 2, false, new Item.Settings().group(ItemGroup.SCYTHES)));
+        put("golden_scythe", new ScytheTool(ToolMaterials.GOLD, 3, new Item.Settings().group(ItemGroup.SCYTHES)));
         put("diamond_scythe", new ScytheTool(ToolMaterials.DIAMOND, new Item.Settings().group(ItemGroup.SCYTHES)));
         put("netherite_scythe", new ScytheTool(ToolMaterials.NETHERITE, new Item.Settings().group(ItemGroup.SCYTHES).fireproof()));
-        put("creative_scythe", new ScytheTool(ToolMaterials.NETHERITE, 20, false, new Item.Settings().group(ItemGroup.SCYTHES).fireproof().maxDamage(-1)));
+        put("creative_scythe", new ScytheTool(ToolMaterials.NETHERITE, 20, new Item.Settings().group(ItemGroup.SCYTHES).fireproof().maxDamage(-1)));
 
         put("wooden_machete", new MacheteItem(ToolMaterials.WOOD, new Item.Settings().group(ItemGroup.MACHETES)));
         put("stone_machete", new MacheteItem(ToolMaterials.STONE, new Item.Settings().group(ItemGroup.MACHETES)));
