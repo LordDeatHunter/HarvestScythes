@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import jayceecreates.earlygame.item.CopperToolBase;
@@ -27,3 +28,4 @@ public class EarlyGameSupport {
     }
 
 }
+*/

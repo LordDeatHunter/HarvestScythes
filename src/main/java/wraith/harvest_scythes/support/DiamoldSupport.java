@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import net.minecraft.item.Item;
@@ -24,3 +25,4 @@ public class DiamoldSupport {
     }
 
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import com.github.theintfox.tools.PlatinumToolMaterial;
@@ -25,3 +26,4 @@ public class SimplyPlatinumSupport {
     }
 
 }
+ */

@@ -12,13 +12,13 @@ public class GobberSupport {
     private GobberSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("gobber2_scythe", new ScytheTool(ItemInit.GOBBER_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("gobber2_scythe_nether", new ScytheTool(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("gobber2_scythe_end", new ScytheTool(ItemInit.GOBBER_END_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("gobber2_scythe", new ScytheTool(ItemInit.GOBBER_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
+        ItemRegistry.ITEMS.put("gobber2_scythe_nether", new ScytheTool(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
+        ItemRegistry.ITEMS.put("gobber2_scythe_end", new ScytheTool(ItemInit.GOBBER_END_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("gobber2_machete", new MacheteItem(ItemInit.GOBBER_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("gobber2_machete_nether", new MacheteItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("gobber2_machete_end", new MacheteItem(ItemInit.GOBBER_END_TOOL_MATERIAL, new Item.Settings().group(ItemGroup.MACHETES)));
+        ItemRegistry.ITEMS.put("gobber2_machete", new MacheteItem(ItemInit.GOBBER_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
+        ItemRegistry.ITEMS.put("gobber2_machete_nether", new MacheteItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
+        ItemRegistry.ITEMS.put("gobber2_machete_end", new MacheteItem(ItemInit.GOBBER_END_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {

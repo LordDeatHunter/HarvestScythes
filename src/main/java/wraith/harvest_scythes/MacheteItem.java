@@ -38,8 +38,8 @@ public class MacheteItem extends SwordItem {
     }
 
     @Override
-    public boolean isEffectiveOn(BlockState state) {
-        return super.isEffectiveOn(state) || state.getBlock() instanceof LeavesBlock;
+    public boolean isSuitableFor(BlockState state) {
+        return super.isSuitableFor(state) || state.getBlock() instanceof LeavesBlock;
     }
 
     @Override

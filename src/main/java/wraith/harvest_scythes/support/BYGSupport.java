@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import corgiaoc.byg.common.properties.items.itemtiers.BYGItemTiers;
@@ -24,3 +25,4 @@ public class BYGSupport {
     }
 
 }
+*/

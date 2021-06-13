@@ -12,9 +12,9 @@ public class DragonLootSupport {
     private DragonLootSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("dragon_scythe", new ScytheTool(DragonToolMaterial.getInstance(), new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.ITEMS.put("dragon_scythe", new ScytheTool(DragonToolMaterial.getInstance(), new Item.Settings().group(CustomItemGroups.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("dragon_machete", new MacheteItem(DragonToolMaterial.getInstance(), new Item.Settings().group(ItemGroup.MACHETES)));
+        ItemRegistry.ITEMS.put("dragon_machete", new MacheteItem(DragonToolMaterial.getInstance(), new Item.Settings().group(CustomItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {

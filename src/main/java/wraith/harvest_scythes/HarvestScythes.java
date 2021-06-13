@@ -5,21 +5,17 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.support.*;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -48,6 +44,7 @@ public class HarvestScythes implements ModInitializer {
 
         RecipesGenerator.createShapedRecipes();
 
+        /*
         if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
             LOGGER.info("[Simply Platinum] detected. Loading supported items.");
             SimplyPlatinumSupport.loadItems();
@@ -66,12 +63,14 @@ public class HarvestScythes implements ModInitializer {
             AstromineSupport.loadRecipes();
             ++compatibleMods;
         }
+         */
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
             MoreGemsSupport.loadItems();
             MoreGemsSupport.loadRecipes();
             ++compatibleMods;
         }
+        /*
         if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
             LOGGER.info("[Hellish Materials] detected. Loading supported items.");
             HellishMaterialsSupport.loadItems();
@@ -108,12 +107,14 @@ public class HarvestScythes implements ModInitializer {
             TechRebornSupport.loadRecipes();
             ++compatibleMods;
         }
+         */
         if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
             LOGGER.info("[DragonLoot] detected. Loading supported items.");
             DragonLootSupport.loadItems();
             DragonLootSupport.loadRecipes();
             ++compatibleMods;
         }
+        /*
         if (FabricLoader.getInstance().isModLoaded("tungstenmod")) {
             LOGGER.info("[Tungsten Mod] detected. Loading supported items.");
             TungstenModSupport.loadItems();
@@ -137,6 +138,7 @@ public class HarvestScythes implements ModInitializer {
             LuxoreSupport.loadRecipes();
             ++compatibleMods;
         }
+         */
         if (FabricLoader.getInstance().isModLoaded("gobber2")) {
             LOGGER.info("[Gobber] detected. Loading supported items.");
             GobberSupport.loadItems();
@@ -149,6 +151,7 @@ public class HarvestScythes implements ModInitializer {
             AdabraniumSupport.loadRecipes();
             ++compatibleMods;
         }
+        /*
         if (FabricLoader.getInstance().isModLoaded("the_aether")) {
             LOGGER.info("[Aether Reborn] detected. Loading supported items.");
             AetherSupport.loadItems();
@@ -161,6 +164,7 @@ public class HarvestScythes implements ModInitializer {
             EarlyGameSupport.loadRecipes();
             ++compatibleMods;
         }
+         */
 
         int registeredItems = ItemRegistry.registerItems();
         LOGGER.info("Loaded " + (registeredItems - vanillaHSItems) + " items from " + compatibleMods + " compatible mod" + (compatibleMods != 1 ? "s" : "") + ", for a total of " + registeredItems + " items.");

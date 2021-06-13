@@ -1,6 +1,9 @@
 package wraith.harvest_scythes;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.CropBlock;
+import net.minecraft.block.PlantBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
@@ -11,10 +14,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-import java.util.HashSet;
 import java.util.List;
 
 public class ScytheTool extends HoeItem {
@@ -77,8 +78,7 @@ public class ScytheTool extends HoeItem {
                     BlockState blockState = world.getBlockState(cropPos);
                     Block block = blockState.getBlock();
                     int damageTool = 0;
-                    if (block instanceof CropBlock && ((CropBlock)block).isMature(blockState)) {
-                        CropBlock cropBlock = (CropBlock) block;
+                    if (block instanceof CropBlock cropBlock && ((CropBlock)block).isMature(blockState)) {
                         List<ItemStack> drops = Block.getDroppedStacks(blockState, (ServerWorld) world, blockPos, world.getBlockEntity(blockPos));
                         boolean removedExtraSeed = false;
                         for (ItemStack drop : drops) {

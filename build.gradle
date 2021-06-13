@@ -1,10 +1,10 @@
 plugins {
-	id 'fabric-loom' version '0.6-SNAPSHOT'
+	id 'fabric-loom' version '0.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -19,25 +19,24 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modCompileOnly 'curse.maven:astrominefoundations-404374:3080153'
-	modCompileOnly 'curse.maven:moregemsfabric-377284:3198161'
-	modCompileOnly 'curse.maven:hellishmaterials-410015:3087133'
-	modCompileOnly 'curse.maven:diamold-415159:3131013'
-	modCompileOnly 'curse.maven:betterend-413596:3203464'
-	modCompileOnly 'curse.maven:betternether-311377:3180179'
-	modCompileOnly 'curse.maven:byg-391378:3239861'
-	modCompileOnly 'curse.maven:mythicmetals-410127:3164691'
-	modCompileOnly 'curse.maven:techreborn-233564:3151153'
-	modCompileOnly 'curse.maven:fantasycraft-458160:3260492'
-	modCompileOnly 'curse.maven:tungstenmod-448549:3227117'
-	modCompileOnly 'curse.maven:pigsteel-448941:3263156'
-	modCompileOnly 'curse.maven:dragonloot-424480:3255465'
-	modCompileOnly 'curse.maven:luxore-421775:3255909'
-	modCompileOnly 'curse.maven:gobber-427177:3232918'
-	modCompileOnly 'curse.maven:adabranium-361599:3176385'
-	modCompileOnly 'curse.maven:simplyplatinum-262530:3208198'
-	modCompileOnly 'curse.maven:aether-418680:3285109'
-	modCompileOnly 'curse.maven:earlygame-410298:3260884'
+	modCompileOnly 'curse.maven:moregemsfabric-377284:3349717'
+	//modCompileOnly 'curse.maven:hellishmaterials-410015:3087133'
+	//modCompileOnly 'curse.maven:diamold-415159:3131013'
+	//modCompileOnly 'curse.maven:betterend-413596:3203464'
+	//modCompileOnly 'curse.maven:betternether-311377:3180179'
+	//modCompileOnly 'curse.maven:byg-391378:3239861'
+	//modCompileOnly 'curse.maven:mythicmetals-410127:3164691'
+	//modCompileOnly 'curse.maven:techreborn-233564:3151153'
+	//modCompileOnly 'curse.maven:fantasycraft-458160:3260492'
+	//modCompileOnly 'curse.maven:tungstenmod-448549:3227117'
+	//modCompileOnly 'curse.maven:pigsteel-448941:3263156'
+	modCompileOnly 'curse.maven:dragonloot-424480:3347808'
+	//modCompileOnly 'curse.maven:luxore-421775:3255909'
+	modCompileOnly 'curse.maven:gobber-427177:3349659'
+	modCompileOnly 'curse.maven:adabranium-361599:3345491'
+	//modCompileOnly 'curse.maven:simplyplatinum-262530:3208198'
+	//modCompileOnly 'curse.maven:aether-418680:3285109'
+	//modCompileOnly 'curse.maven:earlygame-410298:3260884'
 
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -46,40 +45,29 @@ dependencies {
 processResources {
 	inputs.property "version", project.version
 
-	from(sourceSets.main.resources.srcDirs) {
-		include "fabric.mod.json"
+	filesMatching("fabric.mod.json") {
 		expand "version": project.version
 	}
-
-	from(sourceSets.main.resources.srcDirs) {
-		exclude "fabric.mod.json"
-	}
 }
 
-// ensure that the encoding is set to UTF-8, no matter what the system default is
-// this fixes some edge cases with special characters not displaying correctly
-// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-tasks.withType(JavaCompile) {
-	options.encoding = "UTF-8"
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 16
 }
 
-// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-// if it is present.
-// If you remove this task, sources will not be generated.
-task sourcesJar(type: Jar, dependsOn: classes) {
-	classifier = "sources"
-	from sourceSets.main.allSource
+java {
+	withSourcesJar()
 }
 
 jar {
-	from "LICENSE"
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
 }
 
-// configure the maven publication
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
 			artifact(remapJar) {
 				builtBy remapJar
 			}
@@ -88,10 +76,6 @@ publishing {
 			}
 		}
 	}
-
-	// select the repositories you want to publish to
 	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
 	}
 }

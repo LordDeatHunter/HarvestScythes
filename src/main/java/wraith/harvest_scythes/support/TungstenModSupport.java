@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import amymialee.tungstenmod.equipment.TungstenToolMaterial;
@@ -24,3 +25,4 @@ public class TungstenModSupport {
     }
 
 }
+ */

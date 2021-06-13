@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import com.aether.items.utils.AetherTiers;
@@ -30,3 +31,4 @@ public class AetherSupport {
     }
 
 }
+*/

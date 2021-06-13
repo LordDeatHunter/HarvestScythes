@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import net.froztigaming.fantasycraft.tools.bronze.DwarvenBronzeMaterial;
@@ -40,3 +41,4 @@ public class FantasycraftSupport {
     }
 
 }
+*/

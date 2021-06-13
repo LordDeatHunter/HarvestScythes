@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import dev.luxmiyu.mc.luxore.luxore.LuxoreToolMaterial;
@@ -24,3 +25,4 @@ public class LuxoreSupport {
     }
 
 }
+ */
