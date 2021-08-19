@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "wraith.harvest_scythes.HarvestScythes"
+    ],
+    "mm:early_risers": [
+      "wraith.harvest_scythes.EarlyRiser"
     ]
   },
   "mixins": [
@@ -30,7 +33,8 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "1.17.x",
-    "java": ">=16"
+    "java": ">=16",
+    "mm": ">=2.3"
   }
 
 }

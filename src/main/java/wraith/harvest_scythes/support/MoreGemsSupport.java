@@ -13,7 +13,7 @@ public class MoreGemsSupport {
 
     public static void loadItems() {
         ItemRegistry.ITEMS.put("alexandrite_scythe", new ScytheTool(ItemInit.ALEXANDRITE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
-        ItemRegistry.ITEMS.put("amethyst_scythe", new ScytheTool(ItemInit.AMETHYST_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
+        ItemRegistry.ITEMS.put("kunzite_scythe", new ScytheTool(ItemInit.KUNZITE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
         ItemRegistry.ITEMS.put("carbonado_scythe", new ScytheTool(ItemInit.CARBONADO_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
         ItemRegistry.ITEMS.put("citrine_scythe", new ScytheTool(ItemInit.CITRINE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
         ItemRegistry.ITEMS.put("corundum_scythe", new ScytheTool(ItemInit.CORUNDUM_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
@@ -24,7 +24,7 @@ public class MoreGemsSupport {
         ItemRegistry.ITEMS.put("tourmaline_scythe", new ScytheTool(ItemInit.TOURMALINE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.SCYTHES)));
 
         ItemRegistry.ITEMS.put("alexandrite_machete", new MacheteItem(ItemInit.ALEXANDRITE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
-        ItemRegistry.ITEMS.put("amethyst_machete", new MacheteItem(ItemInit.AMETHYST_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
+        ItemRegistry.ITEMS.put("kunzite_machete", new MacheteItem(ItemInit.KUNZITE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
         ItemRegistry.ITEMS.put("carbonado_machete", new MacheteItem(ItemInit.CARBONADO_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
         ItemRegistry.ITEMS.put("citrine_machete", new MacheteItem(ItemInit.CITRINE_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
         ItemRegistry.ITEMS.put("corundum_machete", new MacheteItem(ItemInit.CORUNDUM_TOOL_MATERIAL, new Item.Settings().group(CustomItemGroups.MACHETES)));
@@ -37,7 +37,7 @@ public class MoreGemsSupport {
 
     public static void loadRecipes() {
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("alexandrite_scythe", new ShapedRecipeMaterials(new Identifier("c", "alexandrite"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("alexandrite_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("amethyst_scythe", new ShapedRecipeMaterials(new Identifier("c", "amethyst"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("amethyst_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("kunzite_scythe", new ShapedRecipeMaterials(new Identifier("c", "kunzite"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("kunzite_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("carbonado_scythe", new ShapedRecipeMaterials(new Identifier("c", "carbonado"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("carbonado_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("citrine_scythe", new ShapedRecipeMaterials(new Identifier("c", "citrine"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("citrine_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("corundum_scythe", new ShapedRecipeMaterials(new Identifier("c", "corundum"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("corundum_scythe")));
@@ -48,7 +48,7 @@ public class MoreGemsSupport {
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tourmaline_scythe", new ShapedRecipeMaterials(new Identifier("c", "tourmaline"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("tourmaline_scythe")));
 
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("alexandrite_machete", new ShapedRecipeMaterials(new Identifier("c", "alexandrite"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("alexandrite_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("amethyst_machete", new ShapedRecipeMaterials(new Identifier("c", "amethyst"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("amethyst_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("kunzite_machete", new ShapedRecipeMaterials(new Identifier("c", "kunzite"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("kunzite_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("carbonado_machete", new ShapedRecipeMaterials(new Identifier("c", "carbonado"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("carbonado_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("citrine_machete", new ShapedRecipeMaterials(new Identifier("c", "citrine"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("citrine_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("corundum_machete", new ShapedRecipeMaterials(new Identifier("c", "corundum"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("corundum_machete")));

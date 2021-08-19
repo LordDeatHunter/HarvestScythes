@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "harvest_scythes:item/amethyst_machete"
+        "layer0": "harvest_scythes:item/kunzite_machete"
     }
 }

@@ -2,6 +2,7 @@ package wraith.harvest_scythes;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.registry.Registry;
+import wraith.harvest_scythes.enchantments.CropReaperEnchantment;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -18,7 +18,7 @@ public class ItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     void use(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir){
-        NbtCompound tag = user.getStackInHand(hand).getSubTag("HarvestScytheProperties");
+        NbtCompound tag = user.getStackInHand(hand).getSubNbt("HarvestScytheProperties");
         if (tag != null) {
             int radius = tag.getInt("HarvestRadius");
             cir.setReturnValue(ScytheTool.harvest(radius, world, user, hand));

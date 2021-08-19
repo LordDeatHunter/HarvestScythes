@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.8-SNAPSHOT'
+	id 'fabric-loom' version '0.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -19,7 +19,12 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modCompileOnly 'curse.maven:moregemsfabric-377284:3349717'
+	modImplementation("com.github.Chocohead:Fabric-ASM:v2.3") {
+		exclude (group: "net.fabricmc.fabric-api")
+	}
+	include "com.github.Chocohead:Fabric-ASM:v2.3"
+
+	modCompileOnly 'curse.maven:moregemsfabric-377284:3428644'
 	//modCompileOnly 'curse.maven:hellishmaterials-410015:3087133'
 	//modCompileOnly 'curse.maven:diamold-415159:3131013'
 	//modCompileOnly 'curse.maven:betterend-413596:3203464'
