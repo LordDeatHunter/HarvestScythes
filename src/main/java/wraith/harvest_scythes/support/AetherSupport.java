@@ -1,25 +1,24 @@
-/*
 package wraith.harvest_scythes.support;
 
 import com.aether.items.utils.AetherTiers;
-import net.minecraft.item.Item;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 
-public class AetherSupport {
+public final class AetherSupport {
 
     private AetherSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("gravitite_scythe", new ScytheTool(AetherTiers.Gravitite.getDefaultTier(), new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("zanite_scythe", new ScytheTool(AetherTiers.Zanite.getDefaultTier(), new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("valkyrie_scythe", new ScytheTool(AetherTiers.Valkyrie.getDefaultTier(), new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("gravitite_scythe", new ScytheTool(AetherTiers.GRAVITITE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("zanite_scythe", new ScytheTool(AetherTiers.ZANITE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("valkyrie_scythe", new ScytheTool(AetherTiers.VALKYRIE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("gravitite_machete", new MacheteItem(AetherTiers.Gravitite.getDefaultTier(), new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("zanite_machete", new MacheteItem(AetherTiers.Zanite.getDefaultTier(), new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("valkyrie_machete", new MacheteItem(AetherTiers.Valkyrie.getDefaultTier(), new Item.Settings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("gravitite_machete", new MacheteItem(AetherTiers.GRAVITITE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("zanite_machete", new MacheteItem(AetherTiers.ZANITE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("valkyrie_machete", new MacheteItem(AetherTiers.VALKYRIE.getDefaultTier(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {
@@ -31,4 +30,3 @@ public class AetherSupport {
     }
 
 }
-*/

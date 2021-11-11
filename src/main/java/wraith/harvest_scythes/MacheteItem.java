@@ -2,11 +2,19 @@ package wraith.harvest_scythes;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class MacheteItem extends SwordItem {
 
@@ -45,6 +53,12 @@ public class MacheteItem extends SwordItem {
     @Override
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
         return super.canMine(state, world, pos, miner) || state.getBlock() instanceof LeavesBlock;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        super.appendTooltip(stack, world, tooltip, context);
+        tooltip.add(new TranslatableText("harvest_scythes.machete_tooltip.depth", new TranslatableText("harvest_scythes.machete_tooltip.depth.arg_color").append(String.valueOf(harvestDepth))));
     }
 
 }

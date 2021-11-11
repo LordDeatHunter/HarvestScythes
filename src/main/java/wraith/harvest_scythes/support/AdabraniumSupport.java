@@ -1,25 +1,25 @@
 package wraith.harvest_scythes.support;
 
 import com.brand.adabraniummod.content.stuff.materials.AdabraniumToolMaterials;
-import net.minecraft.item.Item;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 
-public class AdabraniumSupport {
+public final class AdabraniumSupport {
 
     private AdabraniumSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("adb_adamantium_scythe", new ScytheTool(AdabraniumToolMaterials.ADAMANTIUM, new Item.Settings().group(CustomItemGroups.SCYTHES)));
-        ItemRegistry.ITEMS.put("adb_vibranium_scythe", new ScytheTool(AdabraniumToolMaterials.VIBRANIUM, new Item.Settings().group(CustomItemGroups.SCYTHES)));
-        ItemRegistry.ITEMS.put("adb_nether_scythe", new ScytheTool(AdabraniumToolMaterials.NETHER_BRICK, new Item.Settings().group(CustomItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("adb_adamantium_scythe", new ScytheTool(AdabraniumToolMaterials.ADAMANTIUM, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("adb_vibranium_scythe", new ScytheTool(AdabraniumToolMaterials.VIBRANIUM, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("adb_nether_scythe", new ScytheTool(AdabraniumToolMaterials.NETHER_BRICK, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("adb_adamantium_machete", new MacheteItem(AdabraniumToolMaterials.ADAMANTIUM, new Item.Settings().group(CustomItemGroups.MACHETES)));
-        ItemRegistry.ITEMS.put("adb_vibranium_machete", new MacheteItem(AdabraniumToolMaterials.VIBRANIUM, new Item.Settings().group(CustomItemGroups.MACHETES)));
-        ItemRegistry.ITEMS.put("adb_nether_machete", new MacheteItem(AdabraniumToolMaterials.NETHER_BRICK, new Item.Settings().group(CustomItemGroups.MACHETES)));
+        ItemRegistry.registerItem("adb_adamantium_machete", new MacheteItem(AdabraniumToolMaterials.ADAMANTIUM, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("adb_vibranium_machete", new MacheteItem(AdabraniumToolMaterials.VIBRANIUM, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("adb_nether_machete", new MacheteItem(AdabraniumToolMaterials.NETHER_BRICK, new FabricItemSettings().group(HSItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {

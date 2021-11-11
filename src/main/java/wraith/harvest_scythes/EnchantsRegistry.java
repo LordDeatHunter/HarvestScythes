@@ -7,9 +7,11 @@ import wraith.harvest_scythes.enchantments.CropReaperEnchantment;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EnchantsRegistry {
+public final class EnchantsRegistry {
 
-    public static final HashMap<String, Enchantment> ENCHANTMENTS = new HashMap<String, Enchantment>(){{
+    private EnchantsRegistry() {}
+
+    public static final HashMap<String, Enchantment> ENCHANTMENTS = new HashMap<>() {{
         put("crop_reaper", new CropReaperEnchantment());
     }};
 

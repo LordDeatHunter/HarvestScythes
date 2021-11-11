@@ -1,7 +1,6 @@
-/*
 package wraith.harvest_scythes.support;
 
-import net.minecraft.item.Item;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import net.tigereye.hellishmaterials.HellishMaterials;
 import net.tigereye.hellishmaterials.items.BatetMaterial;
@@ -12,18 +11,18 @@ import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 
-public class HellishMaterialsSupport {
+public final class HellishMaterialsSupport {
 
     private HellishMaterialsSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("batet_scythe", new ScytheTool(new BatetMaterial(), new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("luss_scythe", new ScytheTool(new LussMaterial(), new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("vuld_scythe", new ScytheTool(new VuldMaterial(), new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("batet_scythe", new ScytheTool(new BatetMaterial(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("luss_scythe", new ScytheTool(new LussMaterial(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("vuld_scythe", new ScytheTool(new VuldMaterial(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("batet_machete", new MacheteItem(new BatetMaterial(), new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("luss_machete", new MacheteItem(new LussMaterial(), new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("vuld_machete", new MacheteItem(new VuldMaterial(), new Item.Settings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("batet_machete", new MacheteItem(new BatetMaterial(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("luss_machete", new MacheteItem(new LussMaterial(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("vuld_machete", new MacheteItem(new VuldMaterial(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {
@@ -37,4 +36,3 @@ public class HellishMaterialsSupport {
     }
 
 }
- */

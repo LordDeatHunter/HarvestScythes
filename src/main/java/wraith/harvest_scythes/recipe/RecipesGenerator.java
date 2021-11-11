@@ -36,17 +36,17 @@ public class RecipesGenerator {
     }
 
     public static void addRecipes() {
-        for (String key : SHAPED_SCYTHE_RECIPES.keySet()) {
-            ShapedRecipeMaterials material = SHAPED_SCYTHE_RECIPES.get(key);
-            RECIPES.put(Utils.ID(key), ShapedRecipeGenerator.generateScytheJson(material.headItem, material.handleItem, material.headType, material.handleType, material.output));
+        for (var recipe : SHAPED_SCYTHE_RECIPES.entrySet()) {
+            var material = recipe.getValue();
+            RECIPES.put(Utils.ID(recipe.getKey()), ShapedRecipeGenerator.generateScytheJson(material.headItem, material.handleItem, material.headType, material.handleType, material.output));
         }
-        for (String key : SMITHING_RECIPES.keySet()) {
-            SmithingRecipeMaterials material = SMITHING_RECIPES.get(key);
-            RECIPES.put(Utils.ID(key), ShapedRecipeGenerator.generateSmithingJson(material.baseItem, material.additionItem, material.baseType, material.additionType, material.output));
+        for (var recipe : SMITHING_RECIPES.entrySet()) {
+            var material = recipe.getValue();
+            RECIPES.put(Utils.ID(recipe.getKey()), ShapedRecipeGenerator.generateSmithingJson(material.baseItem, material.additionItem, material.baseType, material.additionType, material.output));
         }
-        for (String key : SHAPED_MACHETE_RECIPES.keySet()) {
-            ShapedRecipeMaterials material = SHAPED_MACHETE_RECIPES.get(key);
-            RECIPES.put(Utils.ID(key), ShapedRecipeGenerator.generateMacheteJson(material.headItem, material.handleItem, material.headType, material.handleType, material.output));
+        for (var recipe : SHAPED_MACHETE_RECIPES.entrySet()) {
+            var material = recipe.getValue();
+            RECIPES.put(Utils.ID(recipe.getKey()), ShapedRecipeGenerator.generateMacheteJson(material.headItem, material.handleItem, material.headType, material.handleType, material.output));
         }
     }
 }

@@ -12,20 +12,20 @@ import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 
-public class FantasycraftSupport {
+public final class FantasycraftSupport {
 
     private FantasycraftSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.ITEMS.put("elven_silver_scythe", new ScytheTool(ElvenSilverMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("dwarven_bronze_scythe", new ScytheTool(DwarvenBronzeMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("mithril_scythe", new ScytheTool(MithrilMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
-        ItemRegistry.ITEMS.put("triton_prismarine_scythe", new ScytheTool(TritonPrismarineMaterial.INSTANCE, new Item.Settings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("elven_silver_scythe", new ScytheTool(ElvenSilverMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("dwarven_bronze_scythe", new ScytheTool(DwarvenBronzeMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("mithril_scythe", new ScytheTool(MithrilMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("triton_prismarine_scythe", new ScytheTool(TritonPrismarineMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.SCYTHES)));
 
-        ItemRegistry.ITEMS.put("elven_silver_machete", new MacheteItem(ElvenSilverMaterial.INSTANCE, new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("dwarven_bronze_machete", new MacheteItem(DwarvenBronzeMaterial.INSTANCE, new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("mithril_machete", new MacheteItem(MithrilMaterial.INSTANCE, new Item.Settings().group(ItemGroup.MACHETES)));
-        ItemRegistry.ITEMS.put("triton_prismarine_machete", new MacheteItem(TritonPrismarineMaterial.INSTANCE, new Item.Settings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("elven_silver_machete", new MacheteItem(ElvenSilverMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("dwarven_bronze_machete", new MacheteItem(DwarvenBronzeMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("mithril_machete", new MacheteItem(MithrilMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("triton_prismarine_machete", new MacheteItem(TritonPrismarineMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.MACHETES)));
     }
 
     public static void loadRecipes() {
