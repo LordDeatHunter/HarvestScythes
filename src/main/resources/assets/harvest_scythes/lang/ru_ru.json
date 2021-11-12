@@ -1,0 +1,173 @@
+{
+  "harvest_scythes.scythe_tooltip.radius": "§6Радиус: %s",
+  "harvest_scythes.scythe_tooltip.circle": "§6Сбор формой круга: %s",
+  "harvest_scythes.scythe_tooltip.radius.arg_color": "§e",
+  "harvest_scythes.scythe_tooltip.circle.arg_color": "§e",
+
+  "harvest_scythes.machete_tooltip.depth": "§6Радиус: %s",
+  "harvest_scythes.machete_tooltip.depth.arg_color": "§e",
+
+  "item.harvest_scythes.creative_scythe": "§5Коса творческого режима",
+
+  "item.harvest_scythes.wooden_scythe": "Деревянная коса",
+  "item.harvest_scythes.stone_scythe": "Каменная коса",
+  "item.harvest_scythes.iron_scythe": "Железная коса",
+  "item.harvest_scythes.golden_scythe": "Золотая коса",
+  "item.harvest_scythes.diamond_scythe": "Алмазная коса",
+  "item.harvest_scythes.netherite_scythe": "Незеритовая коса",
+
+  "item.harvest_scythes.dragon_scythe": "Драконья коса",
+
+  "item.harvest_scythes.platinum_scythe": "Платиновая коса",
+
+  "item.harvest_scythes.luxore_scythe": "Люксоровая коса",
+
+  "item.harvest_scythes.gobber2_scythe": "Гоббер коса",
+  "item.harvest_scythes.gobber2_scythe_nether": "Адская гоббер коса",
+  "item.harvest_scythes.gobber2_scythe_end": "Гоббер коса края",
+
+  "item.harvest_scythes.gravitite_scythe": "Граветитовая коса",
+  "item.harvest_scythes.zanite_scythe": "Занитная коса",
+  "item.harvest_scythes.valkyrie_scythe": "Коса Валькирии",
+
+  "item.harvest_scythes.adb_adamantium_scythe": "Aдамантиновая коса",
+  "item.harvest_scythes.adb_vibranium_scythe": "Вибраниумовая коса",
+  "item.harvest_scythes.adb_nether_scythe": "Коса Незера",
+
+  "item.harvest_scythes.elven_silver_scythe": "Эльфийская коса",
+  "item.harvest_scythes.dwarven_bronze_scythe": "Коса гнома",
+  "item.harvest_scythes.triton_prismarine_scythe": "Коса тритона",
+  "item.harvest_scythes.mithril_scythe": "Мифрильная коса",
+
+  "item.harvest_scythes.copper_scythe": "Медная коса",
+  "item.harvest_scythes.bronze_scythe": "Брозновая коса",
+  "item.harvest_scythes.steel_scythe": "Стальная коса",
+
+  "item.harvest_scythes.alexandrite_scythe": "Александритовая коса",
+  "item.harvest_scythes.kunzite_scythe": "Кунсайтная коса",
+  "item.harvest_scythes.carbonado_scythe": "Карбонадовая коса",
+  "item.harvest_scythes.citrine_scythe": "Цитриновая коса",
+  "item.harvest_scythes.corundum_scythe": "Корундовая коса",
+  "item.harvest_scythes.emerald_scythe": "Изумрудная коса",
+  "item.harvest_scythes.ruby_scythe": "Рубиновая коса",
+  "item.harvest_scythes.sapphire_scythe": "Сапфирная коса",
+  "item.harvest_scythes.topaz_scythe": "Топазная коса",
+  "item.harvest_scythes.tourmaline_scythe": "Турмалиновая коса",
+  "item.harvest_scythes.moissanite_scythe": "Коса муассанита",
+
+  "item.harvest_scythes.adamantite_scythe": "Адамантитовая коса",
+  "item.harvest_scythes.aquarium_scythe": "Акварийная коса",
+  "item.harvest_scythes.banglum_scythe": "Банглиевая коса",
+  "item.harvest_scythes.carmot_scythe": "Кармотовая коса",
+  "item.harvest_scythes.celestium_scythe": "Целестиевая коса",
+  "item.harvest_scythes.durasteel_scythe": "Дюрастальная коса",
+  "item.harvest_scythes.hallowed_scythe": "Коса из священного сплава",
+  "item.harvest_scythes.kyber_scythe": "Кайберовая коса",
+  "item.harvest_scythes.metallurgium_scythe": "Металлургиевая коса",
+  "item.harvest_scythes.mythril_scythe": "Мифрильная коса",
+  "item.harvest_scythes.orichalcum_scythe": "Орихалковая коса",
+  "item.harvest_scythes.osmium_scythe": "Осмийная коса",
+  "item.harvest_scythes.palladium_scythe": "Палладиевая коса",
+  "item.harvest_scythes.prometheum_scythe": "Прометийная коса",
+  "item.harvest_scythes.quadrillum_scythe": "Квадриллиевая коса",
+  "item.harvest_scythes.runite_scythe": "Рунитовая коса",
+  "item.harvest_scythes.star_platinum_scythe": "Коса звездной платины",
+  "item.harvest_scythes.stormyx_scythe": "Штормиксная коса",
+
+  "item.harvest_scythes.peridot_scythe": "Хризолитная коса",
+
+  "item.harvest_scythes.diamold_scythe": "Диамоулдная коса",
+
+  "item.harvest_scythes.batet_scythe": "Коса Batet",
+  "item.harvest_scythes.luss_scythe": "Коса Luss",
+  "item.harvest_scythes.vuld_scythe": "Коса Vuld",
+
+  "item.harvest_scythes.flint_scythe": "Кремниевая коса",
+
+
+
+
+
+
+  "item.harvest_scythes.creative_machete": "§5Мачете творческого режима",
+
+  "item.harvest_scythes.wooden_machete": "Деревянный мачете",
+  "item.harvest_scythes.stone_machete": "Каменный мачете",
+  "item.harvest_scythes.iron_machete": "Железный мачете",
+  "item.harvest_scythes.golden_machete": "Золотой мачете",
+  "item.harvest_scythes.diamond_machete": "Алмазный мачете",
+  "item.harvest_scythes.netherite_machete": "Незеритовый мачете",
+
+  "item.harvest_scythes.dragon_machete": "Драконий мачете",
+
+  "item.harvest_scythes.platinum_machete": "Платиновый мачете",
+
+  "item.harvest_scythes.luxore_machete": "Люксоровый мачете",
+
+  "item.harvest_scythes.gobber2_machete": "Гоббер мачете",
+  "item.harvest_scythes.gobber2_machete_nether": "Адская гоббер мачете",
+  "item.harvest_scythes.gobber2_machete_end": "Гоббер мачете края",
+
+  "item.harvest_scythes.gravitite_machete": "Граветитовый мачете",
+  "item.harvest_scythes.zanite_machete": "Занитный мачете",
+  "item.harvest_scythes.valkyrie_machete": "Мачете Валькирии",
+
+  "item.harvest_scythes.adb_adamantium_machete": "Aдамантиновый мачете",
+  "item.harvest_scythes.adb_vibranium_machete": "Вибраниумовый мачете",
+  "item.harvest_scythes.adb_nether_machete": "Мачете Незера",
+
+  "item.harvest_scythes.elven_silver_machete": "Эльфийский мачете",
+  "item.harvest_scythes.dwarven_bronze_machete": "Мачете гнома",
+  "item.harvest_scythes.triton_prismarine_machete": "Мачете тритона",
+  "item.harvest_scythes.mithril_machete": "Мифрильный мачете",
+
+  "item.harvest_scythes.copper_machete": "Медный мачете",
+  "item.harvest_scythes.bronze_machete": "Брозновый мачете",
+  "item.harvest_scythes.steel_machete": "Стальной мачете",
+
+  "item.harvest_scythes.alexandrite_machete": "Александритовый мачете",
+  "item.harvest_scythes.amethyst_machete": "Аметистовый мачете",
+  "item.harvest_scythes.carbonado_machete": "Карбонадовый мачете",
+  "item.harvest_scythes.citrine_machete": "Цитриновый мачете",
+  "item.harvest_scythes.corundum_machete": "Корундовый мачете",
+  "item.harvest_scythes.emerald_machete": "Изумрудный мачете",
+  "item.harvest_scythes.moissanite_machete": "Мачете муассанита",
+  "item.harvest_scythes.ruby_machete": "Рубиновый мачете",
+  "item.harvest_scythes.sapphire_machete": "Сапфирный мачете",
+  "item.harvest_scythes.topaz_machete": "Топазный мачете",
+  "item.harvest_scythes.tourmaline_machete": "Турмалиновый мачете",
+
+  "item.harvest_scythes.adamantite_machete": "Адамантитовый мачете",
+  "item.harvest_scythes.aquarium_machete": "Акварийный мачете",
+  "item.harvest_scythes.banglum_machete": "Банглиевый мачете",
+  "item.harvest_scythes.carmot_machete": "Кармотовый мачете",
+  "item.harvest_scythes.celestium_machete": "Целестиевый мачете",
+  "item.harvest_scythes.durasteel_machete": "Дюрасталевый мачете",
+  "item.harvest_scythes.hallowed_machete": "Мачете из священного сплава",
+  "item.harvest_scythes.kyber_machete": "Кайберовый мачете",
+  "item.harvest_scythes.metallurgium_machete": "Металлургиевый мачете",
+  "item.harvest_scythes.mythril_machete": "Мифрильный мачете",
+  "item.harvest_scythes.orichalcum_machete": "Орихалковый мачете",
+  "item.harvest_scythes.osmium_machete": "Осмийный мачете",
+  "item.harvest_scythes.palladium_machete": "Палладиевый мачете",
+  "item.harvest_scythes.prometheum_machete": "Прометийный мачете",
+  "item.harvest_scythes.quadrillum_machete": "Квадриллиевый мачете",
+  "item.harvest_scythes.runite_machete": "Рунитовый мачете",
+  "item.harvest_scythes.star_platinum_machete": "Мачете звездной платины",
+  "item.harvest_scythes.stormyx_machete": "Штормиксный мачете",
+
+  "item.harvest_scythes.peridot_machete": "Хризолитный мачете",
+
+  "item.harvest_scythes.diamold_machete": "Диамоулдный мачете",
+
+  "item.harvest_scythes.batet_machete": "Мачете Batet",
+  "item.harvest_scythes.luss_machete": "Мачете Luss",
+  "item.harvest_scythes.vuld_machete": "Мачете Vuld",
+
+  "item.harvest_scythes.flint_machete": "Кремниевый мачете",
+
+  "itemGroup.harvest_scythes.scythes": "Косы",
+  "itemGroup.harvest_scythes.machetes": "Мачете",
+
+  "enchantment.harvest_scythes.crop_reaper": "Взмах жнеца"
+}
