@@ -1,10 +1,10 @@
 plugins {
-	id 'fabric-loom' version '0.9-SNAPSHOT'
+	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -24,37 +24,37 @@ dependencies {
 	}
 	include "com.github.Chocohead:Fabric-ASM:v2.3"
 
-	//1.2.43
-	modCompileOnly 'curse.maven:more-gems-fabric-377284:3516918'
+	//1.3.49
+	modCompileOnly 'curse.maven:more-gems-fabric-377284:3542344'
 	//0.13.1
-	modCompileOnly 'curse.maven:hellish-materials-410015:3479635'
+	//modCompileOnly 'curse.maven:hellish-materials-410015:3479635'
 	//1.3.1
-	modCompileOnly 'curse.maven:diamold-415159:3456656'
+	//modCompileOnly 'curse.maven:diamold-415159:3456656'
 	//0.12.2
 	//modCompileOnly 'curse.maven:betterend-413596:3520661'
 	//5.1.3
 	//modCompileOnly 'curse.maven:betternether-311377:3379682'
 	//0.10.0
-	modCompileOnly 'curse.maven:mythicmetals-410127:3521683'
-	//5.0.11-beta
-	modCompileOnly 'curse.maven:techreborn-233564:3517196'
+	//modCompileOnly 'curse.maven:mythicmetals-410127:3521683'
+	//5.1.0-beta
+	modCompileOnly 'curse.maven:techreborn-233564:3539618'
 	//modCompileOnly 'curse.maven:fantasycraft-458160:3260492'
 	//1.6.6
-	modCompileOnly 'curse.maven:pigsteel-448941:3408135'
+	//modCompileOnly 'curse.maven:pigsteel-448941:3408135'
 	//1.0.9
-	modCompileOnly 'curse.maven:dragonloot-424480:3437929'
+	modCompileOnly 'curse.maven:dragonloot-424480:3529611'
 	//2.0.0
-	modCompileOnly 'curse.maven:luxore-421775:3540774'
-	//1-2.4.58
-	modCompileOnly 'curse.maven:gobber-427177:3516879'
+	//modCompileOnly 'curse.maven:luxore-421775:3540774'
+	//2.5.50
+	modCompileOnly 'curse.maven:gobber-427177:3542205'
 	//2.1.1
-	modCompileOnly 'curse.maven:adabranium-361599:3378780'
+	modCompileOnly 'curse.maven:adabranium-361599:3540158'
 	//3.0
-	modCompileOnly 'curse.maven:simply-platinum-262530:3380844'
+	//modCompileOnly 'curse.maven:simply-platinum-262530:3380844'
 	//1.5.0
-	modCompileOnly 'curse.maven:aether-418680:3538227'
+	modCompileOnly 'curse.maven:aether-418680:3541777'
 	//1.1.1
-	modCompileOnly 'curse.maven:earlygame-410298:3421187'
+	//modCompileOnly 'curse.maven:earlygame-410298:3421187'
 
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -70,7 +70,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release = 16
+	it.options.release = 17
 }
 
 java {

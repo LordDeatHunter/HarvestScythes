@@ -42,31 +42,31 @@ public class HarvestScythes implements ModInitializer {
         ItemRegistry.init();
         RecipesGenerator.createShapedRecipes();
 
-        if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
-            LOGGER.info("[Simply Platinum] detected. Loading supported items.");
-            SimplyPlatinumSupport.loadItems();
-            SimplyPlatinumSupport.loadRecipes();
-        }
-        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
-            MythicMetalsSupport.loadItems();
-            MythicMetalsSupport.loadRecipes();
-        }
+        //if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
+        //    LOGGER.info("[Simply Platinum] detected. Loading supported items.");
+        //    SimplyPlatinumSupport.loadItems();
+        //    SimplyPlatinumSupport.loadRecipes();
+        //}
+        //if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+        //    LOGGER.info("[Mythic Metals] detected. Loading supported items.");
+        //    MythicMetalsSupport.loadItems();
+        //    MythicMetalsSupport.loadRecipes();
+        //}
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
             MoreGemsSupport.loadItems();
             MoreGemsSupport.loadRecipes();
         }
-        if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
-            LOGGER.info("[Hellish Materials] detected. Loading supported items.");
-            HellishMaterialsSupport.loadItems();
-            HellishMaterialsSupport.loadRecipes();
-        }
-        if (FabricLoader.getInstance().isModLoaded("diamold")) {
-            LOGGER.info("[Diamold] detected. Loading supported items.");
-            DiamoldSupport.loadItems();
-            DiamoldSupport.loadRecipes();
-        }
+        //if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
+        //    LOGGER.info("[Hellish Materials] detected. Loading supported items.");
+        //    HellishMaterialsSupport.loadItems();
+        //    HellishMaterialsSupport.loadRecipes();
+        //}
+        //if (FabricLoader.getInstance().isModLoaded("diamold")) {
+        //    LOGGER.info("[Diamold] detected. Loading supported items.");
+        //    DiamoldSupport.loadItems();
+        //    DiamoldSupport.loadRecipes();
+        //}
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             LOGGER.info("[Tech Reborn] detected. Loading supported items.");
             TechRebornSupport.loadItems();
@@ -77,23 +77,20 @@ public class HarvestScythes implements ModInitializer {
             DragonLootSupport.loadItems();
             DragonLootSupport.loadRecipes();
         }
-        /*
-        if (FabricLoader.getInstance().isModLoaded("fantasycraft")) {
-            LOGGER.info("[Fantasycraft] detected. Loading supported items.");
-            FantasycraftSupport.loadItems();
-            FantasycraftSupport.loadRecipes();
-            ++compatibleMods;
-        }
-        */
-        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
-            LOGGER.info("[PigSteel] detected. Loading supported items.");
-            PigSteelSupport.loadRecipes();
-        }
-        if (FabricLoader.getInstance().isModLoaded("luxore")) {
-            LOGGER.info("[Luxore] detected. Loading supported items.");
-            LuxoreSupport.loadItems();
-            LuxoreSupport.loadRecipes();
-        }
+        //if (FabricLoader.getInstance().isModLoaded("fantasycraft")) {
+        //    LOGGER.info("[Fantasycraft] detected. Loading supported items.");
+        //    FantasycraftSupport.loadItems();
+        //    FantasycraftSupport.loadRecipes();
+        //}
+        //if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
+        //    LOGGER.info("[PigSteel] detected. Loading supported items.");
+        //    PigSteelSupport.loadRecipes();
+        //}
+        //if (FabricLoader.getInstance().isModLoaded("luxore")) {
+        //    LOGGER.info("[Luxore] detected. Loading supported items.");
+        //    LuxoreSupport.loadItems();
+        //    LuxoreSupport.loadRecipes();
+        //}
         if (FabricLoader.getInstance().isModLoaded("gobber2")) {
             LOGGER.info("[Gobber] detected. Loading supported items.");
             GobberSupport.loadItems();
@@ -109,11 +106,11 @@ public class HarvestScythes implements ModInitializer {
             AetherSupport.loadItems();
             AetherSupport.loadRecipes();
         }
-        if (FabricLoader.getInstance().isModLoaded("earlygame")) {
-            LOGGER.info("[EarlyGame] detected. Loading supported items.");
-            EarlyGameSupport.loadItems();
-            EarlyGameSupport.loadRecipes();
-        }
+        //if (FabricLoader.getInstance().isModLoaded("earlygame")) {
+        //    LOGGER.info("[EarlyGame] detected. Loading supported items.");
+        //    EarlyGameSupport.loadItems();
+        //    EarlyGameSupport.loadRecipes();
+        //}
         EnchantsRegistry.registerEnchantments();
         RecipesGenerator.addRecipes();
 
