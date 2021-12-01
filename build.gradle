@@ -43,7 +43,8 @@ dependencies {
 	modCompileOnly 'curse.maven:pigsteel-448941:3408135'
 	//1.0.9
 	modCompileOnly 'curse.maven:dragonloot-424480:3437929'
-	//modCompileOnly 'curse.maven:luxore-421775:3255909'
+	//2.0.0
+	modCompileOnly 'curse.maven:luxore-421775:3540774'
 	//1-2.4.58
 	modCompileOnly 'curse.maven:gobber-427177:3516879'
 	//2.1.1
@@ -51,7 +52,7 @@ dependencies {
 	//3.0
 	modCompileOnly 'curse.maven:simply-platinum-262530:3380844'
 	//1.5.0
-	modCompileOnly 'curse.maven:aether-418680:3380386'
+	modCompileOnly 'curse.maven:aether-418680:3538227'
 	//1.1.1
 	modCompileOnly 'curse.maven:earlygame-410298:3421187'
 

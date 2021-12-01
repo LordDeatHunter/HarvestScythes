@@ -89,14 +89,11 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[PigSteel] detected. Loading supported items.");
             PigSteelSupport.loadRecipes();
         }
-        /*
         if (FabricLoader.getInstance().isModLoaded("luxore")) {
             LOGGER.info("[Luxore] detected. Loading supported items.");
             LuxoreSupport.loadItems();
             LuxoreSupport.loadRecipes();
-            ++compatibleMods;
         }
-        */
         if (FabricLoader.getInstance().isModLoaded("gobber2")) {
             LOGGER.info("[Gobber] detected. Loading supported items.");
             GobberSupport.loadItems();

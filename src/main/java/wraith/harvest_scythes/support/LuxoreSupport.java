@@ -1,8 +1,7 @@
-/*
 package wraith.harvest_scythes.support;
 
-import dev.luxmiyu.mc.luxore.luxore.LuxoreToolMaterial;
-import net.minecraft.item.Item;
+import dev.luxmiyu.luxore.LuxoreToolMaterial;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
@@ -13,9 +12,9 @@ public class LuxoreSupport {
     private LuxoreSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.SCYTHES)));
+        ItemRegistry.registerItem("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
 
-        ItemRegistry.registerItem("luxore_machete", new MacheteItem(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(ItemGroup.MACHETES)));
+        ItemRegistry.registerItem("luxore_machete", new MacheteItem(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(HSItemGroups.MACHETES)));
     }
 
     public static void loadRecipes() {
@@ -25,4 +24,3 @@ public class LuxoreSupport {
     }
 
 }
- */
