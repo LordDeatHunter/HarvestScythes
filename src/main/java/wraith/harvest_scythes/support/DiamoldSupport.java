@@ -1,3 +1,4 @@
+/*
 package wraith.harvest_scythes.support;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -24,3 +25,4 @@ public final class DiamoldSupport {
     }
 
 }
+ */
