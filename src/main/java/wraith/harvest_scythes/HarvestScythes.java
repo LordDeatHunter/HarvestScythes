@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -13,6 +15,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import wraith.harvest_scythes.api.event.HarvestEvent;
+import wraith.harvest_scythes.api.event.SingleHarvestEvent;
+import wraith.harvest_scythes.api.machete.HSMacheteEvents;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.support.*;
 
@@ -126,18 +131,19 @@ public class HarvestScythes implements ModInitializer {
             if (!(stack.getItem() instanceof MacheteItem)) {
                 return;
             }
+            int blocksHarvested = 0;
             int damage = 0;
             boolean isCreative = stack.getItem() == ItemRegistry.get("creative_machete");
             Queue<BlockPos> positions = new LinkedList<>();
             positions.add(pos);
-            while (!positions.isEmpty() && ((stack.getDamage() + damage <= stack.getMaxDamage()) || isCreative) && damage <= ((MacheteItem) stack.getItem()).getHarvestDepth()) {
+            while (!positions.isEmpty() && blocksHarvested <= ((MacheteItem) stack.getItem()).getHarvestDepth()) {
                 BlockPos curPos = positions.remove();
                 BlockState curState = world.getBlockState(curPos);
-                if (!(curState.getBlock() instanceof LeavesBlock) && damage > 0) {
+                if (!(curState.getBlock() instanceof LeavesBlock) && blocksHarvested > 0) {
                     continue;
                 }
                 world.breakBlock(curPos, true);
-                ++damage;
+                ++blocksHarvested;
                 for (int x = -1; x <= 1; ++x) {
                     for (int y = -1; y <= 1; ++y) {
                         for (int z = -1; z <= 1; ++z) {
@@ -148,10 +154,14 @@ public class HarvestScythes implements ModInitializer {
                         }
                     }
                 }
+                var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) != 0;
+                HSMacheteEvents.onSingleHarvest(new SingleHarvestEvent(world, player, stack, curState, curPos, 1, blocksHarvested, takeDamage));
+                if (!isCreative && takeDamage) {
+                    ++damage;
+                    stack.damage(1, player, (p) -> p.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+                }
             }
-            if (isCreative && damage > 1) {
-                stack.damage(damage - 1, player, (p) -> p.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-            }
+            HSMacheteEvents.onHarvest(new HarvestEvent(world, player, stack, blocksHarvested, damage));
         });
     }
 

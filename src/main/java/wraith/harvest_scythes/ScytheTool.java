@@ -19,6 +19,9 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import wraith.harvest_scythes.api.event.HarvestEvent;
+import wraith.harvest_scythes.api.event.SingleHarvestEvent;
+import wraith.harvest_scythes.api.scythe.HSScythesEvents;
 
 import java.util.List;
 
@@ -43,11 +46,11 @@ public class ScytheTool extends HoeItem {
         this(material, 5, -3.3F, harvestRadius, settings);
     }
 
-    private static int getRadius(ToolMaterial material) {
+    protected static int getRadius(ToolMaterial material) {
         return (int) (Math.floor(material.getMiningLevel() / 2.0) + 1);
     }
 
-    private static boolean shouldBeCircle(int radius) {
+    protected static boolean shouldBeCircle(int radius) {
         return radius % 2 == 0;
     }
 
@@ -64,6 +67,9 @@ public class ScytheTool extends HoeItem {
         int lvl = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("crop_reaper"), stack);
         int radius = (int) (Math.floor(lvl / 2.0) + harvestRadius);
         boolean circleHarvest = shouldBeCircle(harvestRadius + lvl);
+
+        int totalBlocks = 0;
+        int totalDamage = 0;
 
         for (int x = -radius; x <= radius; ++x) {
             for (int y = -1; y <= 1; ++y) {
@@ -96,18 +102,23 @@ public class ScytheTool extends HoeItem {
                         damageTool = 1;
                     }
                     if (damageTool > 0) {
-                        int unbreaking = EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack);
-                        if (Utils.getRandomIntInRange(0, unbreaking) > 0) {
+                        totalBlocks += damageTool;
+                        var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) != 0;
+                        HSScythesEvents.onSingleHarvest(new SingleHarvestEvent(world, user, stack, blockState, cropPos, damageTool, totalBlocks, takeDamage));
+                        if (!takeDamage) {
                             continue;
                         }
+                        totalDamage += damageTool;
                         stack.damage(damageTool, (LivingEntity) user, ((e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND)));
                         if (stack.getItem() != item) {
+                            HSScythesEvents.onHarvest(new HarvestEvent(world, user, stack, totalBlocks, totalDamage));
                             return TypedActionResult.success(stack);
                         }
                     }
                 }
             }
         }
+        HSScythesEvents.onHarvest(new HarvestEvent(world, user, stack, totalBlocks, totalDamage));
         return TypedActionResult.success(stack);
     }
 
