@@ -43,7 +43,7 @@ public class HarvestScythes implements ModInitializer {
         registerEvents();
         HSScythesEvents.addSingleHarvestListener(event -> {
             var state = event.blockState();
-            if (!(state.getBlock() instanceof CropBlock)) {
+            if (!(state.getBlock() instanceof CropBlock) || EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("blind_harvest_curse"), event.stack()) > 0) {
                 return;
             }
             var sound = state.getSoundGroup();

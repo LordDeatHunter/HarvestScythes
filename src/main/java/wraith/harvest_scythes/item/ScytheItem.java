@@ -67,6 +67,7 @@ public class ScytheItem extends HoeItem {
         var item = stack.getItem();
 
         int lvl = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("crop_reaper"), stack);
+        boolean prematureHarvest = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("blind_harvest_curse"), stack) > 0;
         int radius = (int) (Math.floor(lvl / 2.0) + harvestRadius);
         boolean circleHarvest = shouldBeCircle(harvestRadius + lvl);
 
@@ -86,18 +87,22 @@ public class ScytheItem extends HoeItem {
                     BlockState blockState = world.getBlockState(cropPos);
                     Block block = blockState.getBlock();
                     int damageTool = 0;
-                    if (block instanceof CropBlock cropBlock && cropBlock.isMature(blockState)) {
-                        var drops = Block.getDroppedStacks(blockState, (ServerWorld) world, blockPos, world.getBlockEntity(blockPos), null, stack);
-                        boolean removedExtraSeed = false;
-                        for (var drop : drops) {
-                            Item dropItem = drop.getItem();
-                            if (!removedExtraSeed && dropItem instanceof BlockItem dropBlock && dropBlock.getBlock() == cropBlock) {
-                                removedExtraSeed = true;
-                                drop.decrement(1);
+                    if (block instanceof CropBlock cropBlock && (prematureHarvest || cropBlock.isMature(blockState))) {
+                        if (prematureHarvest) {
+                            world.breakBlock(cropPos, true, user);
+                        } else {
+                            var drops = Block.getDroppedStacks(blockState, (ServerWorld) world, blockPos, world.getBlockEntity(blockPos), null, stack);
+                            boolean removedExtraSeed = false;
+                            for (var drop : drops) {
+                                Item dropItem = drop.getItem();
+                                if (!removedExtraSeed && dropItem instanceof BlockItem dropBlock && dropBlock.getBlock() == cropBlock) {
+                                    removedExtraSeed = true;
+                                    drop.decrement(1);
+                                }
+                                Block.dropStack(world, cropPos, drop);
                             }
-                            Block.dropStack(world, cropPos, drop);
+                            world.setBlockState(cropPos, cropBlock.withAge(0));
                         }
-                        world.setBlockState(cropPos, cropBlock.withAge(0));
                         damageTool = 1;
                     } else if (block instanceof PlantBlock && !(block instanceof CropBlock)) {
                         world.breakBlock(cropPos, true, user);

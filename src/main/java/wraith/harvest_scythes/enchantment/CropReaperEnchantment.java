@@ -6,7 +6,7 @@ import net.minecraft.entity.EquipmentSlot;
 public class CropReaperEnchantment extends Enchantment {
 
     public CropReaperEnchantment() {
-        super(Enchantment.Rarity.COMMON, CustomEnchantmentTargets.SCYTHE_TARGET, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+        super(Rarity.COMMON, CustomEnchantmentTargets.SCYTHE_TARGET, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     }
 
     @Override

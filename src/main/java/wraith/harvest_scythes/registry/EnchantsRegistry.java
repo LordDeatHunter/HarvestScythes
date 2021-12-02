@@ -3,6 +3,7 @@ package wraith.harvest_scythes.registry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.registry.Registry;
 import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.enchantment.BlindHarvestCurseEnchantment;
 import wraith.harvest_scythes.enchantment.CropReaperEnchantment;
 import wraith.harvest_scythes.enchantment.LeafEaterEnchantment;
 
@@ -16,6 +17,7 @@ public final class EnchantsRegistry {
     public static final HashMap<String, Enchantment> ENCHANTMENTS = new HashMap<>() {{
         put("crop_reaper", new CropReaperEnchantment());
         put("leaf_eater", new LeafEaterEnchantment());
+        put("blind_harvest_curse", new BlindHarvestCurseEnchantment());
     }};
 
     public static void registerEnchantments() {
