@@ -9,10 +9,10 @@ public final class HSMacheteEvents {
 
     private HSMacheteEvents() {}
 
-    private static final HashSet<IMacheteSingleHarvestListener> SINGLE_HARVEST_LISTENERS = new HashSet<>();
+    private static final HashSet<ISingleMacheteHarvestListener> SINGLE_HARVEST_LISTENERS = new HashSet<>();
     private static final HashSet<IMacheteHarvestListener> HARVEST_LISTENERS = new HashSet<>();
 
-    public static void addSingleHarvestListener(IMacheteSingleHarvestListener listener) {
+    public static void addSingleHarvestListener(ISingleMacheteHarvestListener listener) {
         SINGLE_HARVEST_LISTENERS.add(listener);
     }
 
@@ -20,7 +20,7 @@ public final class HSMacheteEvents {
         HARVEST_LISTENERS.add(listener);
     }
 
-    public static void removeSingleHarvestListener(IMacheteSingleHarvestListener listener) {
+    public static void removeSingleHarvestListener(ISingleMacheteHarvestListener listener) {
         SINGLE_HARVEST_LISTENERS.remove(listener);
     }
 

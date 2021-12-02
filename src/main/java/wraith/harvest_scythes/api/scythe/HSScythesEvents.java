@@ -9,10 +9,10 @@ public final class HSScythesEvents {
 
     private HSScythesEvents() {}
 
-    private static final HashSet<IScytheSingleHarvestListener> SINGLE_HARVEST_LISTENERS = new HashSet<>();
+    private static final HashSet<ISingleScytheHarvestListener> SINGLE_HARVEST_LISTENERS = new HashSet<>();
     private static final HashSet<IScytheHarvestListener> HARVEST_LISTENERS = new HashSet<>();
 
-    public static void addSingleHarvestListener(IScytheSingleHarvestListener listener) {
+    public static void addSingleHarvestListener(ISingleScytheHarvestListener listener) {
         SINGLE_HARVEST_LISTENERS.add(listener);
     }
 
@@ -20,7 +20,7 @@ public final class HSScythesEvents {
         HARVEST_LISTENERS.add(listener);
     }
 
-    public static void removeSingleHarvestListener(IScytheSingleHarvestListener listener) {
+    public static void removeSingleHarvestListener(ISingleScytheHarvestListener listener) {
         SINGLE_HARVEST_LISTENERS.remove(listener);
     }
 
