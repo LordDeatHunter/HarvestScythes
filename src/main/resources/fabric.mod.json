@@ -28,7 +28,7 @@
   "mixins": [
     "harvestscythes.mixins.json"
   ],
-
+  "accessWidener": "harvestscythes.accesswidener",
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
