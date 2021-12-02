@@ -13,9 +13,9 @@ public class LuxoreSupport {
     private LuxoreSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("luxore_scythe", new ScytheTool(LuxoreToolMaterial.INSTANCE, ItemRegistry.SCYTHE_SETTINGS));
 
-        ItemRegistry.registerItem("luxore_machete", new MacheteItem(LuxoreToolMaterial.INSTANCE, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("luxore_machete", new MacheteItem(LuxoreToolMaterial.INSTANCE, ItemRegistry.MACHETE_SETTINGS));
     }
 
     public static void loadRecipes() {

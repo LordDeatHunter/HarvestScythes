@@ -1,4 +1,4 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.item;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -11,8 +11,10 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import wraith.harvest_scythes.registry.EnchantsRegistry;
 
 import java.util.List;
 
@@ -41,8 +43,16 @@ public class MacheteItem extends SwordItem {
         return (Math.min(10, material.getMiningLevel() + 1)) * 18;
     }
 
+    public static int getHarvestDepth(ItemStack stack) {
+        if (!(stack.getItem() instanceof MacheteItem machete)) {
+            return 0;
+        }
+        var enchantLevel = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("leaf_eater"), stack);
+        return MathHelper.clamp(machete.getHarvestDepth() + MathHelper.clamp(enchantLevel * 18, 0, 240), 0, 240);
+    }
+
     public int getHarvestDepth() {
-        return Math.min(240, this.harvestDepth);
+        return MathHelper.clamp(this.harvestDepth, 0, 240);
     }
 
     @Override

@@ -4,35 +4,38 @@ import com.kwpugh.more_gems.init.ItemInit;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import wraith.harvest_scythes.*;
+import wraith.harvest_scythes.item.MacheteItem;
+import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
+import wraith.harvest_scythes.registry.ItemRegistry;
 
 public final class MoreGemsSupport {
 
     private MoreGemsSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("alexandrite_scythe", new ScytheTool(ItemInit.ALEXANDRITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("kunzite_scythe", new ScytheTool(ItemInit.KUNZITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("carbonado_scythe", new ScytheTool(ItemInit.CARBONADO_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("citrine_scythe", new ScytheTool(ItemInit.CITRINE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("corundum_scythe", new ScytheTool(ItemInit.CORUNDUM_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("moissanite_scythe", new ScytheTool(ItemInit.MOISSANITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("spinel_scythe", new ScytheTool(ItemInit.SPINEL_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("sapphire_scythe", new ScytheTool(ItemInit.SAPPHIRE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("topaz_scythe", new ScytheTool(ItemInit.TOPAZ_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("tourmaline_scythe", new ScytheTool(ItemInit.TOURMALINE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("alexandrite_scythe", new ScytheItem(ItemInit.ALEXANDRITE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("kunzite_scythe", new ScytheItem(ItemInit.KUNZITE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("carbonado_scythe", new ScytheItem(ItemInit.CARBONADO_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("citrine_scythe", new ScytheItem(ItemInit.CITRINE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("corundum_scythe", new ScytheItem(ItemInit.CORUNDUM_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("moissanite_scythe", new ScytheItem(ItemInit.MOISSANITE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("spinel_scythe", new ScytheItem(ItemInit.SPINEL_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("sapphire_scythe", new ScytheItem(ItemInit.SAPPHIRE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("topaz_scythe", new ScytheItem(ItemInit.TOPAZ_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("tourmaline_scythe", new ScytheItem(ItemInit.TOURMALINE_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
 
-        ItemRegistry.registerItem("alexandrite_machete", new MacheteItem(ItemInit.ALEXANDRITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("kunzite_machete", new MacheteItem(ItemInit.KUNZITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("carbonado_machete", new MacheteItem(ItemInit.CARBONADO_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("citrine_machete", new MacheteItem(ItemInit.CITRINE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("corundum_machete", new MacheteItem(ItemInit.CORUNDUM_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("moissanite_machete", new MacheteItem(ItemInit.MOISSANITE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("spinel_machete", new MacheteItem(ItemInit.SPINEL_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("sapphire_machete", new MacheteItem(ItemInit.SAPPHIRE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("topaz_machete", new MacheteItem(ItemInit.TOPAZ_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("tourmaline_machete", new MacheteItem(ItemInit.TOURMALINE_TOOL_MATERIAL, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("alexandrite_machete", new MacheteItem(ItemInit.ALEXANDRITE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("kunzite_machete", new MacheteItem(ItemInit.KUNZITE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("carbonado_machete", new MacheteItem(ItemInit.CARBONADO_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("citrine_machete", new MacheteItem(ItemInit.CITRINE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("corundum_machete", new MacheteItem(ItemInit.CORUNDUM_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("moissanite_machete", new MacheteItem(ItemInit.MOISSANITE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("spinel_machete", new MacheteItem(ItemInit.SPINEL_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("sapphire_machete", new MacheteItem(ItemInit.SAPPHIRE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("topaz_machete", new MacheteItem(ItemInit.TOPAZ_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("tourmaline_machete", new MacheteItem(ItemInit.TOURMALINE_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
     }
 
     public static void loadRecipes() {

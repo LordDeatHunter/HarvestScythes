@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import wraith.harvest_scythes.ScytheTool;
+import wraith.harvest_scythes.item.ScytheItem;
 
 @Mixin(Item.class)
 public class ItemMixin {
@@ -21,7 +21,7 @@ public class ItemMixin {
         NbtCompound tag = user.getStackInHand(hand).getSubNbt("HarvestScytheProperties");
         if (tag != null) {
             int radius = tag.getInt("HarvestRadius");
-            cir.setReturnValue(ScytheTool.harvest(radius, world, user, hand));
+            cir.setReturnValue(ScytheItem.harvest(radius, world, user, hand));
             cir.cancel();
         }
     }

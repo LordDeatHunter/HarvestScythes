@@ -14,11 +14,11 @@ public final class EarlyGameSupport {
     private EarlyGameSupport(){}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("flint_scythe", new ScytheTool(new FlintToolBase(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("copper_scythe", new ScytheTool(new CopperToolBase(), new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("flint_scythe", new ScytheTool(new FlintToolBase(), ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("copper_scythe", new ScytheTool(new CopperToolBase(), ItemRegistry.SCYTHE_SETTINGS));
 
-        ItemRegistry.registerItem("flint_machete", new MacheteItem(new FlintToolBase(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("copper_machete", new MacheteItem(new CopperToolBase(), new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("flint_machete", new MacheteItem(new FlintToolBase(), ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("copper_machete", new MacheteItem(new CopperToolBase(), ItemRegistry.MACHETE_SETTINGS));
     }
 
     public static void loadRecipes() {

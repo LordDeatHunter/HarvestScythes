@@ -1,4 +1,4 @@
-package wraith.harvest_scythes.enchantments;
+package wraith.harvest_scythes.enchantment;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;

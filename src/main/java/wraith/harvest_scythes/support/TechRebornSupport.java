@@ -4,23 +4,26 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import techreborn.init.TRToolTier;
 import wraith.harvest_scythes.*;
+import wraith.harvest_scythes.item.MacheteItem;
+import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
+import wraith.harvest_scythes.registry.ItemRegistry;
 
 public final class TechRebornSupport {
 
     private TechRebornSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("peridot_scythe", new ScytheTool(TRToolTier.PERIDOT, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("sapphire_scythe", new ScytheTool(TRToolTier.SAPPHIRE, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("ruby_scythe", new ScytheTool(TRToolTier.RUBY, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
-        ItemRegistry.registerItem("bronze_scythe", new ScytheTool(TRToolTier.BRONZE, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("peridot_scythe", new ScytheItem(TRToolTier.PERIDOT, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("sapphire_scythe", new ScytheItem(TRToolTier.SAPPHIRE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("ruby_scythe", new ScytheItem(TRToolTier.RUBY, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("bronze_scythe", new ScytheItem(TRToolTier.BRONZE, ItemRegistry.SCYTHE_SETTINGS));
 
-        ItemRegistry.registerItem("peridot_machete", new MacheteItem(TRToolTier.PERIDOT, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("sapphire_machete", new MacheteItem(TRToolTier.SAPPHIRE, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("ruby_machete", new MacheteItem(TRToolTier.RUBY, new FabricItemSettings().group(HSItemGroups.MACHETES)));
-        ItemRegistry.registerItem("bronze_machete", new MacheteItem(TRToolTier.BRONZE, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("peridot_machete", new MacheteItem(TRToolTier.PERIDOT, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("sapphire_machete", new MacheteItem(TRToolTier.SAPPHIRE, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("ruby_machete", new MacheteItem(TRToolTier.RUBY, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("bronze_machete", new MacheteItem(TRToolTier.BRONZE, ItemRegistry.MACHETE_SETTINGS));
     }
 
     public static void loadRecipes() {

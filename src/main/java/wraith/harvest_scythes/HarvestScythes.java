@@ -18,7 +18,10 @@ import org.apache.logging.log4j.Logger;
 import wraith.harvest_scythes.api.event.HarvestEvent;
 import wraith.harvest_scythes.api.event.SingleHarvestEvent;
 import wraith.harvest_scythes.api.machete.HSMacheteEvents;
+import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
+import wraith.harvest_scythes.registry.EnchantsRegistry;
+import wraith.harvest_scythes.registry.ItemRegistry;
 import wraith.harvest_scythes.support.*;
 
 import java.util.LinkedList;
@@ -128,7 +131,7 @@ public class HarvestScythes implements ModInitializer {
                 return;
             }
             ItemStack stack = player.getMainHandStack();
-            if (!(stack.getItem() instanceof MacheteItem)) {
+            if (!(stack.getItem() instanceof MacheteItem machete)) {
                 return;
             }
             int blocksHarvested = 0;
@@ -136,7 +139,7 @@ public class HarvestScythes implements ModInitializer {
             boolean isCreative = stack.getItem() == ItemRegistry.get("creative_machete");
             Queue<BlockPos> positions = new LinkedList<>();
             positions.add(pos);
-            while (!positions.isEmpty() && blocksHarvested <= ((MacheteItem) stack.getItem()).getHarvestDepth()) {
+            while (!positions.isEmpty() && blocksHarvested <= MacheteItem.getHarvestDepth(stack)) {
                 BlockPos curPos = positions.remove();
                 BlockState curState = world.getBlockState(curPos);
                 if (!(curState.getBlock() instanceof LeavesBlock) && blocksHarvested > 0) {

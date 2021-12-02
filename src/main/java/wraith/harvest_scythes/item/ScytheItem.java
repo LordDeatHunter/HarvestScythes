@@ -1,4 +1,4 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,30 +19,32 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import wraith.harvest_scythes.registry.EnchantsRegistry;
+import wraith.harvest_scythes.Utils;
 import wraith.harvest_scythes.api.event.HarvestEvent;
 import wraith.harvest_scythes.api.event.SingleHarvestEvent;
 import wraith.harvest_scythes.api.scythe.HSScythesEvents;
 
 import java.util.List;
 
-public class ScytheTool extends HoeItem {
+public class ScytheItem extends HoeItem {
 
     protected int harvestRadius;
 
-    public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+    public ScytheItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         this(material, attackDamage, attackSpeed, getRadius(material), settings);
     }
 
-    public ScytheTool(ToolMaterial material, int attackDamage, float attackSpeed, int harvestRadius, Settings settings) {
+    public ScytheItem(ToolMaterial material, int attackDamage, float attackSpeed, int harvestRadius, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
         this.harvestRadius = harvestRadius;
     }
 
-    public ScytheTool(ToolMaterial material, Settings settings) {
+    public ScytheItem(ToolMaterial material, Settings settings) {
         this(material, 5, -3.3F, settings);
     }
 
-    public ScytheTool(ToolMaterial material, int harvestRadius, Settings settings) {
+    public ScytheItem(ToolMaterial material, int harvestRadius, Settings settings) {
         this(material, 5, -3.3F, harvestRadius, settings);
     }
 

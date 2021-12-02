@@ -14,9 +14,9 @@ public final class SimplyPlatinumSupport {
 
     public static void loadItems() {
         PlatinumToolMaterial material = new PlatinumToolMaterial();
-        ItemRegistry.registerItem("platinum_scythe", new ScytheTool(material, new FabricItemSettings().group(HSItemGroups.SCYTHES)));
+        ItemRegistry.registerItem("platinum_scythe", new ScytheTool(material, ItemRegistry.SCYTHE_SETTINGS));
 
-        ItemRegistry.registerItem("platinum_machete", new MacheteItem(material, new FabricItemSettings().group(HSItemGroups.MACHETES)));
+        ItemRegistry.registerItem("platinum_machete", new MacheteItem(material, ItemRegistry.MACHETE_SETTINGS));
     }
 
     public static void loadRecipes() {
