@@ -170,5 +170,6 @@
   "itemGroup.harvest_scythes.scythes": "Scythes",
   "itemGroup.harvest_scythes.machetes": "Machetes",
 
-  "enchantment.harvest_scythes.crop_reaper": "Crop Reaper"
+  "enchantment.harvest_scythes.crop_reaper": "Crop Reaper",
+  "enchantment.harvest_scythes.leaf_eater": "Leaf Eater"
 }

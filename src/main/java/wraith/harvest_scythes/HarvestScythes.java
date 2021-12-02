@@ -4,12 +4,14 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.CropBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
@@ -18,6 +20,7 @@ import org.apache.logging.log4j.Logger;
 import wraith.harvest_scythes.api.event.HarvestEvent;
 import wraith.harvest_scythes.api.event.SingleHarvestEvent;
 import wraith.harvest_scythes.api.machete.HSMacheteEvents;
+import wraith.harvest_scythes.api.scythe.HSScythesEvents;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.registry.EnchantsRegistry;
@@ -38,6 +41,14 @@ public class HarvestScythes implements ModInitializer {
     @Override
     public void onInitialize() {
         registerEvents();
+        HSScythesEvents.addSingleHarvestListener(event -> {
+            var state = event.blockState();
+            if (!(state.getBlock() instanceof CropBlock)) {
+                return;
+            }
+            var sound = state.getSoundGroup();
+            event.world().playSound(null, event.cropPos(), sound.getBreakSound(), SoundCategory.BLOCKS, sound.getVolume(), sound.getPitch());
+        });
     }
 
     public static void load() {
@@ -136,7 +147,7 @@ public class HarvestScythes implements ModInitializer {
             }
             int blocksHarvested = 0;
             int damage = 0;
-            boolean isCreative = stack.getItem() == ItemRegistry.get("creative_machete");
+            boolean isCreative = machete == ItemRegistry.get("creative_machete");
             Queue<BlockPos> positions = new LinkedList<>();
             positions.add(pos);
             while (!positions.isEmpty() && blocksHarvested <= MacheteItem.getHarvestDepth(stack)) {

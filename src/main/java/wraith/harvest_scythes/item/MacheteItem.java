@@ -28,7 +28,7 @@ public class MacheteItem extends SwordItem {
     }
 
     public MacheteItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
-        this(material, attackDamage, attackSpeed, getDepth(material), settings);
+        this(material, attackDamage, attackSpeed, getDepthFromMaterial(material), settings);
     }
 
     public MacheteItem(ToolMaterial material, Settings settings) {
@@ -39,7 +39,7 @@ public class MacheteItem extends SwordItem {
         this(material, 2, -2.0F, harvestDepth, settings);
     }
 
-    private static int getDepth(ToolMaterial material) {
+    private static int getDepthFromMaterial(ToolMaterial material) {
         return (Math.min(10, material.getMiningLevel() + 1)) * 18;
     }
 
@@ -48,10 +48,10 @@ public class MacheteItem extends SwordItem {
             return 0;
         }
         var enchantLevel = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("leaf_eater"), stack);
-        return MathHelper.clamp(machete.getHarvestDepth() + MathHelper.clamp(enchantLevel * 18, 0, 240), 0, 240);
+        return MathHelper.clamp(machete.getRegularHarvestDepth() + MathHelper.clamp(enchantLevel * 18, 0, 240), 0, 240);
     }
 
-    public int getHarvestDepth() {
+    public int getRegularHarvestDepth() {
         return MathHelper.clamp(this.harvestDepth, 0, 240);
     }
 
@@ -68,7 +68,7 @@ public class MacheteItem extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(new TranslatableText("harvest_scythes.machete_tooltip.depth", new TranslatableText("harvest_scythes.machete_tooltip.depth.arg_color").append(String.valueOf(harvestDepth))));
+        tooltip.add(new TranslatableText("harvest_scythes.machete_tooltip.depth", new TranslatableText("harvest_scythes.machete_tooltip.depth.arg_color").append(String.valueOf(getHarvestDepth(stack)))));
     }
 
 }

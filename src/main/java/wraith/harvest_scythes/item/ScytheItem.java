@@ -121,7 +121,7 @@ public class ScytheItem extends HoeItem {
             }
         }
         HSScythesEvents.onHarvest(new HarvestEvent(world, user, stack, totalBlocks, totalDamage));
-        return TypedActionResult.success(stack);
+        return totalBlocks > 0 ? TypedActionResult.success(stack) : TypedActionResult.fail(stack);
     }
 
     @Override
