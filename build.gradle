@@ -33,8 +33,8 @@ dependencies {
 	//modCompileOnly 'curse.maven:betterend-413596:3520661'
 	//5.1.3
 	//modCompileOnly 'curse.maven:betternether-311377:3379682'
-	//0.10.0
-	//modCompileOnly 'curse.maven:mythicmetals-410127:3521683'
+	//0.11.0
+	modCompileOnly 'curse.maven:mythicmetals-410127:3548273'
 	//5.1.0-beta
 	modCompileOnly 'curse.maven:techreborn-233564:3539618'
 	//modCompileOnly 'curse.maven:fantasycraft-458160:3260492'

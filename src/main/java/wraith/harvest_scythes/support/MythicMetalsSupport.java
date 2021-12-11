@@ -1,39 +1,41 @@
-/*
 package wraith.harvest_scythes.support;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
 import nourl.mythicmetals.tools.ToolMaterials;
-import wraith.harvest_scythes.*;
+import wraith.harvest_scythes.HarvestScythes;
+import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.item.MacheteItem;
+import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.ShapedRecipeMaterials;
+import wraith.harvest_scythes.registry.ItemRegistry;
 
 public final class MythicMetalsSupport {
 
     private MythicMetalsSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("adamantite_scythe", new ScytheTool(ToolMaterials.ADAMANTITE, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("aquarium_scythe", new ScytheTool(ToolMaterials.AQUARIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("banglum_scythe", new ScytheTool(ToolMaterials.BANGLUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("bronze_scythe", new ScytheTool(ToolMaterials.BRONZE, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("carmot_scythe", new ScytheTool(ToolMaterials.CARMOT, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("celestium_scythe", new ScytheTool(ToolMaterials.CELESTIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("copper_scythe", new ScytheTool(ToolMaterials.COPPER, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("durasteel_scythe", new ScytheTool(ToolMaterials.DURASTEEL, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("hallowed_scythe", new ScytheTool(ToolMaterials.HALLOWED, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("kyber_scythe", new ScytheTool(ToolMaterials.KYBER, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("metallurgium_scythe", new ScytheTool(ToolMaterials.METALLURGIUM, ItemRegistry.SCYTHE_SETTINGS.fireproof()));
-        ItemRegistry.registerItem("mythril_scythe", new ScytheTool(ToolMaterials.MYTHRIL, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("orichalcum_scythe", new ScytheTool(ToolMaterials.ORICHALCUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("osmium_scythe", new ScytheTool(ToolMaterials.OSMIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("palladium_scythe", new ScytheTool(ToolMaterials.PALLADIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("prometheum_scythe", new ScytheTool(ToolMaterials.PROMETHEUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("quadrillum_scythe", new ScytheTool(ToolMaterials.QUADRILLUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("runite_scythe", new ScytheTool(ToolMaterials.RUNITE, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("star_platinum_scythe", new ScytheTool(ToolMaterials.STAR_PLATINUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("steel_scythe", new ScytheTool(ToolMaterials.STEEL, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("stormyx_scythe", new ScytheTool(ToolMaterials.STORMYX, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("adamantite_scythe", new ScytheItem(ToolMaterials.ADAMANTITE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("aquarium_scythe", new ScytheItem(ToolMaterials.AQUARIUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("banglum_scythe", new ScytheItem(ToolMaterials.BANGLUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("bronze_scythe", new ScytheItem(ToolMaterials.BRONZE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("carmot_scythe", new ScytheItem(ToolMaterials.CARMOT, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("celestium_scythe", new ScytheItem(ToolMaterials.CELESTIUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("copper_scythe", new ScytheItem(ToolMaterials.COPPER, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("durasteel_scythe", new ScytheItem(ToolMaterials.DURASTEEL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("hallowed_scythe", new ScytheItem(ToolMaterials.HALLOWED, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("kyber_scythe", new ScytheItem(ToolMaterials.KYBER, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("metallurgium_scythe", new ScytheItem(ToolMaterials.METALLURGIUM, ItemRegistry.SCYTHE_SETTINGS.fireproof()));
+        ItemRegistry.registerItem("mythril_scythe", new ScytheItem(ToolMaterials.MYTHRIL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("orichalcum_scythe", new ScytheItem(ToolMaterials.ORICHALCUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("osmium_scythe", new ScytheItem(ToolMaterials.OSMIUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("palladium_scythe", new ScytheItem(ToolMaterials.PALLADIUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("prometheum_scythe", new ScytheItem(ToolMaterials.PROMETHEUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("quadrillum_scythe", new ScytheItem(ToolMaterials.QUADRILLUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("runite_scythe", new ScytheItem(ToolMaterials.RUNITE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("star_platinum_scythe", new ScytheItem(ToolMaterials.STAR_PLATINUM, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("steel_scythe", new ScytheItem(ToolMaterials.STEEL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("stormyx_scythe", new ScytheItem(ToolMaterials.STORMYX, ItemRegistry.SCYTHE_SETTINGS));
 
         ItemRegistry.registerItem("adamantite_machete", new MacheteItem(ToolMaterials.ADAMANTITE, ItemRegistry.MACHETE_SETTINGS));
         ItemRegistry.registerItem("aquarium_machete", new MacheteItem(ToolMaterials.AQUARIUM, ItemRegistry.MACHETE_SETTINGS));
@@ -105,4 +107,3 @@ public final class MythicMetalsSupport {
     }
 
 }
- */

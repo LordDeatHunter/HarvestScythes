@@ -66,11 +66,11 @@ public class HarvestScythes implements ModInitializer {
         //    SimplyPlatinumSupport.loadItems();
         //    SimplyPlatinumSupport.loadRecipes();
         //}
-        //if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-        //    LOGGER.info("[Mythic Metals] detected. Loading supported items.");
-        //    MythicMetalsSupport.loadItems();
-        //    MythicMetalsSupport.loadRecipes();
-        //}
+        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
+            MythicMetalsSupport.loadItems();
+            MythicMetalsSupport.loadRecipes();
+        }
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
             MoreGemsSupport.loadItems();
