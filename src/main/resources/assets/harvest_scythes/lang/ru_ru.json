@@ -50,6 +50,7 @@
   "item.harvest_scythes.corundum_scythe": "Корундовая коса",
   "item.harvest_scythes.emerald_scythe": "Изумрудная коса",
   "item.harvest_scythes.ruby_scythe": "Рубиновая коса",
+  "item.harvest_scythes.spinel_scythe": "Шпинельная Коса",
   "item.harvest_scythes.sapphire_scythe": "Сапфирная коса",
   "item.harvest_scythes.topaz_scythe": "Топазная коса",
   "item.harvest_scythes.tourmaline_scythe": "Турмалиновая коса",
@@ -169,5 +170,7 @@
   "itemGroup.harvest_scythes.scythes": "Косы",
   "itemGroup.harvest_scythes.machetes": "Мачете",
 
-  "enchantment.harvest_scythes.crop_reaper": "Взмах жнеца"
+  "enchantment.harvest_scythes.crop_reaper": "Взмах жнеца",
+  "enchantment.harvest_scythes.leaf_eater": "Пожиратель листьев",
+  "enchantment.harvest_scythes.blind_harvest_curse": "Проклятие cлепой жатвы"
 }
