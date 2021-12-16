@@ -7,7 +7,6 @@ import net.minecraft.block.PlantBlock;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -19,11 +18,11 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import wraith.harvest_scythes.registry.EnchantsRegistry;
 import wraith.harvest_scythes.Utils;
 import wraith.harvest_scythes.api.event.HarvestEvent;
 import wraith.harvest_scythes.api.event.SingleHarvestEvent;
 import wraith.harvest_scythes.api.scythe.HSScythesEvents;
+import wraith.harvest_scythes.registry.EnchantsRegistry;
 
 import java.util.List;
 
@@ -110,13 +109,13 @@ public class ScytheItem extends HoeItem {
                     }
                     if (damageTool > 0) {
                         totalBlocks += damageTool;
-                        var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) != 0;
+                        var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) == 0;
                         HSScythesEvents.onSingleHarvest(new SingleHarvestEvent(world, user, stack, blockState, cropPos, damageTool, totalBlocks, takeDamage));
                         if (!takeDamage) {
                             continue;
                         }
                         totalDamage += damageTool;
-                        stack.damage(damageTool, (LivingEntity) user, ((e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND)));
+                        stack.damage(damageTool, (LivingEntity) user, ((e) -> e.sendToolBreakStatus(hand)));
                         if (stack.getItem() != item) {
                             HSScythesEvents.onHarvest(new HarvestEvent(world, user, stack, totalBlocks, totalDamage));
                             return TypedActionResult.success(stack);

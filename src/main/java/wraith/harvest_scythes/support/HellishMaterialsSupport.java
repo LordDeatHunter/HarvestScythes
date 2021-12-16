@@ -17,13 +17,13 @@ public final class HellishMaterialsSupport {
     private HellishMaterialsSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("batet_scythe", new ScytheTool(new BatetMaterial(), ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("luss_scythe", new ScytheTool(new LussMaterial(), ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("vuld_scythe", new ScytheTool(new VuldMaterial(), ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("batet_scythe", new ScytheTool(new BatetMaterial(), ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("luss_scythe", new ScytheTool(new LussMaterial(), ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("vuld_scythe", new ScytheTool(new VuldMaterial(), ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("batet_machete", new MacheteItem(new BatetMaterial(), ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("luss_machete", new MacheteItem(new LussMaterial(), ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("vuld_machete", new MacheteItem(new VuldMaterial(), ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("batet_machete", new MacheteItem(new BatetMaterial(), ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("luss_machete", new MacheteItem(new LussMaterial(), ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("vuld_machete", new MacheteItem(new VuldMaterial(), ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {

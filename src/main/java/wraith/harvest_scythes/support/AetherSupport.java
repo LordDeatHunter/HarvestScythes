@@ -15,13 +15,13 @@ public final class AetherSupport {
     private AetherSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("gravitite_scythe", new ScytheItem(AetherToolMaterials.GRAVITITE, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("zanite_scythe", new ScytheItem(AetherToolMaterials.ZANITE, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("valkyrie_scythe", new ScytheItem(AetherToolMaterials.VALKYRIE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("gravitite_scythe", new ScytheItem(AetherToolMaterials.GRAVITITE, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("zanite_scythe", new ScytheItem(AetherToolMaterials.ZANITE, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("valkyrie_scythe", new ScytheItem(AetherToolMaterials.VALKYRIE, ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("gravitite_machete", new MacheteItem(AetherToolMaterials.GRAVITITE, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("zanite_machete", new MacheteItem(AetherToolMaterials.ZANITE, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("valkyrie_machete", new MacheteItem(AetherToolMaterials.VALKYRIE, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("gravitite_machete", new MacheteItem(AetherToolMaterials.GRAVITITE, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("zanite_machete", new MacheteItem(AetherToolMaterials.ZANITE, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("valkyrie_machete", new MacheteItem(AetherToolMaterials.VALKYRIE, ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {

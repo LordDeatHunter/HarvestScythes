@@ -15,9 +15,9 @@ public final class DragonLootSupport {
     private DragonLootSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("dragon_scythe", new ScytheItem(DragonToolMaterial.getInstance(), ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("dragon_scythe", new ScytheItem(DragonToolMaterial.getInstance(), ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("dragon_machete", new MacheteItem(DragonToolMaterial.getInstance(), ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("dragon_machete", new MacheteItem(DragonToolMaterial.getInstance(), ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {

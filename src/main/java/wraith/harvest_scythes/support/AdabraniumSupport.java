@@ -15,13 +15,13 @@ public final class AdabraniumSupport {
     private AdabraniumSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("adb_adamantium_scythe", new ScytheItem(AdabraniumToolMaterials.ADAMANTIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("adb_vibranium_scythe", new ScytheItem(AdabraniumToolMaterials.VIBRANIUM, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("adb_nether_scythe", new ScytheItem(AdabraniumToolMaterials.NETHER_BRICK, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("adb_adamantium_scythe", new ScytheItem(AdabraniumToolMaterials.ADAMANTIUM, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("adb_vibranium_scythe", new ScytheItem(AdabraniumToolMaterials.VIBRANIUM, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("adb_nether_scythe", new ScytheItem(AdabraniumToolMaterials.NETHER_BRICK, ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("adb_adamantium_machete", new MacheteItem(AdabraniumToolMaterials.ADAMANTIUM, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("adb_vibranium_machete", new MacheteItem(AdabraniumToolMaterials.VIBRANIUM, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("adb_nether_machete", new MacheteItem(AdabraniumToolMaterials.NETHER_BRICK, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("adb_adamantium_machete", new MacheteItem(AdabraniumToolMaterials.ADAMANTIUM, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("adb_vibranium_machete", new MacheteItem(AdabraniumToolMaterials.VIBRANIUM, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("adb_nether_machete", new MacheteItem(AdabraniumToolMaterials.NETHER_BRICK, ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {

@@ -29,10 +29,6 @@ dependencies {
 	//modCompileOnly 'curse.maven:hellish-materials-410015:3479635'
 	//1.3.1
 	//modCompileOnly 'curse.maven:diamold-415159:3456656'
-	//0.12.2
-	//modCompileOnly 'curse.maven:betterend-413596:3520661'
-	//5.1.3
-	//modCompileOnly 'curse.maven:betternether-311377:3379682'
 	//0.11.0
 	modCompileOnly 'curse.maven:mythicmetals-410127:3548273'
 	//5.1.0-beta
@@ -48,8 +44,8 @@ dependencies {
 	modCompileOnly 'curse.maven:gobber-427177:3542205'
 	//2.1.1
 	modCompileOnly 'curse.maven:adabranium-361599:3540158'
-	//3.0
-	//modCompileOnly 'curse.maven:simply-platinum-262530:3380844'
+	//4.1
+	modCompileOnly 'curse.maven:simply-platinum-262530:3566305'
 	//1.5.0
 	modCompileOnly 'curse.maven:aether-418680:3541777'
 	//1.1.1

@@ -13,9 +13,9 @@ public final class DiamoldSupport {
     private DiamoldSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("diamold_scythe", new ScytheTool(DiamoldMaterial.INSTANCE, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("diamold_scythe", new ScytheTool(DiamoldMaterial.INSTANCE, ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("diamold_machete", new MacheteItem(DiamoldMaterial.INSTANCE, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("diamold_machete", new MacheteItem(DiamoldMaterial.INSTANCE, ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {

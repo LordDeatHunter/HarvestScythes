@@ -15,13 +15,13 @@ public final class GobberSupport {
     private GobberSupport() {}
 
     public static void loadItems() {
-        ItemRegistry.registerItem("gobber2_scythe", new ScytheItem(ItemInit.GOBBER_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("gobber2_scythe_nether", new ScytheItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
-        ItemRegistry.registerItem("gobber2_scythe_end", new ScytheItem(ItemInit.GOBBER_END_TOOL_MATERIAL, ItemRegistry.SCYTHE_SETTINGS));
+        ItemRegistry.registerItem("gobber2_scythe", new ScytheItem(ItemInit.GOBBER_TOOL_MATERIAL, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("gobber2_scythe_nether", new ScytheItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("gobber2_scythe_end", new ScytheItem(ItemInit.GOBBER_END_TOOL_MATERIAL, ItemRegistry.getScytheSettings()));
 
-        ItemRegistry.registerItem("gobber2_machete", new MacheteItem(ItemInit.GOBBER_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("gobber2_machete_nether", new MacheteItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
-        ItemRegistry.registerItem("gobber2_machete_end", new MacheteItem(ItemInit.GOBBER_END_TOOL_MATERIAL, ItemRegistry.MACHETE_SETTINGS));
+        ItemRegistry.registerItem("gobber2_machete", new MacheteItem(ItemInit.GOBBER_TOOL_MATERIAL, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("gobber2_machete_nether", new MacheteItem(ItemInit.GOBBER_NETHER_TOOL_MATERIAL, ItemRegistry.getMacheteSettings()));
+        ItemRegistry.registerItem("gobber2_machete_end", new MacheteItem(ItemInit.GOBBER_END_TOOL_MATERIAL, ItemRegistry.getMacheteSettings()));
     }
 
     public static void loadRecipes() {
