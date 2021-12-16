@@ -168,7 +168,7 @@ public class HarvestScythes implements ModInitializer {
                         }
                     }
                 }
-                var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) != 0;
+                var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) == 0;
                 HSMacheteEvents.onSingleHarvest(new SingleHarvestEvent(world, player, stack, curState, curPos, 1, blocksHarvested, takeDamage));
                 if (!isCreative && takeDamage) {
                     ++damage;
