@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 
@@ -16,9 +16,9 @@ public final class ItemRegistry {
 
 
     private static final HashMap<String, Item> ITEMS = new HashMap<>();
-    public static final ItemGroup SCYTHES = FabricItemGroupBuilder.create(Utils.ID("scythes"))
+    public static final ItemGroup SCYTHES = FabricItemGroupBuilder.create(HSUtils.ID("scythes"))
             .icon(() -> new ItemStack(ItemRegistry.get("diamond_scythe"))).build();
-    public static final ItemGroup MACHETES = FabricItemGroupBuilder.create(Utils.ID("machetes"))
+    public static final ItemGroup MACHETES = FabricItemGroupBuilder.create(HSUtils.ID("machetes"))
             .icon(() -> new ItemStack(ItemRegistry.get("diamond_machete"))).build();
 
     public static FabricItemSettings getScytheSettings() {
@@ -58,7 +58,7 @@ public final class ItemRegistry {
         if (ITEMS.containsKey(id)) {
             return;
         }
-        ITEMS.put(id, Registry.register(Registry.ITEM, Utils.ID(id), item));
+        ITEMS.put(id, Registry.register(Registry.ITEM, HSUtils.ID(id), item));
     }
 
     public static int count() {

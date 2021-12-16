@@ -1,14 +1,13 @@
 package wraith.harvest_scythes.support;
 
 import net.dragonloot.item.DragonToolMaterial;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
-import wraith.harvest_scythes.*;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 import wraith.harvest_scythes.registry.ItemRegistry;
+import wraith.harvest_scythes.util.HSUtils;
 
 public final class DragonLootSupport {
 
@@ -21,9 +20,9 @@ public final class DragonLootSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SMITHING_RECIPES.put("dragon_scythe", new SmithingRecipeMaterials(Utils.ID("netherite_scythe"), new Identifier("dragonloot", "dragon_scale"), "item", "item", Utils.ID("dragon_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("dragon_scythe", new SmithingRecipeMaterials(HSUtils.ID("netherite_scythe"), new Identifier("dragonloot", "dragon_scale"), "item", "item", HSUtils.ID("dragon_scythe")));
 
-        RecipesGenerator.SMITHING_RECIPES.put("dragon_machete", new SmithingRecipeMaterials(Utils.ID("netherite_machete"), new Identifier("dragonloot", "dragon_scale"), "item", "item", Utils.ID("dragon_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("dragon_machete", new SmithingRecipeMaterials(HSUtils.ID("netherite_machete"), new Identifier("dragonloot", "dragon_scale"), "item", "item", HSUtils.ID("dragon_machete")));
     }
 
 }

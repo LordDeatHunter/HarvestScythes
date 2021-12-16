@@ -1,13 +1,14 @@
-package wraith.harvest_scythes;
+package wraith.harvest_scythes.util;
 
 import net.minecraft.util.Identifier;
+import wraith.harvest_scythes.HarvestScythes;
 
 import java.util.Calendar;
 import java.util.Random;
 
-public final class Utils {
+public final class HSUtils {
 
-    private Utils() {}
+    private HSUtils() {}
 
     private static final Random RANDOM = new Random(Calendar.getInstance().getTimeInMillis());
 

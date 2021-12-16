@@ -6,7 +6,7 @@ import net.tigereye.hellishmaterials.items.BatetMaterial;
 import net.tigereye.hellishmaterials.items.LussMaterial;
 import net.tigereye.hellishmaterials.items.VuldMaterial;
 import wraith.harvest_scythes.HarvestScythes;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
@@ -29,13 +29,13 @@ public final class HellishMaterialsSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("batet_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("batet_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("luss_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luss_scythe")));
-        RecipesGenerator.SMITHING_RECIPES.put("vuld_scythe", new SmithingRecipeMaterials(Utils.ID("diamond_scythe"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", Utils.ID("vuld_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("batet_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("batet_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("luss_scythe", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("luss_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("vuld_scythe", new SmithingRecipeMaterials(HSUtils.ID("diamond_scythe"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", HSUtils.ID("vuld_scythe")));
 
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("batet_machete", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("batet_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("luss_machete", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, Utils.ID("luss_machete")));
-        RecipesGenerator.SMITHING_RECIPES.put("vuld_machete", new SmithingRecipeMaterials(Utils.ID("diamond_machete"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", Utils.ID("vuld_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("batet_machete", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "batet_gem"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("batet_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("luss_machete", new ShapedRecipeMaterials(new Identifier(HellishMaterials.MODID, "luss_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("luss_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("vuld_machete", new SmithingRecipeMaterials(HSUtils.ID("diamond_machete"), new Identifier(HellishMaterials.MODID, "vuld"), "item", "item", HSUtils.ID("vuld_machete")));
     }
 
 }

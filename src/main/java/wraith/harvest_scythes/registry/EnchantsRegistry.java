@@ -2,7 +2,7 @@ package wraith.harvest_scythes.registry;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.registry.Registry;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.enchantment.BlindHarvestCurseEnchantment;
 import wraith.harvest_scythes.enchantment.CropReaperEnchantment;
 import wraith.harvest_scythes.enchantment.LeafEaterEnchantment;
@@ -22,7 +22,7 @@ public final class EnchantsRegistry {
 
     public static void registerEnchantments() {
         for (Map.Entry<String, Enchantment> enchantment : ENCHANTMENTS.entrySet()) {
-            Registry.register(Registry.ENCHANTMENT, Utils.ID(enchantment.getKey()), enchantment.getValue());
+            Registry.register(Registry.ENCHANTMENT, HSUtils.ID(enchantment.getKey()), enchantment.getValue());
         }
     }
 

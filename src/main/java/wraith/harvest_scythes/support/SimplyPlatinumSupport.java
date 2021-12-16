@@ -2,7 +2,7 @@ package wraith.harvest_scythes.support;
 
 import com.github.theintfox.tools.PlatinumToolMaterial;
 import net.minecraft.util.Identifier;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
@@ -21,9 +21,9 @@ public final class SimplyPlatinumSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_scythe", new SmithingRecipeMaterials(Utils.ID("golden_scythe"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", Utils.ID("platinum_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_scythe", new SmithingRecipeMaterials(HSUtils.ID("golden_scythe"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", HSUtils.ID("platinum_scythe")));
 
-        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_machete", new SmithingRecipeMaterials(Utils.ID("golden_machete"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", Utils.ID("platinum_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("sp_platinum_machete", new SmithingRecipeMaterials(HSUtils.ID("golden_machete"), new Identifier("simplyplatinum", "platinum_ingot"), "item", "item", HSUtils.ID("platinum_machete")));
     }
 
 }

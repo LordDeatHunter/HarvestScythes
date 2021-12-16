@@ -3,7 +3,7 @@ package wraith.harvest_scythes.support;
 import net.minecraft.util.Identifier;
 import techreborn.init.TRToolTier;
 import wraith.harvest_scythes.HarvestScythes;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
@@ -27,15 +27,15 @@ public final class TechRebornSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("peridot_scythe", new ShapedRecipeMaterials(new Identifier("c", "peridot_gems"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("peridot_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tr_sapphire_scythe", new ShapedRecipeMaterials(new Identifier("c", "sapphires"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("sapphire_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tr_ruby_scythe", new ShapedRecipeMaterials(new Identifier("c", "rubies"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("ruby_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("bronze_scythe", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("bronze_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("peridot_scythe", new ShapedRecipeMaterials(new Identifier("c", "peridot_gems"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("peridot_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tr_sapphire_scythe", new ShapedRecipeMaterials(new Identifier("c", "sapphires"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("sapphire_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("tr_ruby_scythe", new ShapedRecipeMaterials(new Identifier("c", "rubies"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("ruby_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("bronze_scythe", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("bronze_scythe")));
 
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("peridot_machete", new ShapedRecipeMaterials(new Identifier("c", "peridot_gems"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("peridot_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tr_sapphire_machete", new ShapedRecipeMaterials(new Identifier("c", "sapphires"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("sapphire_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tr_ruby_machete", new ShapedRecipeMaterials(new Identifier("c", "rubies"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("ruby_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("bronze_machete", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, Utils.ID("bronze_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("peridot_machete", new ShapedRecipeMaterials(new Identifier("c", "peridot_gems"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("peridot_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tr_sapphire_machete", new ShapedRecipeMaterials(new Identifier("c", "sapphires"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("sapphire_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("tr_ruby_machete", new ShapedRecipeMaterials(new Identifier("c", "rubies"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("ruby_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("bronze_machete", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("bronze_machete")));
     }
 
 }

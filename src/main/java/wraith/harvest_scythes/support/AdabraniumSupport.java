@@ -2,7 +2,7 @@ package wraith.harvest_scythes.support;
 
 import com.brand.adabraniummod.content.stuff.materials.AdabraniumToolMaterials;
 import net.minecraft.util.Identifier;
-import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
@@ -25,13 +25,13 @@ public final class AdabraniumSupport {
     }
 
     public static void loadRecipes() {
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("adb_adamantium_scythe", new ShapedRecipeMaterials(new Identifier("adabraniummod", "adamantium_ingot"), new Identifier("adabraniummod", "adamantium_rod"), "item", "item", Utils.ID("adb_adamantium_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("adb_vibranium_scythe", new ShapedRecipeMaterials(new Identifier("adabraniummod", "vibranium_ingot"), new Identifier("adabraniummod", "obsidian_rod"), "item", "item", Utils.ID("adb_vibranium_scythe")));
-        RecipesGenerator.SMITHING_RECIPES.put("adb_nether_scythe", new SmithingRecipeMaterials(Utils.ID("iron_scythe"), new Identifier("minecraft", "nether_brick"), "item", "item", Utils.ID("adb_nether_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("adb_adamantium_scythe", new ShapedRecipeMaterials(new Identifier("adabraniummod", "adamantium_ingot"), new Identifier("adabraniummod", "adamantium_rod"), "item", "item", HSUtils.ID("adb_adamantium_scythe")));
+        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("adb_vibranium_scythe", new ShapedRecipeMaterials(new Identifier("adabraniummod", "vibranium_ingot"), new Identifier("adabraniummod", "obsidian_rod"), "item", "item", HSUtils.ID("adb_vibranium_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("adb_nether_scythe", new SmithingRecipeMaterials(HSUtils.ID("iron_scythe"), new Identifier("minecraft", "nether_brick"), "item", "item", HSUtils.ID("adb_nether_scythe")));
 
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("adb_adamantium_machete", new ShapedRecipeMaterials(new Identifier("adabraniummod", "adamantium_ingot"), new Identifier("adabraniummod", "adamantium_rod"), "item", "item", Utils.ID("adb_adamantium_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("adb_vibranium_machete", new ShapedRecipeMaterials(new Identifier("adabraniummod", "vibranium_ingot"), new Identifier("adabraniummod", "obsidian_rod"), "item", "item", Utils.ID("adb_vibranium_machete")));
-        RecipesGenerator.SMITHING_RECIPES.put("adb_nether_machete", new SmithingRecipeMaterials(Utils.ID("iron_machete"), new Identifier("minecraft", "nether_brick"), "item", "item", Utils.ID("adb_nether_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("adb_adamantium_machete", new ShapedRecipeMaterials(new Identifier("adabraniummod", "adamantium_ingot"), new Identifier("adabraniummod", "adamantium_rod"), "item", "item", HSUtils.ID("adb_adamantium_machete")));
+        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("adb_vibranium_machete", new ShapedRecipeMaterials(new Identifier("adabraniummod", "vibranium_ingot"), new Identifier("adabraniummod", "obsidian_rod"), "item", "item", HSUtils.ID("adb_vibranium_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("adb_nether_machete", new SmithingRecipeMaterials(HSUtils.ID("iron_machete"), new Identifier("minecraft", "nether_brick"), "item", "item", HSUtils.ID("adb_nether_machete")));
     }
 
 }

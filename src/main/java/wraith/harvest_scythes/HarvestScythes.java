@@ -26,6 +26,7 @@ import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.registry.EnchantsRegistry;
 import wraith.harvest_scythes.registry.ItemRegistry;
 import wraith.harvest_scythes.support.*;
+import wraith.harvest_scythes.util.HSUtils;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -168,7 +169,7 @@ public class HarvestScythes implements ModInitializer {
                         }
                     }
                 }
-                var takeDamage = Utils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) == 0;
+                var takeDamage = HSUtils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) == 0;
                 HSMacheteEvents.onSingleHarvest(new SingleHarvestEvent(world, player, stack, curState, curPos, 1, blocksHarvested, takeDamage));
                 if (!isCreative && takeDamage) {
                     ++damage;
