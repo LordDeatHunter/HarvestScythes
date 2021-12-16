@@ -1,12 +1,13 @@
-/*
 package wraith.harvest_scythes.support;
 
 import com.github.theintfox.tools.PlatinumToolMaterial;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.util.Identifier;
-import wraith.harvest_scythes.*;
+import wraith.harvest_scythes.Utils;
+import wraith.harvest_scythes.item.MacheteItem;
+import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
+import wraith.harvest_scythes.registry.ItemRegistry;
 
 public final class SimplyPlatinumSupport {
 
@@ -14,7 +15,7 @@ public final class SimplyPlatinumSupport {
 
     public static void loadItems() {
         PlatinumToolMaterial material = new PlatinumToolMaterial();
-        ItemRegistry.registerItem("platinum_scythe", new ScytheTool(material, ItemRegistry.getScytheSettings()));
+        ItemRegistry.registerItem("platinum_scythe", new ScytheItem(material, ItemRegistry.getScytheSettings()));
 
         ItemRegistry.registerItem("platinum_machete", new MacheteItem(material, ItemRegistry.getMacheteSettings()));
     }
@@ -26,4 +27,3 @@ public final class SimplyPlatinumSupport {
     }
 
 }
-*/

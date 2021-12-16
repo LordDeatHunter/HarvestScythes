@@ -61,11 +61,11 @@ public class HarvestScythes implements ModInitializer {
         ItemRegistry.init();
         RecipesGenerator.createShapedRecipes();
 
-        //if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
-        //    LOGGER.info("[Simply Platinum] detected. Loading supported items.");
-        //    SimplyPlatinumSupport.loadItems();
-        //    SimplyPlatinumSupport.loadRecipes();
-        //}
+        if (FabricLoader.getInstance().isModLoaded("simplyplatinum")) {
+            LOGGER.info("[Simply Platinum] detected. Loading supported items.");
+            SimplyPlatinumSupport.loadItems();
+            SimplyPlatinumSupport.loadRecipes();
+        }
         if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
             LOGGER.info("[Mythic Metals] detected. Loading supported items.");
             MythicMetalsSupport.loadItems();
@@ -76,11 +76,11 @@ public class HarvestScythes implements ModInitializer {
             MoreGemsSupport.loadItems();
             MoreGemsSupport.loadRecipes();
         }
-        //if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
-        //    LOGGER.info("[Hellish Materials] detected. Loading supported items.");
-        //    HellishMaterialsSupport.loadItems();
-        //    HellishMaterialsSupport.loadRecipes();
-        //}
+        if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
+            LOGGER.info("[Hellish Materials] detected. Loading supported items.");
+            HellishMaterialsSupport.loadItems();
+            HellishMaterialsSupport.loadRecipes();
+        }
         //if (FabricLoader.getInstance().isModLoaded("diamold")) {
         //    LOGGER.info("[Diamold] detected. Loading supported items.");
         //    DiamoldSupport.loadItems();
@@ -101,10 +101,10 @@ public class HarvestScythes implements ModInitializer {
         //    FantasycraftSupport.loadItems();
         //    FantasycraftSupport.loadRecipes();
         //}
-        //if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
-        //    LOGGER.info("[PigSteel] detected. Loading supported items.");
-        //    PigSteelSupport.loadRecipes();
-        //}
+        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
+            LOGGER.info("[PigSteel] detected. Loading supported items.");
+            PigSteelSupport.loadRecipes();
+        }
         //if (FabricLoader.getInstance().isModLoaded("luxore")) {
         //    LOGGER.info("[Luxore] detected. Loading supported items.");
         //    LuxoreSupport.loadItems();

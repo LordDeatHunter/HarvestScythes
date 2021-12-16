@@ -1,4 +1,3 @@
-/*
 package wraith.harvest_scythes.support;
 
 import net.minecraft.util.Identifier;
@@ -17,4 +16,3 @@ public final class PigSteelSupport {
     }
 
 }
- */
