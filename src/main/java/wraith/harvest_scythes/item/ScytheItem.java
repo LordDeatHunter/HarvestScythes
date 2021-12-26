@@ -16,8 +16,10 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import wraith.harvest_scythes.util.Config;
 import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.api.event.HarvestEvent;
 import wraith.harvest_scythes.api.event.SingleHarvestEvent;
@@ -79,14 +81,15 @@ public class ScytheItem extends HoeItem {
                     BlockPos cropPos = new BlockPos(blockPos.getX() + x, blockPos.getY() + y, blockPos.getZ() + z);
                     if (circleHarvest &&
                             ((y == -1 && cropPos.getManhattanDistance(blockPos.down()) > radius) ||
-                            (y == 0 && cropPos.getManhattanDistance(blockPos) > radius) ||
-                            (y == 1 && cropPos.getManhattanDistance(blockPos.up()) > radius))) {
+                                    (y == 0 && cropPos.getManhattanDistance(blockPos) > radius) ||
+                                    (y == 1 && cropPos.getManhattanDistance(blockPos.up()) > radius))) {
                         continue;
                     }
                     BlockState blockState = world.getBlockState(cropPos);
                     Block block = blockState.getBlock();
                     int damageTool = 0;
-                    if (block instanceof CropBlock cropBlock && (prematureHarvest || cropBlock.isMature(blockState))) {
+                    boolean canHarvest = Config.getInstance().canScytheHarvest(Registry.BLOCK.getId(block));
+                    if (block instanceof CropBlock cropBlock && (prematureHarvest || cropBlock.isMature(blockState)) && canHarvest) {
                         if (prematureHarvest) {
                             world.breakBlock(cropPos, true, user);
                         } else {
@@ -103,7 +106,7 @@ public class ScytheItem extends HoeItem {
                             world.setBlockState(cropPos, cropBlock.withAge(0));
                         }
                         damageTool = 1;
-                    } else if (block instanceof PlantBlock && !(block instanceof CropBlock)) {
+                    } else if (block instanceof PlantBlock && !(block instanceof CropBlock) && canHarvest) {
                         world.breakBlock(cropPos, true, user);
                         damageTool = 1;
                     }

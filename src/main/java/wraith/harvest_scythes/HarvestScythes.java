@@ -1,35 +1,26 @@
 package wraith.harvest_scythes;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.command.CommandManager;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import wraith.harvest_scythes.api.event.HarvestEvent;
-import wraith.harvest_scythes.api.event.SingleHarvestEvent;
-import wraith.harvest_scythes.api.machete.HSMacheteEvents;
 import wraith.harvest_scythes.api.scythe.HSScythesEvents;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.recipe.RecipesGenerator;
 import wraith.harvest_scythes.registry.EnchantsRegistry;
 import wraith.harvest_scythes.registry.ItemRegistry;
 import wraith.harvest_scythes.support.*;
-import wraith.harvest_scythes.util.HSUtils;
-
-import java.util.LinkedList;
-import java.util.Queue;
+import wraith.harvest_scythes.util.Config;
 
 public class HarvestScythes implements ModInitializer {
 
@@ -42,6 +33,7 @@ public class HarvestScythes implements ModInitializer {
     @Override
     public void onInitialize() {
         registerEvents();
+        Config.getInstance();
         HSScythesEvents.addSingleHarvestListener(event -> {
             var state = event.blockState();
             if (!(state.getBlock() instanceof CropBlock) || EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("blind_harvest_curse"), event.stack()) > 0) {
@@ -138,46 +130,17 @@ public class HarvestScythes implements ModInitializer {
     }
 
     private void registerEvents() {
-        PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-            if (world.isClient) {
-                return;
-            }
-            ItemStack stack = player.getMainHandStack();
-            if (!(stack.getItem() instanceof MacheteItem machete)) {
-                return;
-            }
-            int blocksHarvested = 0;
-            int damage = 0;
-            boolean isCreative = machete == ItemRegistry.get("creative_machete");
-            Queue<BlockPos> positions = new LinkedList<>();
-            positions.add(pos);
-            while (!positions.isEmpty() && blocksHarvested <= MacheteItem.getHarvestDepth(stack)) {
-                BlockPos curPos = positions.remove();
-                BlockState curState = world.getBlockState(curPos);
-                if (!(curState.getBlock() instanceof LeavesBlock) && blocksHarvested > 0) {
-                    continue;
-                }
-                world.breakBlock(curPos, true);
-                ++blocksHarvested;
-                for (int x = -1; x <= 1; ++x) {
-                    for (int y = -1; y <= 1; ++y) {
-                        for (int z = -1; z <= 1; ++z) {
-                            if (x == 0 && y == 0 && z == 0) {
-                                continue;
-                            }
-                            positions.add(curPos.add(x, y, z));
-                        }
-                    }
-                }
-                var takeDamage = HSUtils.getRandomIntInRange(0, EnchantmentHelper.getLevel(Enchantments.UNBREAKING, stack)) == 0;
-                HSMacheteEvents.onSingleHarvest(new SingleHarvestEvent(world, player, stack, curState, curPos, 1, blocksHarvested, takeDamage));
-                if (!isCreative && takeDamage) {
-                    ++damage;
-                    stack.damage(1, player, (p) -> p.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-                }
-            }
-            HSMacheteEvents.onHarvest(new HarvestEvent(world, player, stack, blocksHarvested, damage));
-        });
+        PlayerBlockBreakEvents.AFTER.register(MacheteItem::tryHarvest);
+        CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> dispatcher.register(CommandManager.literal("harvest_scythes")
+                .then(CommandManager.literal("reload")
+                        .requires(source -> source.hasPermissionLevel(1))
+                        .executes(context -> {
+                            Config.getInstance().loadConfig();
+                            context.getSource().sendFeedback(new LiteralText("§6[§eHarvest Scythes§6] §3has successfully reloaded!"), false);
+                            return 1;
+                        })
+                )
+        ));
     }
 
 }
