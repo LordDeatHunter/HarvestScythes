@@ -173,4 +173,8 @@
   "enchantment.harvest_scythes.crop_reaper": "Crop Reaper",
   "enchantment.harvest_scythes.leaf_eater": "Leaf Eater",
   "enchantment.harvest_scythes.blind_harvest_curse": "Curse of Blind Harvesting"
+  
+  "enchantment.harvest_scythes.crop_reaper.desc": "Increase harvesting range",
+  "enchantment.harvest_scythes.leaf_eater.desc": "Destroy connected leaves",
+  "enchantment.harvest_scythes.blind_harvest_curse.desc": "Is it grown?"
 }
