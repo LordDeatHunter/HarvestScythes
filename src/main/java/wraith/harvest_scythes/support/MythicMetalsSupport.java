@@ -34,7 +34,6 @@ public final class MythicMetalsSupport {
         ItemRegistry.registerItem("quadrillum_scythe", new ScytheItem(ToolMaterials.QUADRILLUM, ItemRegistry.getScytheSettings()));
         ItemRegistry.registerItem("runite_scythe", new ScytheItem(ToolMaterials.RUNITE, ItemRegistry.getScytheSettings()));
         ItemRegistry.registerItem("star_platinum_scythe", new ScytheItem(ToolMaterials.STAR_PLATINUM, ItemRegistry.getScytheSettings()));
-        ItemRegistry.registerItem("steel_scythe", new ScytheItem(ToolMaterials.STEEL, ItemRegistry.getScytheSettings()));
         ItemRegistry.registerItem("stormyx_scythe", new ScytheItem(ToolMaterials.STORMYX, ItemRegistry.getScytheSettings()));
 
         ItemRegistry.registerItem("adamantite_machete", new MacheteItem(ToolMaterials.ADAMANTITE, ItemRegistry.getMacheteSettings()));
@@ -56,7 +55,6 @@ public final class MythicMetalsSupport {
         ItemRegistry.registerItem("quadrillum_machete", new MacheteItem(ToolMaterials.QUADRILLUM, ItemRegistry.getMacheteSettings()));
         ItemRegistry.registerItem("runite_machete", new MacheteItem(ToolMaterials.RUNITE, ItemRegistry.getMacheteSettings()));
         ItemRegistry.registerItem("star_platinum_machete", new MacheteItem(ToolMaterials.STAR_PLATINUM, ItemRegistry.getMacheteSettings()));
-        ItemRegistry.registerItem("steel_machete", new MacheteItem(ToolMaterials.STEEL, ItemRegistry.getMacheteSettings()));
         ItemRegistry.registerItem("stormyx_machete", new MacheteItem(ToolMaterials.STORMYX, ItemRegistry.getMacheteSettings()));
     }
 
@@ -80,7 +78,6 @@ public final class MythicMetalsSupport {
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("quadrillum_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "quadrillum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("quadrillum_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("runite_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "runite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("runite_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("star_platinum_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "star_platinum"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("star_platinum_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("steel_scythe", new ShapedRecipeMaterials(new Identifier("c", "steel_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("steel_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("stormyx_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "stormyx_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("stormyx_scythe")));
 
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("adamantite_machete", new ShapedRecipeMaterials(new Identifier("c", "adamantite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("adamantite_machete")));
@@ -102,7 +99,6 @@ public final class MythicMetalsSupport {
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("quadrillum_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "quadrillum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("quadrillum_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("runite_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "runite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("runite_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("star_platinum_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "star_platinum"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("star_platinum_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("steel_machete", new ShapedRecipeMaterials(new Identifier("c", "steel_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("steel_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("stormyx_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "stormyx_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("stormyx_machete")));
     }
 
