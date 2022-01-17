@@ -3,6 +3,7 @@ package wraith.harvest_scythes.support;
 import net.minecraft.util.Identifier;
 import nourl.mythicmetals.tools.ToolMaterials;
 import wraith.harvest_scythes.HarvestScythes;
+import wraith.harvest_scythes.recipe.SmithingRecipeMaterials;
 import wraith.harvest_scythes.util.HSUtils;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
@@ -64,12 +65,10 @@ public final class MythicMetalsSupport {
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("banglum_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "banglum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("banglum_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("bronze_scythe", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("bronze_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("carmot_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "carmot_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("carmot_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("celestium_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "celestium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("celestium_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("copper_scythe", new ShapedRecipeMaterials(new Identifier("c", "copper_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("copper_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("durasteel_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "durasteel_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("durasteel_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("hallowed_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "hallowed_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("hallowed_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("kyber_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "kyber_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("kyber_scythe")));
-        RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("metallurgium_scythe", new ShapedRecipeMaterials(new Identifier("mythicmetals", "metallurgium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("metallurgium_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("mythril_scythe", new ShapedRecipeMaterials(new Identifier("c", "mythril_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("mythril_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("orichalcum_scythe", new ShapedRecipeMaterials(new Identifier("c", "orichalcum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("orichalcum_scythe")));
         RecipesGenerator.SHAPED_SCYTHE_RECIPES.put("osmium_scythe", new ShapedRecipeMaterials(new Identifier("c", "osmium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("osmium_scythe")));
@@ -85,12 +84,10 @@ public final class MythicMetalsSupport {
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("banglum_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "banglum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("banglum_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("bronze_machete", new ShapedRecipeMaterials(new Identifier("c", "bronze_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("bronze_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("carmot_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "carmot_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("carmot_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("celestium_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "celestium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("celestium_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("copper_machete", new ShapedRecipeMaterials(new Identifier("c", "copper_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("copper_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("durasteel_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "durasteel_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("durasteel_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("hallowed_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "hallowed_ingot"), HarvestScythes.STICK, "item", HarvestScythes.STICK_TYPE, HSUtils.ID("hallowed_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("kyber_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "kyber_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("kyber_machete")));
-        RecipesGenerator.SHAPED_MACHETE_RECIPES.put("metallurgium_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "metallurgium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("metallurgium_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("mythril_machete", new ShapedRecipeMaterials(new Identifier("c", "mythril_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("mythril_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("orichalcum_machete", new ShapedRecipeMaterials(new Identifier("c", "orichalcum_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("orichalcum_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("osmium_machete", new ShapedRecipeMaterials(new Identifier("c", "osmium_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("osmium_machete")));
@@ -100,6 +97,12 @@ public final class MythicMetalsSupport {
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("runite_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "runite_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("runite_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("star_platinum_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "star_platinum"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("star_platinum_machete")));
         RecipesGenerator.SHAPED_MACHETE_RECIPES.put("stormyx_machete", new ShapedRecipeMaterials(new Identifier("mythicmetals", "stormyx_ingots"), HarvestScythes.STICK, "tag", HarvestScythes.STICK_TYPE, HSUtils.ID("stormyx_machete")));
+
+        RecipesGenerator.SMITHING_RECIPES.put("celestium_scythe", new SmithingRecipeMaterials(HSUtils.ID("diamond_scythe"), new Identifier("mythicmetals", "celestium_ingot"), "item", "item", HSUtils.ID("celestium_scythe")));
+        RecipesGenerator.SMITHING_RECIPES.put("metallurgium_scythe", new SmithingRecipeMaterials(HSUtils.ID("netherite_scythe"), new Identifier("mythicmetals", "metallurgium_ingot"), "item", "item", HSUtils.ID("metallurgium_scythe")));
+
+        RecipesGenerator.SMITHING_RECIPES.put("celestium_machete", new SmithingRecipeMaterials(HSUtils.ID("diamond_machete"), new Identifier("mythicmetals", "celestium_ingot"), "item", "item", HSUtils.ID("celestium_machete")));
+        RecipesGenerator.SMITHING_RECIPES.put("metallurgium_machete", new SmithingRecipeMaterials(HSUtils.ID("netherite_machete"), new Identifier("mythicmetals", "metallurgium_ingot"), "item", "item", HSUtils.ID("metallurgium_machete")));
     }
 
 }
