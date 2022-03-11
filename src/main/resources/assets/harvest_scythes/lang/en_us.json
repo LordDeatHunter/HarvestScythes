@@ -23,8 +23,8 @@
   "item.harvest_scythes.luxore_scythe": "Luxore Scythe",
 
   "item.harvest_scythes.gobber2_scythe": "Gobber Scythe",
-  "item.harvest_scythes.gobber2_scythe_nether": "Nether Scythe",
-  "item.harvest_scythes.gobber2_scythe_end": "End Scythe",
+  "item.harvest_scythes.gobber2_nether_scythe": "Nether Scythe",
+  "item.harvest_scythes.gobber2_end_scythe": "End Scythe",
 
   "item.harvest_scythes.gravitite_scythe": "Gravitite Scythe",
   "item.harvest_scythes.zanite_scythe": "Zanite Scythe",
@@ -106,8 +106,8 @@
   "item.harvest_scythes.luxore_machete": "Luxore Machete",
 
   "item.harvest_scythes.gobber2_machete": "Gobber Machete",
-  "item.harvest_scythes.gobber2_machete_nether": "Nether Machete",
-  "item.harvest_scythes.gobber2_machete_end": "End Machete",
+  "item.harvest_scythes.gobber2_nether_machete": "Nether Machete",
+  "item.harvest_scythes.gobber2_end_machete": "End Machete",
 
   "item.harvest_scythes.gravitite_machete": "Gravitite Machete",
   "item.harvest_scythes.zanite_machete": "Zanite Machete",
@@ -127,16 +127,17 @@
   "item.harvest_scythes.steel_machete": "Steel Machete",
 
   "item.harvest_scythes.alexandrite_machete": "Alexandrite Machete",
-  "item.harvest_scythes.amethyst_machete": "Amethyst Machete",
+  "item.harvest_scythes.kunzite_machete": "Kunzite Machete",
   "item.harvest_scythes.carbonado_machete": "Carbonado Machete",
   "item.harvest_scythes.citrine_machete": "Citrine Machete",
   "item.harvest_scythes.corundum_machete": "Corundum Machete",
   "item.harvest_scythes.emerald_machete": "Emerald Machete",
-  "item.harvest_scythes.moissanite_machete": "Moissanite Machete",
   "item.harvest_scythes.ruby_machete": "Ruby Machete",
+  "item.harvest_scythes.spinel_machete": "Spinel Machete",
   "item.harvest_scythes.sapphire_machete": "Sapphire Machete",
   "item.harvest_scythes.topaz_machete": "Topaz Machete",
   "item.harvest_scythes.tourmaline_machete": "Tourmaline Machete",
+  "item.harvest_scythes.moissanite_machete": "Moissanite Machete",
 
   "item.harvest_scythes.adamantite_machete": "Adamantite Machete",
   "item.harvest_scythes.aquarium_machete": "Aquarium Machete",

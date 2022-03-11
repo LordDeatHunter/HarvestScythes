@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:golden_scythe"
+  },
+  "addition": {
+    "item": "simplyplatinum:platinum_ingot"
+  },
+  "result": {
+    "item": "harvest_scythes:platinum_scythe"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "simplyplatinum"
+      ]
+    }
+  ]
+}

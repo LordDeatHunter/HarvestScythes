@@ -9,6 +9,7 @@ import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 
 import java.util.HashMap;
+import java.util.function.Supplier;
 
 public final class ItemRegistry {
 
@@ -37,28 +38,28 @@ public final class ItemRegistry {
         if (!ITEMS.isEmpty()) {
             return;
         }
-        registerItem("wooden_scythe", new ScytheItem(ToolMaterials.WOOD, getScytheSettings()));
-        registerItem("stone_scythe", new ScytheItem(ToolMaterials.STONE, getScytheSettings()));
-        registerItem("iron_scythe", new ScytheItem(ToolMaterials.IRON, getScytheSettings()));
-        registerItem("golden_scythe", new ScytheItem(ToolMaterials.GOLD, 3, getScytheSettings()));
-        registerItem("diamond_scythe", new ScytheItem(ToolMaterials.DIAMOND, getScytheSettings()));
-        registerItem("netherite_scythe", new ScytheItem(ToolMaterials.NETHERITE, new FabricItemSettings().group(SCYTHES).fireproof()));
-        registerItem("creative_scythe", new ScytheItem(ToolMaterials.NETHERITE, 20, new FabricItemSettings().group(SCYTHES).fireproof().maxDamage(-1)));
+        registerItem("wooden_scythe", () -> new ScytheItem(ToolMaterials.WOOD, getScytheSettings()));
+        registerItem("stone_scythe", () -> new ScytheItem(ToolMaterials.STONE, getScytheSettings()));
+        registerItem("iron_scythe", () -> new ScytheItem(ToolMaterials.IRON, getScytheSettings()));
+        registerItem("golden_scythe", () -> new ScytheItem(ToolMaterials.GOLD, 3, getScytheSettings()));
+        registerItem("diamond_scythe", () -> new ScytheItem(ToolMaterials.DIAMOND, getScytheSettings()));
+        registerItem("netherite_scythe", () -> new ScytheItem(ToolMaterials.NETHERITE, new FabricItemSettings().group(SCYTHES).fireproof()));
+        registerItem("creative_scythe", () -> new ScytheItem(ToolMaterials.NETHERITE, 20, new FabricItemSettings().group(SCYTHES).fireproof().maxDamage(-1)));
 
-        registerItem("wooden_machete", new MacheteItem(ToolMaterials.WOOD, getMacheteSettings()));
-        registerItem("stone_machete", new MacheteItem(ToolMaterials.STONE, getMacheteSettings()));
-        registerItem("iron_machete", new MacheteItem(ToolMaterials.IRON, getMacheteSettings()));
-        registerItem("golden_machete", new MacheteItem(ToolMaterials.GOLD, 100, getMacheteSettings()));
-        registerItem("diamond_machete", new MacheteItem(ToolMaterials.DIAMOND, getMacheteSettings()));
-        registerItem("netherite_machete", new MacheteItem(ToolMaterials.NETHERITE, new FabricItemSettings().group(MACHETES).fireproof()));
-        registerItem("creative_machete", new MacheteItem(ToolMaterials.NETHERITE, 240, new FabricItemSettings().group(MACHETES).fireproof().maxDamage(-1)));
+        registerItem("wooden_machete", () -> new MacheteItem(ToolMaterials.WOOD, getMacheteSettings()));
+        registerItem("stone_machete", () -> new MacheteItem(ToolMaterials.STONE, getMacheteSettings()));
+        registerItem("iron_machete", () -> new MacheteItem(ToolMaterials.IRON, getMacheteSettings()));
+        registerItem("golden_machete", () -> new MacheteItem(ToolMaterials.GOLD, 100, getMacheteSettings()));
+        registerItem("diamond_machete", () -> new MacheteItem(ToolMaterials.DIAMOND, getMacheteSettings()));
+        registerItem("netherite_machete", () -> new MacheteItem(ToolMaterials.NETHERITE, new FabricItemSettings().group(MACHETES).fireproof()));
+        registerItem("creative_machete", () -> new MacheteItem(ToolMaterials.NETHERITE, 240, new FabricItemSettings().group(MACHETES).fireproof().maxDamage(-1)));
     }
 
-    public static void registerItem(String id, Item item) {
+    public static void registerItem(String id, Supplier<Item> item) {
         if (ITEMS.containsKey(id)) {
             return;
         }
-        ITEMS.put(id, Registry.register(Registry.ITEM, HSUtils.ID(id), item));
+        ITEMS.put(id, Registry.register(Registry.ITEM, HSUtils.ID(id), item.get()));
     }
 
     public static int count() {

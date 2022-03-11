@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:diamond_machete"
+  },
+  "addition": {
+    "item": "mythicmetals:celestium_ingot"
+  },
+  "result": {
+    "item": "harvest_scythes:celestium_machete"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "mythicmetals"
+      ]
+    }
+  ]
+}

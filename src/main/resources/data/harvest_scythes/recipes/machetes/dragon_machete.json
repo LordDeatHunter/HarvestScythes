@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:netherite_machete"
+  },
+  "addition": {
+    "item": "dragonloot:dragon_scale"
+  },
+  "result": {
+    "item": "harvest_scythes:dragon_machete"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "dragonloot"
+      ]
+    }
+  ]
+}

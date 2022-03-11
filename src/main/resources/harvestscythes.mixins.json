@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "EnchantmentTargetMixin",
-    "ItemMixin",
-    "RecipeManagerMixin"
+    "ItemMixin"
   ],
   "client": [
     "ClientMixin"

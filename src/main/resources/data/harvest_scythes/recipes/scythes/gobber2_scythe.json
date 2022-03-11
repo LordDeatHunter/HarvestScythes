@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "gobber2:gobber2_ingot"
+    },
+    "|": {
+      "item": "gobber2:gobber2_rod"
+    }
+  },
+  "result": {
+    "item": "harvest_scythes:gobber2_scythe",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "gobber2"
+      ]
+    }
+  ],
+  "pattern": [
+    "###",
+    "  |",
+    "  |"
+  ]
+}

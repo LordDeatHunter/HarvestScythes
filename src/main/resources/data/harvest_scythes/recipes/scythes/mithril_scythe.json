@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:netherite_scythe"
+  },
+  "addition": {
+    "item": "fantasycraft:mithril_ingot"
+  },
+  "result": {
+    "item": "harvest_scythes:mithril_scythe"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "fantasycraft"
+      ]
+    }
+  ]
+}

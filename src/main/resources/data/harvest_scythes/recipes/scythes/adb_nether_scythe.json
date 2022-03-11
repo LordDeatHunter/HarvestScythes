@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:iron_scythe"
+  },
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "result": {
+    "item": "harvest_scythes:adb_nether_scythe"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "adabraniummod"
+      ]
+    }
+  ]
+}

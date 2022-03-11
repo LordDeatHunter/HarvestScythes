@@ -27,3 +27,7 @@ bin/
 # fabric
 
 run/
+
+# datagen
+
+datagen/recipes/

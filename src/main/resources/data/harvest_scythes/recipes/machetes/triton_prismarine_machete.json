@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "fantasycraft:prismarine_ingot"
+    },
+    "|": {
+      "item": "fantasycraft:stone_rod"
+    }
+  },
+  "result": {
+    "item": "harvest_scythes:triton_prismarine_machete",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "fantasycraft"
+      ]
+    }
+  ],
+  "pattern": [
+    "## ",
+    " # ",
+    " | "
+  ]
+}

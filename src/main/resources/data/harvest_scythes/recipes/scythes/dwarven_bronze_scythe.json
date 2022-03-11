@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "fantasycraft:bronze_ingot"
+    },
+    "|": {
+      "item": "fantasycraft:stone_rod"
+    }
+  },
+  "result": {
+    "item": "harvest_scythes:dwarven_bronze_scythe",
+    "count": 1
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "fantasycraft"
+      ]
+    }
+  ],
+  "pattern": [
+    "###",
+    "  |",
+    "  |"
+  ]
+}

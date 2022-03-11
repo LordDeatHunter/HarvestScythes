@@ -23,8 +23,8 @@
   "item.harvest_scythes.luxore_scythe": "Люксоровая коса",
 
   "item.harvest_scythes.gobber2_scythe": "Гоббер коса",
-  "item.harvest_scythes.gobber2_scythe_nether": "Адская гоббер коса",
-  "item.harvest_scythes.gobber2_scythe_end": "Гоббер коса края",
+  "item.harvest_scythes.gobber2_nether_scythe": "Адская гоббер коса",
+  "item.harvest_scythes.gobber2_end_scythe": "Гоббер коса края",
 
   "item.harvest_scythes.gravitite_scythe": "Граветитовая коса",
   "item.harvest_scythes.zanite_scythe": "Занитная коса",
@@ -106,8 +106,8 @@
   "item.harvest_scythes.luxore_machete": "Люксоровый мачете",
 
   "item.harvest_scythes.gobber2_machete": "Гоббер мачете",
-  "item.harvest_scythes.gobber2_machete_nether": "Адская гоббер мачете",
-  "item.harvest_scythes.gobber2_machete_end": "Гоббер мачете края",
+  "item.harvest_scythes.gobber2_nether_machete": "Адская гоббер мачете",
+  "item.harvest_scythes.gobber2_end_machete": "Гоббер мачете края",
 
   "item.harvest_scythes.gravitite_machete": "Граветитовый мачете",
   "item.harvest_scythes.zanite_machete": "Занитный мачете",
