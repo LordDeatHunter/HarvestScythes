@@ -23,21 +23,19 @@ dependencies {
 		exclude (group: "net.fabricmc.fabric-api")
 	}
 	include "com.github.Chocohead:Fabric-ASM:v2.3"
-	modCompileOnly 'curse.maven:more-gems-fabric-377284:3682992'
-	//modCompileOnly 'curse.maven:hellish-materials-410015:3544776'
-	modCompileOnly 'curse.maven:diamold-415159:3676374'
-	modCompileOnly 'curse.maven:mythicmetals-410127:3680961'
-	modCompileOnly 'curse.maven:techreborn-233564:3672447'
-	//modCompileOnly 'curse.maven:fantasycraft-458160:3260492'
-	modCompileOnly 'curse.maven:pigsteel-448941:3667968'
-	modCompileOnly 'curse.maven:dragonloot-424480:3683636'
 	//modCompileOnly 'curse.maven:luxore-421775:3540774'
-	modCompileOnly 'curse.maven:gobber-427177:3670412'
-	//modCompileOnly 'curse.maven:adabranium-361599:3540158'
-	//modCompileOnly 'curse.maven:simply-platinum-262530:3566305'
-	//modCompileOnly 'curse.maven:aether-418680:3541777'
-	//modCompileOnly 'curse.maven:earlygame-410298:3421187'
 
+	modCompileOnly 'curse.maven:gobber-427177:3791292'
+	modCompileOnly 'curse.maven:more-gems-fabric-377284:3790217'
+	modCompileOnly 'curse.maven:hellish-materials-410015:3741501'
+	modCompileOnly 'curse.maven:diamold-415159:3676374'
+	modCompileOnly 'curse.maven:mythicmetals-410127:3725977'
+	modCompileOnly 'curse.maven:techreborn-233564:3798505'
+	modCompileOnly 'curse.maven:pigsteel-448941:3667968'
+	modCompileOnly 'curse.maven:dragonloot-424480:3814476'
+	modCompileOnly 'curse.maven:adabranium-361599:3704006'
+	modCompileOnly 'curse.maven:simply-platinum-262530:3798557'
+	modCompileOnly 'curse.maven:aether-418680:3777049'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
