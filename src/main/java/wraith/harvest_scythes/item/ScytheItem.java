@@ -32,7 +32,7 @@ public class ScytheItem extends HoeItem {
     protected int harvestRadius;
 
     public ScytheItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
-        this(material, attackDamage, attackSpeed, getRadius(material), settings);
+        this(material, attackDamage, attackSpeed, getLowerRadius(material.getMiningLevel()), settings);
     }
 
     public ScytheItem(ToolMaterial material, int attackDamage, float attackSpeed, int harvestRadius, Settings settings) {
@@ -48,15 +48,18 @@ public class ScytheItem extends HoeItem {
         this(material, 5, -3.3F, harvestRadius, settings);
     }
 
-    protected static int getRadius(ToolMaterial material) {
-        return (int) (Math.floor(material.getMiningLevel() / 2.0) + 1);
+    public static int getLowerRadius(int miningLevel) {
+        return (int) (Math.floor(miningLevel / 2.0) + 1);
+    }
+    public static int getUpperRadius(int miningLevel) {
+        return (int) (Math.ceil(miningLevel / 2.0) + 1);
     }
 
-    protected static boolean shouldBeCircle(int radius) {
-        return radius % 2 == 0;
+    protected static boolean shouldBeCircle(int miningLevel) {
+        return getLowerRadius(miningLevel) == getUpperRadius(miningLevel);
     }
 
-    public static TypedActionResult<ItemStack> harvest(int harvestRadius, World world, PlayerEntity user, Hand hand) {
+    public static TypedActionResult<ItemStack> harvest(int harvestRadius, int miningLevel, World world, PlayerEntity user, Hand hand) {
         var blockPos = user.getBlockPos();
         var stack = user.getStackInHand(hand);
         var item = stack.getItem();
@@ -64,7 +67,7 @@ public class ScytheItem extends HoeItem {
         int lvl = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("crop_reaper"), stack);
         boolean prematureHarvest = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("blind_harvest_curse"), stack) > 0;
         int radius = (int) (Math.floor(lvl / 2.0) + harvestRadius);
-        boolean circleHarvest = shouldBeCircle(harvestRadius + lvl);
+        boolean circleHarvest = shouldBeCircle(miningLevel + lvl);
 
         int totalBlocks = 0;
         int totalDamage = 0;
@@ -127,7 +130,7 @@ public class ScytheItem extends HoeItem {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return world.isClient ? TypedActionResult.fail(user.getStackInHand(hand)) : harvest(this.harvestRadius, world, user, hand);
+        return world.isClient ? TypedActionResult.fail(user.getStackInHand(hand)) : harvest(this.harvestRadius, this.getMaterial().getMiningLevel(), world, user, hand);
     }
 
     @Override
@@ -135,7 +138,7 @@ public class ScytheItem extends HoeItem {
         super.appendTooltip(stack, world, tooltip, context);
         int lvl = EnchantmentHelper.getLevel(EnchantsRegistry.ENCHANTMENTS.get("crop_reaper"), stack);
         int radius = (int) (Math.floor(lvl / 2.0) + harvestRadius);
-        boolean circleHarvest = shouldBeCircle(harvestRadius + lvl);
+        boolean circleHarvest = shouldBeCircle(this.getMaterial().getMiningLevel() + lvl);
         tooltip.add(Text.translatable("harvest_scythes.scythe_tooltip.radius", Text.translatable("harvest_scythes.scythe_tooltip.radius.arg_color").append(String.valueOf(radius))));
         tooltip.add(Text.translatable("harvest_scythes.scythe_tooltip.circle", Text.translatable("harvest_scythes.scythe_tooltip.circle.arg_color").append(String.valueOf(circleHarvest))));
     }
@@ -145,7 +148,7 @@ public class ScytheItem extends HoeItem {
     }
 
     public boolean hasCircleHarvset() {
-        return shouldBeCircle(this.harvestRadius);
+        return shouldBeCircle(this.getMaterial().getMiningLevel());
     }
 
 }

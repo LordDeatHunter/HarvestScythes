@@ -21,7 +21,8 @@ public class ItemMixin {
         NbtCompound tag = user.getStackInHand(hand).getSubNbt("HarvestScytheProperties");
         if (tag != null) {
             int radius = tag.getInt("HarvestRadius");
-            cir.setReturnValue(ScytheItem.harvest(radius, world, user, hand));
+            int miningLevel = tag.getInt("MiningLevel");
+            cir.setReturnValue(ScytheItem.harvest(radius, miningLevel, world, user, hand));
             cir.cancel();
         }
     }
