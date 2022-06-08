@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.Registry;
@@ -63,26 +62,6 @@ public class MacheteItem extends SwordItem {
         return MathHelper.clamp(machete.getRegularHarvestDepth() + MathHelper.clamp(enchantLevel * 18, 0, 240), 0, 240);
     }
 
-    public int getRegularHarvestDepth() {
-        return MathHelper.clamp(this.harvestDepth, 0, 240);
-    }
-
-    @Override
-    public boolean isSuitableFor(BlockState state) {
-        return super.isSuitableFor(state) || state.getBlock() instanceof LeavesBlock;
-    }
-
-    @Override
-    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
-        return super.canMine(state, world, pos, miner) || state.getBlock() instanceof LeavesBlock;
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(new TranslatableText("harvest_scythes.machete_tooltip.depth", new TranslatableText("harvest_scythes.machete_tooltip.depth.arg_color").append(String.valueOf(getHarvestDepth(stack)))));
-    }
-
     public static void tryHarvest(World world, PlayerEntity player, BlockPos pos, BlockState blockState, BlockEntity blockEntity) {
         if (world.isClient) {
             return;
@@ -123,6 +102,26 @@ public class MacheteItem extends SwordItem {
             }
         }
         HSMacheteEvents.onHarvest(new HarvestEvent(world, player, stack, blocksHarvested, damage));
+    }
+
+    public int getRegularHarvestDepth() {
+        return MathHelper.clamp(this.harvestDepth, 0, 240);
+    }
+
+    @Override
+    public boolean isSuitableFor(BlockState state) {
+        return super.isSuitableFor(state) || state.getBlock() instanceof LeavesBlock;
+    }
+
+    @Override
+    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
+        return super.canMine(state, world, pos, miner) || state.getBlock() instanceof LeavesBlock;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        super.appendTooltip(stack, world, tooltip, context);
+        tooltip.add(Text.translatable("harvest_scythes.machete_tooltip.depth", Text.translatable("harvest_scythes.machete_tooltip.depth.arg_color").append(String.valueOf(getHarvestDepth(stack)))));
     }
 
 }
