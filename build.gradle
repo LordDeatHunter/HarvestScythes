@@ -31,6 +31,7 @@ dependencies {
 	modCompileOnly 'curse.maven:diamold-415159:3864376'
 	modCompileOnly 'curse.maven:mythicmetals-410127:3869439'
 	modCompileOnly 'curse.maven:techreborn-233564:3821102'
+	modCompileOnly 'curse.maven:natures-minerals-469480:3828294'
 //	modCompileOnly 'curse.maven:pigsteel-448941:3667968'
 	modCompileOnly 'curse.maven:dragonloot-424480:3831053'
 //	modCompileOnly 'curse.maven:adabranium-361599:3704006'

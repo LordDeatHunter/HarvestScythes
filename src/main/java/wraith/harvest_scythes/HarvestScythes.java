@@ -41,6 +41,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Mythic Metals] detected. Loading supported items.");
             MythicMetalsSupport.loadItems();
         }
+        if (FabricLoader.getInstance().isModLoaded("naturesminerals")) {
+            LOGGER.info("[Nature's Minerals] detected. Loading supported items.");
+            NaturesMineralsSupport.loadItems();
+        }
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
             MoreGemsSupport.loadItems();
