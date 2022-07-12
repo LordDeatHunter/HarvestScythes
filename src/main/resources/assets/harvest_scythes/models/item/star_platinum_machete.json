@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/handheld",
-    "textures": {
-        "layer0": "harvest_scythes:item/star_platinum_machete"
-    }
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "harvest_scythes:item/star_platinum_machete"
+  }
 }

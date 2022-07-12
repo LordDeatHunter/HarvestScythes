@@ -31,3 +31,4 @@ run/
 # datagen
 
 datagen/recipes/
+datagen/models/

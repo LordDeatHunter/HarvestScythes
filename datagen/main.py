@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from copy import deepcopy
 
 
 patterns = {
@@ -26,6 +27,13 @@ base_recipes = {
         "base": {},
         "addition": {},
         "result": {}
+    }
+}
+
+base_model = {
+    'parent': 'minecraft:item/handheld',
+    'textures': {
+        'layer0': 'harvest_scythes:item/'
     }
 }
 
@@ -90,13 +98,18 @@ recipes = [
     {'type': 'crafting', 'item': 'harvest_scythes:peridot', 'material': '#c:peridot_gems', 'rod': '#c:wood_sticks', 'requires': ['techreborn']},
     {'type': 'crafting', 'item': 'harvest_scythes:sapphire', 'material': '#c:sapphires', 'rod': '#c:wood_sticks', 'filename': 'tr_sapphire', 'requires': ['techreborn']},
     {'type': 'crafting', 'item': 'harvest_scythes:ruby', 'material': '#c:spinel', 'rod': '#c:wood_sticks', 'filename': 'tr_ruby', 'requires': ['techreborn']},
-    {'type': 'crafting', 'item': 'harvest_scythes:bronze', 'material': '#c:bronze_ingots', 'rod': '#c:wood_sticks', 'requires': ['techreborn']},
+    {'type': 'crafting', 'item': 'harvest_scythes:bronze', 'material': '#c:bronze_ingots', 'rod': '#c:wood_sticks', 'requires': ['techreborn', 'mythicmetals']},
 
     {'type': 'crafting', 'item': 'harvest_scythes:iron', 'material': 'pigsteel:pigsteel_ingot', 'rod': '#c:wood_sticks', 'filename': 'ps_iron', 'requires': ['pigsteel']},
 
     {'type': 'crafting', 'item': 'harvest_scythes:adb_adamantium', 'material': 'adabraniummod:adamantium_ingot', 'rod': 'adabraniummod:adamantium_rod', 'requires': ['adabraniummod']},
     {'type': 'crafting', 'item': 'harvest_scythes:adb_vibranium', 'material': 'adabraniummod:vibranium_ingot', 'rod': 'adabraniummod:obsidian_rod', 'requires': ['adabraniummod']},
 
+    {'type': 'crafting', 'item': 'naturesminerals:astrite', 'material': 'naturesminerals:astrite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
+    {'type': 'crafting', 'item': 'naturesminerals:nm_kunzite', 'material': 'naturesminerals:kunzite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
+    {'type': 'crafting', 'item': 'naturesminerals:stibnite', 'material': 'naturesminerals:stibnite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
+    {'type': 'crafting', 'item': 'naturesminerals:thounite', 'material': 'naturesminerals:thounite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
+    {'type': 'crafting', 'item': 'naturesminerals:uvarovite', 'material': 'naturesminerals:uvarovite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
 
 
     {'type': 'smithing', 'item': 'harvest_scythes:netherite', 'material': 'minecraft:netherite_ingot', 'from': 'harvest_scythes:diamond'},
@@ -124,6 +137,7 @@ for recipe in recipes:
     recipe_types = recipe['recipe_for'] if 'recipe_for' in recipe else ('scythe', 'machete')
     for recipe_type in recipe_types:
         Path(__file__).parent.joinpath(f"recipes/{recipe_type}s").mkdir(parents=True, exist_ok=True)
+        Path(__file__).parent.joinpath(f"models/item").mkdir(parents=True, exist_ok=True)
         if 'requires' in recipe:
             base['fabric:load_conditions'] = [
                 {
@@ -143,7 +157,12 @@ for recipe in recipes:
         else:
             continue
 
-        filename = recipe['filename'] if 'filename' in recipe else f"{recipe['item'].split(':')[1]}"
+        material = recipe['item'].split(':')[1]
+        filename = recipe['filename'] if 'filename' in recipe else material
         filename = f"{filename}_{recipe_type}.json"
+        model = deepcopy(base_model)
+        model['textures']['layer0'] += f"{material}_{recipe_type}"
         with Path(__file__).parent.joinpath(f"recipes/{recipe_type}s/{filename}").open('w') as f:
             f.write(json.dumps(base, indent=2))
+        with Path(__file__).parent.joinpath(f"models/item/{filename}").open('w') as f:
+            f.write(json.dumps(model, indent=2))

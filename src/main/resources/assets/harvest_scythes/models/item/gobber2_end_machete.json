@@ -1,6 +1,6 @@
 {
-    "parent": "minecraft:item/handheld",
-    "textures": {
-        "layer0": "harvest_scythes:item/gobber2_end_machete"
-    }
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "harvest_scythes:item/gobber2_end_machete"
+  }
 }

@@ -1,6 +1,6 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "harvest_scythes:item/mythril_scythe"
-    }
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "harvest_scythes:item/mythril_scythe"
+  }
 }

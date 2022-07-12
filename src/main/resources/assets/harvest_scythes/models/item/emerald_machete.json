@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:item/handheld",
+    "parent": "minecraft:minecraft:item/handheld",
     "textures": {
         "layer0": "harvest_scythes:item/emerald_machete"
     }
