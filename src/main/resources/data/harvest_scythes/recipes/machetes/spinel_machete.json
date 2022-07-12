@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "c:rubies"
+      "tag": "c:spinel"
     },
     "|": {
       "tag": "c:wood_sticks"

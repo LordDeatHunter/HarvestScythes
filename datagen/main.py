@@ -82,14 +82,14 @@ recipes = [
     {'type': 'crafting', 'item': 'harvest_scythes:citrine', 'material': '#c:citrine', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
     {'type': 'crafting', 'item': 'harvest_scythes:corundum', 'material': '#c:corundum', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
     {'type': 'crafting', 'item': 'harvest_scythes:moissanite', 'material': '#c:moissanite', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
-    {'type': 'crafting', 'item': 'harvest_scythes:spinel', 'material': '#c:rubies', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
+    {'type': 'crafting', 'item': 'harvest_scythes:spinel', 'material': '#c:spinel', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
     {'type': 'crafting', 'item': 'harvest_scythes:sapphire', 'material': '#c:sapphire', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
     {'type': 'crafting', 'item': 'harvest_scythes:topaz', 'material': '#c:topaz', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
     {'type': 'crafting', 'item': 'harvest_scythes:tourmaline', 'material': '#c:tourmaline', 'rod': '#c:wood_sticks', 'requires': ['more_gems']},
 
     {'type': 'crafting', 'item': 'harvest_scythes:peridot', 'material': '#c:peridot_gems', 'rod': '#c:wood_sticks', 'requires': ['techreborn']},
     {'type': 'crafting', 'item': 'harvest_scythes:sapphire', 'material': '#c:sapphires', 'rod': '#c:wood_sticks', 'filename': 'tr_sapphire', 'requires': ['techreborn']},
-    {'type': 'crafting', 'item': 'harvest_scythes:ruby', 'material': '#c:rubies', 'rod': '#c:wood_sticks', 'filename': 'tr_ruby', 'requires': ['techreborn']},
+    {'type': 'crafting', 'item': 'harvest_scythes:ruby', 'material': '#c:spinel', 'rod': '#c:wood_sticks', 'filename': 'tr_ruby', 'requires': ['techreborn']},
     {'type': 'crafting', 'item': 'harvest_scythes:bronze', 'material': '#c:bronze_ingots', 'rod': '#c:wood_sticks', 'requires': ['techreborn']},
 
     {'type': 'crafting', 'item': 'harvest_scythes:iron', 'material': 'pigsteel:pigsteel_ingot', 'rod': '#c:wood_sticks', 'filename': 'ps_iron', 'requires': ['pigsteel']},
