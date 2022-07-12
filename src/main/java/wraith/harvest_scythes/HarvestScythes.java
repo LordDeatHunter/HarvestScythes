@@ -15,9 +15,7 @@ import wraith.harvest_scythes.api.scythe.HSScythesEvents;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.registry.EnchantsRegistry;
 import wraith.harvest_scythes.registry.ItemRegistry;
-import wraith.harvest_scythes.support.GobberSupport;
-import wraith.harvest_scythes.support.MoreGemsSupport;
-import wraith.harvest_scythes.support.TechRebornSupport;
+import wraith.harvest_scythes.support.*;
 import wraith.harvest_scythes.util.Config;
 
 public class HarvestScythes implements ModInitializer {
@@ -39,30 +37,30 @@ public class HarvestScythes implements ModInitializer {
 //            LOGGER.info("[Simply Platinum] detected. Loading supported items.");
 //            SimplyPlatinumSupport.loadItems();
 //        }
-//        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
-//            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
-//            MythicMetalsSupport.loadItems();
-//        }
+        if (FabricLoader.getInstance().isModLoaded("mythicmetals")) {
+            LOGGER.info("[Mythic Metals] detected. Loading supported items.");
+            MythicMetalsSupport.loadItems();
+        }
         if (FabricLoader.getInstance().isModLoaded("more_gems")) {
             LOGGER.info("[More Gems] detected. Loading supported items.");
             MoreGemsSupport.loadItems();
         }
-//        if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
-//            LOGGER.info("[Hellish Materials] detected. Loading supported items.");
-//            HellishMaterialsSupport.loadItems();
-//        }
-//        if (FabricLoader.getInstance().isModLoaded("diamold")) {
-//            LOGGER.info("[Diamold] detected. Loading supported items.");
-//            DiamoldSupport.loadItems();
-//        }
+        if (FabricLoader.getInstance().isModLoaded("hellish-materials")) {
+            LOGGER.info("[Hellish Materials] detected. Loading supported items.");
+            HellishMaterialsSupport.loadItems();
+        }
+        if (FabricLoader.getInstance().isModLoaded("diamold")) {
+            LOGGER.info("[Diamold] detected. Loading supported items.");
+            DiamoldSupport.loadItems();
+        }
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             LOGGER.info("[Tech Reborn] detected. Loading supported items.");
             TechRebornSupport.loadItems();
         }
-//        if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
-//            LOGGER.info("[DragonLoot] detected. Loading supported items.");
-//            DragonLootSupport.loadItems();
-//        }
+        if (FabricLoader.getInstance().isModLoaded("dragonloot")) {
+            LOGGER.info("[DragonLoot] detected. Loading supported items.");
+            DragonLootSupport.loadItems();
+        }
 //        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
 //            LOGGER.info("[PigSteel] detected. Loading supported recipes.");
 //        }
