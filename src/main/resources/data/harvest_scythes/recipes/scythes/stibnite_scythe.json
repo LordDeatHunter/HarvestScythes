@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "naturesminerals:stibnite_scythe",
+    "item": "harvest_scythes:stibnite_scythe",
     "count": 1
   },
   "fabric:load_conditions": [

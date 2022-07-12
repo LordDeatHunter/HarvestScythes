@@ -1,16 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "mythicmetals:carmot_ingots"
-    },
-    "|": {
-      "tag": "c:wood_sticks"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:kyber_machete"
+  },
+  "addition": {
+    "tag": "mythicmetals:carmot_ingots"
   },
   "result": {
-    "item": "harvest_scythes:carmot_machete",
-    "count": 1
+    "item": "harvest_scythes:carmot_machete"
   },
   "fabric:load_conditions": [
     {
@@ -19,10 +16,5 @@
         "mythicmetals"
       ]
     }
-  ],
-  "pattern": [
-    "## ",
-    " # ",
-    " | "
   ]
 }

@@ -16,7 +16,8 @@
     {
       "condition": "fabric:any_mod_loaded",
       "values": [
-        "earlygame"
+        "earlygame",
+        "mythicmetals"
       ]
     }
   ],
