@@ -29,7 +29,7 @@ dependencies {
 	modCompileOnly 'curse.maven:more-gems-fabric-377284:3822915'
 	modCompileOnly 'curse.maven:hellish-materials-410015:3834017'
 	modCompileOnly 'curse.maven:diamold-415159:3864376'
-	modCompileOnly 'curse.maven:mythicmetals-410127:3869439'
+	modCompileOnly 'curse.maven:mythicmetals-410127:4015956'
 	modCompileOnly 'curse.maven:techreborn-233564:3821102'
 	modCompileOnly 'curse.maven:natures-minerals-469480:3828294'
 //	modCompileOnly 'curse.maven:pigsteel-448941:3667968'
