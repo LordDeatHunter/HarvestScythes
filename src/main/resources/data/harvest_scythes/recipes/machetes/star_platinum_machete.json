@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "mythicmetals:star_platinum"
+      "item": "mythicmetals:star_platinum"
     },
     "|": {
       "tag": "c:wood_sticks"
