@@ -94,6 +94,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Aether Reborn] detected. Loading supported items.");
             AetherSupport.loadItems();
         }
+        if (FabricLoader.getInstance().isModLoaded("winterly")) {
+            LOGGER.info("[Winterly] detected. Loading supported items.");
+            WinterlySupport.loadItems();
+        }
         EnchantsRegistry.registerEnchantments();
 
         LOGGER.info("[Harvest Scythes] has successfully been loaded!");

@@ -85,6 +85,7 @@
 
   "item.harvest_scythes.flint_scythe": "Flint Scythe",
 
+  "item.harvest_scythes.cryomarble_scythe": "Cryomarble Scythe",
 
 
 
@@ -167,6 +168,8 @@
   "item.harvest_scythes.vuld_machete": "Vuld Machete",
 
   "item.harvest_scythes.flint_machete": "Flint Machete",
+
+  "item.harvest_scythes.cryomarble_machete": "Cryomarble Machete",
 
   "itemGroup.harvest_scythes.scythes": "Scythes",
   "itemGroup.harvest_scythes.machetes": "Machetes",
