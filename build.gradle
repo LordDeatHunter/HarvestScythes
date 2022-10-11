@@ -35,6 +35,7 @@ dependencies {
 	modCompileOnly 'curse.maven:pigsteel-448941:3888460'
 	modCompileOnly 'curse.maven:dragonloot-424480:3831053'
 	modCompileOnly 'curse.maven:adabranium-361599:3987507'
+	modCompileOnly 'curse.maven:winterly-552628:3918205'
 //	modCompileOnly 'curse.maven:simply-platinum-262530:3798557'
 //	modCompileOnly 'curse.maven:aether-418680:3777049'
 

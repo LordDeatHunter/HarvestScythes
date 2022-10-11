@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "harvest_scythes:iron_machete"
+  },
+  "addition": {
+    "item": "winterly:cryomarble"
+  },
+  "result": {
+    "item": "harvest_scythes:cryomarble_machete"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "winterly"
+      ]
+    }
+  ]
+}

@@ -80,6 +80,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Adabranium] detected. Loading supported items.");
             AdabraniumSupport.loadItems();
         }
+        if (FabricLoader.getInstance().isModLoaded("winterly")) {
+            LOGGER.info("[Winterly] detected. Loading supported items.");
+            WinterlySupport.loadItems();
+        }
 //        if (FabricLoader.getInstance().isModLoaded("the_aether")) {
 //            LOGGER.info("[Aether Reborn] detected. Loading supported items.");
 //            AetherSupport.loadItems();
