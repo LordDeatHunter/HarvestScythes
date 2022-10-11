@@ -65,9 +65,9 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[DragonLoot] detected. Loading supported items.");
             DragonLootSupport.loadItems();
         }
-//        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
-//            LOGGER.info("[PigSteel] detected. Loading supported recipes.");
-//        }
+        if (FabricLoader.getInstance().isModLoaded("pigsteel")) {
+            LOGGER.info("[PigSteel] detected. Loading supported recipes.");
+        }
 //        if (FabricLoader.getInstance().isModLoaded("luxore")) {
 //            LOGGER.info("[Luxore] detected. Loading supported items.");
 //            LuxoreSupport.loadItems();
@@ -76,10 +76,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Gobber] detected. Loading supported items.");
             GobberSupport.loadItems();
         }
-//        if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
-//            LOGGER.info("[Adabranium] detected. Loading supported items.");
-//            AdabraniumSupport.loadItems();
-//        }
+        if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
+            LOGGER.info("[Adabranium] detected. Loading supported items.");
+            AdabraniumSupport.loadItems();
+        }
 //        if (FabricLoader.getInstance().isModLoaded("the_aether")) {
 //            LOGGER.info("[Aether Reborn] detected. Loading supported items.");
 //            AetherSupport.loadItems();
