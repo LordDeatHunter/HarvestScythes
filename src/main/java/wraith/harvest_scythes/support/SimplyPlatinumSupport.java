@@ -11,9 +11,9 @@
 //
 //    public static void loadItems() {
 //        PlatinumToolMaterial material = new PlatinumToolMaterial();
-//        ItemRegistry.registerItem("platinum_scythe", () -> new ScytheItem(material, ItemRegistry.getScytheSettings()));
+//        ItemRegistry.registerItem("platinum_scythe", () -> new ScytheItem(material, new FabricItemSettings()));
 //
-//        ItemRegistry.registerItem("platinum_machete", () -> new MacheteItem(material, ItemRegistry.getMacheteSettings()));
+//        ItemRegistry.registerItem("platinum_machete", () -> new MacheteItem(material, new FabricItemSettings()));
 //    }
 //
 //}

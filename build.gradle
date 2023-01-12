@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -25,15 +25,15 @@ dependencies {
 	include "com.github.Chocohead:Fabric-ASM:v2.3"
 	//modCompileOnly 'curse.maven:luxore-421775:3540774'
 
-	modCompileOnly 'curse.maven:gobber-427177:3822634'
-	modCompileOnly 'curse.maven:more-gems-fabric-377284:3822915'
+	modCompileOnly 'curse.maven:gobber-427177:4127518'
+	modCompileOnly 'curse.maven:more-gems-fabric-377284:4127510'
 	modCompileOnly 'curse.maven:hellish-materials-410015:3834017'
 	modCompileOnly 'curse.maven:diamold-415159:3864376'
 	modCompileOnly 'curse.maven:mythicmetals-410127:4015956'
-	modCompileOnly 'curse.maven:techreborn-233564:3821102'
-	modCompileOnly 'curse.maven:natures-minerals-469480:3828294'
-	modCompileOnly 'curse.maven:pigsteel-448941:3888460'
-	modCompileOnly 'curse.maven:dragonloot-424480:3831053'
+	modCompileOnly 'curse.maven:techreborn-233564:4142163'
+	modCompileOnly 'curse.maven:natures-minerals-469480:4069208'
+	modCompileOnly 'curse.maven:pigsteel-448941:4280893'
+	modCompileOnly 'curse.maven:dragonloot-424480:4297774'
 	modCompileOnly 'curse.maven:adabranium-361599:3987507'
 	modCompileOnly 'curse.maven:winterly-552628:3918205'
 //	modCompileOnly 'curse.maven:simply-platinum-262530:3798557'

@@ -10,12 +10,12 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import wraith.harvest_scythes.api.event.HarvestEvent;
@@ -85,7 +85,7 @@ public class ScytheItem extends HoeItem {
                     BlockState blockState = world.getBlockState(cropPos);
                     Block block = blockState.getBlock();
                     int damageTool = 0;
-                    boolean canHarvest = Config.getInstance().canScytheHarvest(Registry.BLOCK.getId(block));
+                    boolean canHarvest = Config.getInstance().canScytheHarvest(Registries.BLOCK.getId(block));
                     if (block instanceof CropBlock cropBlock && (prematureHarvest || cropBlock.isMature(blockState)) && canHarvest) {
                         if (prematureHarvest) {
                             world.breakBlock(cropPos, true, user);

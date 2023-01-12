@@ -11,10 +11,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import wraith.harvest_scythes.api.event.HarvestEvent;
@@ -79,7 +79,7 @@ public class MacheteItem extends SwordItem {
             var curPos = positions.remove();
             var curState = world.getBlockState(curPos);
             var block = curState.getBlock();
-            if ((!(block instanceof LeavesBlock) && blocksHarvested > 0) || !Config.getInstance().canMacheteHarvest(Registry.BLOCK.getId(block))) {
+            if ((!(block instanceof LeavesBlock) && blocksHarvested > 0) || !Config.getInstance().canMacheteHarvest(Registries.BLOCK.getId(block))) {
                 continue;
             }
             world.breakBlock(curPos, true);
