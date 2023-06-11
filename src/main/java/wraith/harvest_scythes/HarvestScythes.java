@@ -76,10 +76,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Gobber] detected. Loading supported items.");
             GobberSupport.loadItems();
         }
-        if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
-            LOGGER.info("[Adabranium] detected. Loading supported items.");
-            AdabraniumSupport.loadItems();
-        }
+//        if (FabricLoader.getInstance().isModLoaded("adabraniummod")) {
+//            LOGGER.info("[Adabranium] detected. Loading supported items.");
+//            AdabraniumSupport.loadItems();
+//        }
         if (FabricLoader.getInstance().isModLoaded("winterly")) {
             LOGGER.info("[Winterly] detected. Loading supported items.");
             WinterlySupport.loadItems();
@@ -114,7 +114,7 @@ public class HarvestScythes implements ModInitializer {
                 .requires(source -> source.hasPermissionLevel(1))
                 .executes(context -> {
                     Config.getInstance().loadConfig();
-                    context.getSource().sendFeedback(Text.translatable("§6[§eHarvest Scythes§6] §3has successfully reloaded!"), false);
+                    context.getSource().sendFeedback(() -> Text.translatable("§6[§eHarvest Scythes§6] §3has successfully reloaded!"), false);
                     return 1;
                 })
             )

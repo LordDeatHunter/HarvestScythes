@@ -5,22 +5,20 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import wraith.harvest_scythes.util.HSUtils;
+import net.minecraft.text.Text;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
+import wraith.harvest_scythes.util.HSUtils;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
 
 public final class ItemRegistry {
 
-    private ItemRegistry() {}
-
-
     private static final HashMap<String, Item> ITEMS = new HashMap<>();
-
-    public static final ItemGroup SCYTHES = FabricItemGroup.builder(HSUtils.ID("scythes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_scythe"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof ScytheItem).map(ItemStack::new).forEach(entries::add)).build();
-    public static final ItemGroup MACHETES = FabricItemGroup.builder(HSUtils.ID("machetes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_machete"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof MacheteItem).map(ItemStack::new).forEach(entries::add)).build();
+    public static final ItemGroup SCYTHES = FabricItemGroup.builder().icon(() -> new ItemStack(ItemRegistry.get("diamond_scythe"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof ScytheItem).map(ItemStack::new).forEach(entries::add)).displayName(Text.translatable("itemGroup.harvest_scythes.scythes")).build();
+    public static final ItemGroup MACHETES = FabricItemGroup.builder().icon(() -> new ItemStack(ItemRegistry.get("diamond_machete"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof MacheteItem).map(ItemStack::new).forEach(entries::add)).displayName(Text.translatable("itemGroup.harvest_scythes.machetes")).build();
+    private ItemRegistry() {}
 
     public static Item get(String id) {
         return ITEMS.getOrDefault(id, Items.AIR);
@@ -30,6 +28,8 @@ public final class ItemRegistry {
         if (!ITEMS.isEmpty()) {
             return;
         }
+        Registry.register(Registries.ITEM_GROUP, HSUtils.ID("scythes"), SCYTHES);
+        Registry.register(Registries.ITEM_GROUP, HSUtils.ID("machetes"), MACHETES);
         registerItem("wooden_scythe", () -> new ScytheItem(ToolMaterials.WOOD, new FabricItemSettings()));
         registerItem("stone_scythe", () -> new ScytheItem(ToolMaterials.STONE, new FabricItemSettings()));
         registerItem("iron_scythe", () -> new ScytheItem(ToolMaterials.IRON, new FabricItemSettings()));

@@ -22,11 +22,12 @@ base_recipes = {
         "key": {},
         "result": {}
     },
-    'smithing': {
-        "type": "minecraft:smithing",
+    'smithing_transform': {
+        "type": "minecraft:smithing_transform",
         "base": {},
         "addition": {},
-        "result": {}
+        "result": {},
+        "template": { "item": "minecraft:netherite_upgrade_smithing_template" }
     }
 }
 
@@ -112,20 +113,20 @@ recipes = [
     {'type': 'crafting', 'item': 'naturesminerals:uvarovite', 'material': 'naturesminerals:uvarovite_ingot', 'rod': 'minecraft:stick', 'requires': ['naturesminerals']},
 
 
-    {'type': 'smithing', 'item': 'harvest_scythes:netherite', 'material': 'minecraft:netherite_ingot', 'from': 'harvest_scythes:diamond'},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:netherite', 'material': 'minecraft:netherite_ingot', 'from': 'harvest_scythes:diamond'},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:celestium', 'material': 'mythicmetals:celestium_ingot', 'from': 'harvest_scythes:diamond', 'requires': ['mythicmetals']},
-    {'type': 'smithing', 'item': 'harvest_scythes:metallurgium', 'material': 'mythicmetals:metallurgium_ingot', 'from': 'harvest_scythes:netherite', 'requires': ['mythicmetals']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:celestium', 'material': 'mythicmetals:celestium_ingot', 'from': 'harvest_scythes:diamond', 'requires': ['mythicmetals']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:metallurgium', 'material': 'mythicmetals:metallurgium_ingot', 'from': 'harvest_scythes:netherite', 'requires': ['mythicmetals']},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:dragon', 'material': 'dragonloot:dragon_scale', 'from': 'harvest_scythes:netherite', 'requires': ['dragonloot']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:dragon', 'material': 'dragonloot:dragon_scale', 'from': 'harvest_scythes:netherite', 'requires': ['dragonloot']},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:mithril', 'material': 'fantasycraft:mithril_ingot', 'from': 'harvest_scythes:netherite', 'requires': ['fantasycraft']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:mithril', 'material': 'fantasycraft:mithril_ingot', 'from': 'harvest_scythes:netherite', 'requires': ['fantasycraft']},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:vuld', 'material': 'hellish-materials:vuld', 'from': 'harvest_scythes:diamond', 'requires': ['hellish-materials']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:vuld', 'material': 'hellish-materials:vuld', 'from': 'harvest_scythes:diamond', 'requires': ['hellish-materials']},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:adb_nether', 'material': 'minecraft:nether_brick', 'from': 'harvest_scythes:iron', 'requires': ['adabraniummod']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:adb_nether', 'material': 'minecraft:nether_brick', 'from': 'harvest_scythes:iron', 'requires': ['adabraniummod']},
 
-    {'type': 'smithing', 'item': 'harvest_scythes:platinum', 'material': 'simplyplatinum:platinum_ingot', 'from': 'harvest_scythes:golden', 'filename': 'sp_platinum', 'requires': ['simplyplatinum']},
+    {'type': 'smithing_transform', 'item': 'harvest_scythes:platinum', 'material': 'simplyplatinum:platinum_ingot', 'from': 'harvest_scythes:golden', 'filename': 'sp_platinum', 'requires': ['simplyplatinum']},
 ]
 
 
@@ -151,7 +152,7 @@ for recipe in recipes:
             base['key']['#'] = item_or_tag(recipe['material'])
             base['key']['|'] = item_or_tag(recipe['rod'])
             base['result']['count'] = 1
-        elif recipe['type'] == 'smithing':
+        elif recipe['type'] == 'smithing_transform':
             base['addition'] = item_or_tag(recipe['material'])
             base['base'] = item_or_tag(f"{recipe['from']}_{recipe_type}")
         else:
