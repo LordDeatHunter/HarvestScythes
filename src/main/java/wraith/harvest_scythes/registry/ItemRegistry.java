@@ -19,8 +19,8 @@ public final class ItemRegistry {
 
     private static final HashMap<String, Item> ITEMS = new HashMap<>();
 
-    public static final ItemGroup SCYTHES = FabricItemGroup.builder(HSUtils.ID("scythes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_scythe"))).entries((enabledFeatures, entries, operatorEnabled) -> ITEMS.values().stream().filter(entry -> entry instanceof ScytheItem).map(ItemStack::new).forEach(entries::add)).build();
-    public static final ItemGroup MACHETES = FabricItemGroup.builder(HSUtils.ID("machetes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_machete"))).entries((enabledFeatures, entries, operatorEnabled) -> ITEMS.values().stream().filter(entry -> entry instanceof MacheteItem).map(ItemStack::new).forEach(entries::add)).build();
+    public static final ItemGroup SCYTHES = FabricItemGroup.builder(HSUtils.ID("scythes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_scythe"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof ScytheItem).map(ItemStack::new).forEach(entries::add)).build();
+    public static final ItemGroup MACHETES = FabricItemGroup.builder(HSUtils.ID("machetes")).icon(() -> new ItemStack(ItemRegistry.get("diamond_machete"))).entries((displayContext, entries) -> ITEMS.values().stream().filter(entry -> entry instanceof MacheteItem).map(ItemStack::new).forEach(entries::add)).build();
 
     public static Item get(String id) {
         return ITEMS.getOrDefault(id, Items.AIR);

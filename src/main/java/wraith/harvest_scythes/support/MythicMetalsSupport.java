@@ -1,7 +1,7 @@
 package wraith.harvest_scythes.support;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import nourl.mythicmetals.tools.MythicToolMaterials;
+import nourl.mythicmetals.item.tools.MythicToolMaterials;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;
 import wraith.harvest_scythes.registry.ItemRegistry;

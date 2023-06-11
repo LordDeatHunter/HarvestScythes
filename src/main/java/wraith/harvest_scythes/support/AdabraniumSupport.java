@@ -1,6 +1,6 @@
 package wraith.harvest_scythes.support;
 
-import com.brand.adabraniummod.content.stuff.materials.AdabraniumToolMaterials;
+import com.brand.adabranium.content.stuff.materials.AdabraniumToolMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import wraith.harvest_scythes.item.MacheteItem;
 import wraith.harvest_scythes.item.ScytheItem;

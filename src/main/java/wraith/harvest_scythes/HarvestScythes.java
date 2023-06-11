@@ -53,10 +53,10 @@ public class HarvestScythes implements ModInitializer {
             LOGGER.info("[Hellish Materials] detected. Loading supported items.");
             HellishMaterialsSupport.loadItems();
         }
-        if (FabricLoader.getInstance().isModLoaded("diamold")) {
-            LOGGER.info("[Diamold] detected. Loading supported items.");
-            DiamoldSupport.loadItems();
-        }
+//        if (FabricLoader.getInstance().isModLoaded("diamold")) {
+//            LOGGER.info("[Diamold] detected. Loading supported items.");
+//            DiamoldSupport.loadItems();
+//        }
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             LOGGER.info("[Tech Reborn] detected. Loading supported items.");
             TechRebornSupport.loadItems();
