@@ -44,7 +44,7 @@
   "item.harvest_scythes.steel_scythe": "Стальная коса",
 
   "item.harvest_scythes.alexandrite_scythe": "Александритовая коса",
-  "item.harvest_scythes.kunzite_scythe": "Кунсайтная коса",
+  "item.harvest_scythes.kunzite_scythe": "Кунцитовая коса",
   "item.harvest_scythes.carbonado_scythe": "Карбонадовая коса",
   "item.harvest_scythes.citrine_scythe": "Цитриновая коса",
   "item.harvest_scythes.corundum_scythe": "Корундовая коса",
@@ -75,6 +75,12 @@
   "item.harvest_scythes.star_platinum_scythe": "Коса звездной платины",
   "item.harvest_scythes.stormyx_scythe": "Штормиксная коса",
 
+  "item.harvest_scythes.astrite_scythe": "Астритовая коса",
+  "item.harvest_scythes.nm_kunzite_scythe": "Кунцитовая коса",
+  "item.harvest_scythes.stibnite_scythe": "Антимонитовая коса",
+  "item.harvest_scythes.thounite_scythe": "Торитовая коса",
+  "item.harvest_scythes.uvarovite_scythe": "Уваровитовая коса",
+
   "item.harvest_scythes.peridot_scythe": "Хризолитная коса",
 
   "item.harvest_scythes.diamold_scythe": "Диамоулдная коса",
@@ -85,12 +91,10 @@
 
   "item.harvest_scythes.flint_scythe": "Кремниевая коса",
 
+  "item.harvest_scythes.cryomarble_scythe": "Криомраморная коса",
 
 
-
-
-
-  "item.harvest_scythes.creative_machete": "§5Мачете творческого режима",
+  "item.harvest_scythes.creative_machete": "Мачете творческого режима",
 
   "item.harvest_scythes.wooden_machete": "Деревянный мачете",
   "item.harvest_scythes.stone_machete": "Каменный мачете",
@@ -102,7 +106,7 @@
   "item.harvest_scythes.dragon_machete": "Драконий мачете",
 
   "item.harvest_scythes.platinum_machete": "Платиновый мачете",
-
+  
   "item.harvest_scythes.luxore_machete": "Люксоровый мачете",
 
   "item.harvest_scythes.gobber2_machete": "Гоббер мачете",
@@ -127,16 +131,17 @@
   "item.harvest_scythes.steel_machete": "Стальной мачете",
 
   "item.harvest_scythes.alexandrite_machete": "Александритовый мачете",
-  "item.harvest_scythes.amethyst_machete": "Аметистовый мачете",
+  "item.harvest_scythes.kunzite_machete": "Кунцитовое мачете",
   "item.harvest_scythes.carbonado_machete": "Карбонадовый мачете",
   "item.harvest_scythes.citrine_machete": "Цитриновый мачете",
   "item.harvest_scythes.corundum_machete": "Корундовый мачете",
   "item.harvest_scythes.emerald_machete": "Изумрудный мачете",
-  "item.harvest_scythes.moissanite_machete": "Мачете муассанита",
   "item.harvest_scythes.ruby_machete": "Рубиновый мачете",
+  "item.harvest_scythes.spinel_machete": "Шпинелевое мачете",
   "item.harvest_scythes.sapphire_machete": "Сапфирный мачете",
   "item.harvest_scythes.topaz_machete": "Топазный мачете",
   "item.harvest_scythes.tourmaline_machete": "Турмалиновый мачете",
+  "item.harvest_scythes.moissanite_machete": "Мачете муассанита",
 
   "item.harvest_scythes.adamantite_machete": "Адамантитовый мачете",
   "item.harvest_scythes.aquarium_machete": "Акварийный мачете",
@@ -157,8 +162,14 @@
   "item.harvest_scythes.star_platinum_machete": "Мачете звездной платины",
   "item.harvest_scythes.stormyx_machete": "Штормиксный мачете",
 
-  "item.harvest_scythes.peridot_machete": "Хризолитный мачете",
+  "item.harvest_scythes.astrite_machete": "Астритовое Мачете",
+  "item.harvest_scythes.nm_kunzite_machete": "Кунцитовое мачете",
+  "item.harvest_scythes.stibnite_machete": "Антимонитовое мачете",
+  "item.harvest_scythes.thounite_machete": "Торитовое мачете",
+  "item.harvest_scythes.uvarovite_machete": "Уваровитовое мачете",
 
+  "item.harvest_scythes.peridot_machete": "Хризолитный мачете",
+  
   "item.harvest_scythes.diamold_machete": "Диамоулдный мачете",
 
   "item.harvest_scythes.batet_machete": "Мачете Batet",
@@ -167,10 +178,16 @@
 
   "item.harvest_scythes.flint_machete": "Кремниевый мачете",
 
+  "item.harvest_scythes.cryomarble_machete": "Криомраморное мачете",
+
   "itemGroup.harvest_scythes.scythes": "Косы",
   "itemGroup.harvest_scythes.machetes": "Мачете",
 
   "enchantment.harvest_scythes.crop_reaper": "Взмах жнеца",
   "enchantment.harvest_scythes.leaf_eater": "Пожиратель листьев",
   "enchantment.harvest_scythes.blind_harvest_curse": "Проклятие cлепой жатвы"
+
+  "enchantment.harvest_scythes.crop_reaper.desc": "Увеличение дальности уборки урожая",
+  "enchantment.harvest_scythes.leaf_eater.desc": "Уничтожить связанные листья",
+  "enchantment.harvest_scythes.blind_harvest_curse.desc": "Это выросло?"																
 }
